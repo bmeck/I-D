@@ -112,8 +112,6 @@ Change controller:       The IESG.
 
 ## application/javascript
 
-7.2.  application/javascript
-
 Type name:               application
 Subtype name:            javascript
 Required parameters:     none
