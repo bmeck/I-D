@@ -88,68 +88,148 @@ The ECMAScript media types are to be updated to point to a non-vendor specific s
 
 ## text/javascript
 
-Type name:               text
-Subtype name:            javascript
-Required parameters:     none
-Optional parameters:     charset, see section 4.1 of {{RFC4329}}.
+Type name:
+
+: text
+
+Subtype name:
+
+: javascript
+
+Required parameters:
+
+: none
+
+Optional parameters:
+
+: charset, see section 4.1 of {{RFC4329}}.
+
 Encoding considerations:
-  The same as the considerations in section 3.1 of {{RFC3023}}.
 
-Security considerations: See section 5 of {{RFC4329}}.
+: The same as the considerations in section 3.1 of {{RFC3023}}.
+
+Security considerations:
+
+: See section 5 of {{RFC4329}}.
+
 Interoperability considerations:
-  See notes in various sections of {{RFC4329}}.
-  This media type does not specify the grammar of {{ECMA-262}} used.
 
-Published specification: {{ECMA-262}}
+: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used.
+
+Published specification:
+
+: \[\[RFCXXXX]]
+
 Applications which use this media type:
-  Script interpreters as discussed in {{RFC4329}}.
+
+: Script interpreters as discussed in {{RFC4329}}.
 
 Additional information:
 
-  Magic number(s):             n/a
-  File extension(s):           .js, .mjs
-  Macintosh File Type Code(s): TEXT
+: Magic number(s):
+
+  : n/a
+
+  File extension(s):
+
+  : .js, .mjs
+
+  Macintosh File Type Code(s):
+
+  : TEXT
 
 Person & email address to contact for further information:
-  See Author's Address section.
 
-Intended usage:          COMMON
-Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
-Author:                  See Author's Address section.
-Change controller:       The IESG.
+: See Author's Address section.
+
+Intended usage:
+
+: COMMON
+
+Restrictions on usage:
+
+: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+
+Author:
+
+: See Author's Address section.
+
+Change controller:
+
+: IESG \<iesg@ietf.org\>
 
 
 ## application/javascript
 
-Type name:               application
-Subtype name:            javascript
-Required parameters:     none
-Optional parameters:     charset, see section 4.1 of {{RFC4329}}.
+Type name:
+
+: application
+
+Subtype name:
+
+: javascript
+
+Required parameters:
+
+: none
+
+Optional parameters:
+
+: charset, see section 4.1 of {{RFC4329}}.
+
 Encoding considerations:
-  The same as the considerations in section 3.2 of {{RFC3023}}.
 
-Security considerations: See section 5 of {{RFC4329}}.
+: The same as the considerations in section 3.2 of {{RFC3023}}.
+
+Security considerations:
+
+: See section 5 of {{RFC4329}}.
+
 Interoperability considerations:
-  See notes in various sections of {{RFC4329}}.
-  This media type does not specify the grammar of {{ECMA-262}} used.
 
-Published specification: {{ECMA-262}}
+: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used.
+
+Published specification:
+
+: \[\[RFCXXXX]]
+
 Applications which use this media type:
-  Script interpreters as discussed in {{RFC4329}}.
+
+: Script interpreters as discussed in {{RFC4329}}.
 
 Additional information:
 
-  Magic number(s):             n/a
-  File extension(s):           .js, .mjs
-  Macintosh File Type Code(s): TEXT
+: Magic number(s):
+
+  : n/a
+
+  File extension(s):
+
+  : .js, .mjs
+
+  Macintosh File Type Code(s):
+
+  : TEXT
 
 Person & email address to contact for further information:
-  See Author's Address section.
 
-Intended usage:          COMMON
-Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
-Author:                  See Author's Address section.
-Change controller:       The IESG.
+: See Author's Address section.
+
+Intended usage:
+
+: COMMON
+
+Restrictions on usage:
+
+: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+
+Author:
+
+: See Author's Address section.
+
+Change controller:
+
+: IESG \<iesg@ietf.org>.
 
 --- back
 
