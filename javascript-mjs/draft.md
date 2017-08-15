@@ -1,14 +1,15 @@
 ---
-title: .mjs File Extension for EcmaScript
+title: EMCAScript Media Types Updates
 abbrev:
 docname: draft-bfarias-json-home-00
 date: 2017
 category: info
 
 ipr:
-area: General
+area: ART
 workgroup:
 keyword: Internet-Draft
+updates: 4329
 
 stand_alone: no
 pi: [toc, tocindent, sortrefs, symrefs, strict, compact, comments, inline]
@@ -52,7 +53,7 @@ informative:
 
 --- abstract
 
-This document proposes updates to the EcmaScript media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document updates {{RFC4329}}.
+This document proposes updates to the  media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document updates RFC4329, "Scripting Media Types".
 
 --- note_Note_to_Readers
 
@@ -86,7 +87,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 # Registration
 
-The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of {{ECMA-262}}. Finally, the {{HTML}} specification is using text/javascript as the default media type of EcmaScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.
+The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of {{ECMA-262}}. Finally, the {{HTML}} specification is using text/javascript as the default media type of  when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.
 
 
 ## text/javascript

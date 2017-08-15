@@ -4,19 +4,20 @@
 
 Network Working Group                                          B. Farias
 Internet-Draft                                           August 15, 2017
+Updates: 4329 (if approved)
 Intended status: Informational
 Expires: February 16, 2018
 
 
-                   .mjs File Extension for EcmaScript
+                     EMCAScript Media Types Updates
                        draft-bfarias-json-home-00
 
 Abstract
 
-   This document proposes updates to the EcmaScript media types,
-   superseding the existing registrations for "application/javascript"
-   and "text/javascript" by adding an additional extension and removing
-   usage warnings.  This document updates [RFC4329].
+   This document proposes updates to the media types, superseding the
+   existing registrations for "application/javascript" and "text/
+   javascript" by adding an additional extension and removing usage
+   warnings.  This document updates RFC4329, "Scripting Media Types".
 
 Note to Readers
 
@@ -52,10 +53,9 @@ Status of This Memo
 
 
 
-
 Farias                  Expires February 16, 2018               [Page 1]
 
-Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
 Copyright Notice
@@ -111,7 +111,7 @@ Table of Contents
 
 Farias                  Expires February 16, 2018               [Page 2]
 
-Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
    should be treated as.  To this end some scripting environments have
@@ -131,9 +131,9 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
    a new file extension of .mjs is to be added to the list of file
    extensions with the restriction that it must correspond to the Module
    grammar of [ECMA-262].  Finally, the [HTML] specification is using
-   text/javascript as the default media type of EcmaScript when
-   preparing script tags; therefore, text/javascript has been moved
-   intended usage from OBSOLETE to COMMON.
+   text/javascript as the default media type of when preparing script
+   tags; therefore, text/javascript has been moved intended usage from
+   OBSOLETE to COMMON.
 
 4.1.  text/javascript
 
@@ -167,7 +167,7 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
 
 Farias                  Expires February 16, 2018               [Page 3]
 
-Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
       File extension(s):  .js, .mjs
@@ -223,7 +223,7 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
 
 Farias                  Expires February 16, 2018               [Page 4]
 
-Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
    Person & email address to contact for further information:  See
@@ -279,7 +279,7 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
 
 Farias                  Expires February 16, 2018               [Page 5]
 
-Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
 Appendix A.  Acknowledgements

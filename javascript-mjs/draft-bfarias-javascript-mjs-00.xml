@@ -17,10 +17,10 @@
 <?rfc comments="yes"?>
 <?rfc inline="yes"?>
 
-<rfc docName="draft-bfarias-json-home-00" category="info">
+<rfc docName="draft-bfarias-json-home-00" category="info" updates="4329">
 
   <front>
-    <title>.mjs File Extension for EcmaScript</title>
+    <title>EMCAScript Media Types Updates</title>
 
     <author initials="B." surname="Farias" fullname="Bradley Farias">
       <organization></organization>
@@ -31,14 +31,14 @@
 
     <date year="2017"/>
 
-    <area>General</area>
+    <area>ART</area>
     
     <keyword>Internet-Draft</keyword>
 
     <abstract>
 
 
-<t>This document proposes updates to the EcmaScript media types, superseding the existing registrations for “application/javascript” and “text/javascript” by adding an additional extension and removing usage warnings.  This document updates <xref target="RFC4329"/>.</t>
+<t>This document proposes updates to the  media types, superseding the existing registrations for “application/javascript” and “text/javascript” by adding an additional extension and removing usage warnings.  This document updates RFC4329, “Scripting Media Types”.</t>
 
 
 
@@ -84,7 +84,7 @@
 </section>
 <section anchor="registration" title="Registration">
 
-<t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"/>. Finally, the <xref target="HTML"/> specification is using text/javascript as the default media type of EcmaScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.</t>
+<t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"/>. Finally, the <xref target="HTML"/> specification is using text/javascript as the default media type of  when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.</t>
 
 <section anchor="textjavascript" title="text/javascript">
 
@@ -234,54 +234,54 @@
   </back>
 
 <!-- ##markdown-source:
-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
-q0hd3HxzeD5K/gvuev5etxYAAA==
+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
+6SLe3hEo3IrLKlIX990cno+S/wIc2fwRvhYAAA==
 
 -->
 
