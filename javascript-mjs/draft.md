@@ -33,12 +33,7 @@ normative:
     date: August 2017
     target: http://www.ecma-international.org/publications/standards/Ecma-262.htm
 
-  TC39-MIME-ISSUE:
-    author:
-      org: TC39
-    title: "Add `application/javascript+module` mime to remove ambiguity5"
-    date: August 2017
-    target: https://web.archive.org/web/20170814193912/https://github.com/tc39/ecma262/issues/322
+informative:
 
   HTML:
     author:
@@ -46,6 +41,14 @@ normative:
     title: HTML Living Standard
     date: August 2017
     target: https://html.spec.whatwg.org/multipage/scripting.html#prepare-a-script
+
+  TC39-MIME-ISSUE:
+    author:
+      org: TC39
+    title: "Add `application/javascript+module` mime to remove ambiguity5"
+    date: August 2017
+    target: https://web.archive.org/web/20170814193912/https://github.com/tc39/ecma262/issues/322
+
 
 --- abstract
 
