@@ -28,10 +28,10 @@ normative:
 
   ECMA-262:
     author:
-      org: European Computer Manufacturers Association
-    title: "Standard ECMA-262"
+      org: Ecma International
+    title: "Standard ECMA-262: ECMAScript Language Specification"
     date: August 2017
-    target: http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm
+    target: http://www.ecma-international.org/publications/standards/Ecma-262.htm
 
   TC39-MIME-ISSUE:
     author:
@@ -69,7 +69,7 @@ This document updates existing media types for the ECMAScript programming langua
 
 # Background
 
-In the [ECMA-262] 6th Edition of the ECMAScript language standard a new top level grammar was introduced for ECMAScript Modules. This now makes two possible top level grammars for any given Source Text of ECMAScript. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work [TC39-MIME-ISSUE].
+In order to formalize support for modular programs [ECMA-262] now defines two top-level goal symbols for the ECMAScript grammar. This means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work [TC39-MIME-ISSUE].
 
 It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments must use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt a new file extension of .mjs for determining the goal of a given Source Text.
 
