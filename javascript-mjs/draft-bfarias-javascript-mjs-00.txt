@@ -14,10 +14,11 @@ Expires: February 16, 2018
 
 Abstract
 
-   This document proposes updates to the media types, superseding the
-   existing registrations for "application/javascript" and "text/
-   javascript" by adding an additional extension and removing usage
-   warnings.  This document updates RFC4329, "Scripting Media Types".
+   This document proposes updates to the ECMAScript media types,
+   superseding the existing registrations for "application/javascript"
+   and "text/javascript" by adding an additional extension and removing
+   usage warnings.  This document updates RFC4329, "Scripting Media
+   Types".
 
 Note to Readers
 
@@ -46,7 +47,6 @@ Status of This Memo
    material or to cite them other than as "work in progress."
 
    This Internet-Draft will expire on February 16, 2018.
-
 
 
 
