@@ -38,7 +38,7 @@
     <abstract>
 
 
-<t>This document proposes a new file extension be added to EcmaScript MIME types.</t>
+<t>This document proposes updates to the EcmaScript media types, superseding the existing registrations for “application/javascript” and “text/javascript” by adding an additional extension and removing usage warnings.  This document updates <xref target="RFC4329"/>.</t>
 
 
 
@@ -65,12 +65,12 @@
 
 <section anchor="introduction" title="Introduction">
 
-<t>This document updates existing media types for the ECMAScript programming language. It supercedes the media types in <xref target="RFC4329"></xref>.</t>
+<t>This document updates the existing media types for the ECMAScript programming language. It supersedes the media types registrations in <xref target="RFC4329"/> for “application/javascript” and “text/javascript”.</t>
 
 </section>
 <section anchor="background" title="Background">
 
-<t>In the <xref target="ECMA-262"></xref> 6th Edition of the ECMAScript language standard a new top level grammar was introduced for ECMAScript Modules. This now makes two possible top level grammars for any given Source Text of ECMAScript. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work <xref target="TC39-MIME-ISSUE"></xref>.</t>
+<t>In order to formalize support for modular programs <xref target="ECMA-262"/> now defines two top-level goal symbols for the ECMAScript grammar. This means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work <xref target="TC39-MIME-ISSUE"/>.</t>
 
 <t>It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments must use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt a new file extension of .mjs for determining the goal of a given Source Text.</t>
 
@@ -84,25 +84,25 @@
 </section>
 <section anchor="registration" title="Registration">
 
-<t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"></xref>. Finally, the <xref target="HTML"></xref> specification is using text/javascript as the default media type of EcmaScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.</t>
+<t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"/>. Finally, the <xref target="HTML"/> specification is using text/javascript as the default media type of EcmaScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.</t>
 
 <section anchor="textjavascript" title="text/javascript">
 
 <t>Type name:               text
 Subtype name:            javascript
 Required parameters:     none
-Optional parameters:     charset, see section 4.1 of <xref target="RFC4329"></xref>.
+Optional parameters:     charset, see section 4.1 of <xref target="RFC4329"/>.
 Encoding considerations:
-  The same as the considerations in section 3.1 of <xref target="RFC3023"></xref>.</t>
+  The same as the considerations in section 3.1 of <xref target="RFC3023"/>.</t>
 
-<t>Security considerations: See section 5 of <xref target="RFC4329"></xref>.
+<t>Security considerations: See section 5 of <xref target="RFC4329"/>.
 Interoperability considerations:
-  See notes in various sections of <xref target="RFC4329"></xref>.
-  This media type does not specify the grammar of <xref target="ECMA-262"></xref> used.</t>
+  See notes in various sections of <xref target="RFC4329"/>.
+  This media type does not specify the grammar of <xref target="ECMA-262"/> used.</t>
 
-<t>Published specification: <xref target="ECMA-262"></xref>
+<t>Published specification: <xref target="ECMA-262"/>
 Applications which use this media type:
-  Script interpreters as discussed in <xref target="RFC4329"></xref>.</t>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
 
 <t>Additional information:</t>
 
@@ -114,7 +114,7 @@ Applications which use this media type:
   See Author’s Address section.</t>
 
 <t>Intended usage:          COMMON
-Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"></xref>
+Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/>
 Author:                  See Author’s Address section.
 Change controller:       The IESG.</t>
 
@@ -124,18 +124,18 @@ Change controller:       The IESG.</t>
 <t>Type name:               application
 Subtype name:            javascript
 Required parameters:     none
-Optional parameters:     charset, see section 4.1 of <xref target="RFC4329"></xref>.
+Optional parameters:     charset, see section 4.1 of <xref target="RFC4329"/>.
 Encoding considerations:
-  The same as the considerations in section 3.2 of <xref target="RFC3023"></xref>.</t>
+  The same as the considerations in section 3.2 of <xref target="RFC3023"/>.</t>
 
-<t>Security considerations: See section 5 of <xref target="RFC4329"></xref>.
+<t>Security considerations: See section 5 of <xref target="RFC4329"/>.
 Interoperability considerations:
-  See notes in various sections of <xref target="RFC4329"></xref>.
-  This media type does not specify the grammar of <xref target="ECMA-262"></xref> used.</t>
+  See notes in various sections of <xref target="RFC4329"/>.
+  This media type does not specify the grammar of <xref target="ECMA-262"/> used.</t>
 
-<t>Published specification: <xref target="ECMA-262"></xref>
+<t>Published specification: <xref target="ECMA-262"/>
 Applications which use this media type:
-  Script interpreters as discussed in <xref target="RFC4329"></xref>.</t>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
 
 <t>Additional information:</t>
 
@@ -147,7 +147,7 @@ Applications which use this media type:
   See Author’s Address section.</t>
 
 <t>Intended usage:          COMMON
-Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"></xref>
+Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/>
 Author:                  See Author’s Address section.
 Change controller:       The IESG.</t>
 
@@ -164,11 +164,11 @@ Change controller:       The IESG.</t>
 &RFC4329;
 &RFC2119;
 &RFC3023;
-<reference anchor="ECMA-262" target="http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm">
+<reference anchor="ECMA-262" target="http://www.ecma-international.org/publications/standards/Ecma-262.htm">
   <front>
-    <title>Standard ECMA-262</title>
+    <title>Standard ECMA-262: ECMAScript Language Specification</title>
     <author >
-      <organization>European Computer Manufacturers Association</organization>
+      <organization>Ecma International</organization>
     </author>
     <date year="2017" month="August"/>
   </front>
@@ -207,52 +207,53 @@ Change controller:       The IESG.</t>
   </back>
 
 <!-- ##markdown-source:
-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
-bi/5LxbBDCt6FQAA
+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
 
 -->
 

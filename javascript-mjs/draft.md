@@ -49,7 +49,7 @@ normative:
 
 --- abstract
 
-This document proposes a new file extension be added to EcmaScript MIME types.
+This document proposes updates to the EcmaScript media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document updates {{RFC4329}}.
 
 --- note_Note_to_Readers
 
@@ -64,12 +64,12 @@ Recent changes are listed at <https://github.com/bfarias/I-D/commits/master/java
 
 # Introduction
 
-This document updates existing media types for the ECMAScript programming language. It supercedes the media types in [RFC4329].
+This document updates the existing media types for the ECMAScript programming language. It supersedes the media types registrations in {{RFC4329}} for "application/javascript" and "text/javascript".
 
 
 # Background
 
-In order to formalize support for modular programs [ECMA-262] now defines two top-level goal symbols for the ECMAScript grammar. This means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work [TC39-MIME-ISSUE].
+In order to formalize support for modular programs {{ECMA-262}} now defines two top-level goal symbols for the ECMAScript grammar. This means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
 
 It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments must use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt a new file extension of .mjs for determining the goal of a given Source Text.
 
@@ -83,7 +83,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 # Registration
 
-The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of [ECMA-262]. Finally, the [HTML] specification is using text/javascript as the default media type of EcmaScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.
+The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of {{ECMA-262}}. Finally, the {{HTML}} specification is using text/javascript as the default media type of EcmaScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.
 
 
 ## text/javascript
@@ -91,18 +91,18 @@ The ECMAScript media types are to be updated to point to a non-vendor specific s
 Type name:               text
 Subtype name:            javascript
 Required parameters:     none
-Optional parameters:     charset, see section 4.1 of [RFC4329].
+Optional parameters:     charset, see section 4.1 of {{RFC4329}}.
 Encoding considerations:
-  The same as the considerations in section 3.1 of [RFC3023].
+  The same as the considerations in section 3.1 of {{RFC3023}}.
 
-Security considerations: See section 5 of [RFC4329].
+Security considerations: See section 5 of {{RFC4329}}.
 Interoperability considerations:
-  See notes in various sections of [RFC4329].
-  This media type does not specify the grammar of [ECMA-262] used.
+  See notes in various sections of {{RFC4329}}.
+  This media type does not specify the grammar of {{ECMA-262}} used.
 
-Published specification: [ECMA-262]
+Published specification: {{ECMA-262}}
 Applications which use this media type:
-  Script interpreters as discussed in [RFC4329].
+  Script interpreters as discussed in {{RFC4329}}.
 
 Additional information:
 
@@ -114,7 +114,7 @@ Person & email address to contact for further information:
   See Author's Address section.
 
 Intended usage:          COMMON
-Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of [ECMA-262]
+Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 Author:                  See Author's Address section.
 Change controller:       The IESG.
 
@@ -124,18 +124,18 @@ Change controller:       The IESG.
 Type name:               application
 Subtype name:            javascript
 Required parameters:     none
-Optional parameters:     charset, see section 4.1 of [RFC4329].
+Optional parameters:     charset, see section 4.1 of {{RFC4329}}.
 Encoding considerations:
-  The same as the considerations in section 3.2 of [RFC3023].
+  The same as the considerations in section 3.2 of {{RFC3023}}.
 
-Security considerations: See section 5 of [RFC4329].
+Security considerations: See section 5 of {{RFC4329}}.
 Interoperability considerations:
-  See notes in various sections of [RFC4329].
-  This media type does not specify the grammar of [ECMA-262] used.
+  See notes in various sections of {{RFC4329}}.
+  This media type does not specify the grammar of {{ECMA-262}} used.
 
-Published specification: [ECMA-262]
+Published specification: {{ECMA-262}}
 Applications which use this media type:
-  Script interpreters as discussed in [RFC4329].
+  Script interpreters as discussed in {{RFC4329}}.
 
 Additional information:
 
@@ -147,7 +147,7 @@ Person & email address to contact for further information:
   See Author's Address section.
 
 Intended usage:          COMMON
-Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of [ECMA-262]
+Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 Author:                  See Author's Address section.
 Change controller:       The IESG.
 
