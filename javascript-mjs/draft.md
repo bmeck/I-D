@@ -53,7 +53,7 @@ informative:
 
 --- abstract
 
-This document proposes updates to the  media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document updates RFC4329, "Scripting Media Types".
+This document proposes updates to the ECMAScript media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document updates RFC4329, "Scripting Media Types".
 
 --- note_Note_to_Readers
 
