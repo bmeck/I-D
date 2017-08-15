@@ -88,68 +88,90 @@
 
 <section anchor="textjavascript" title="text/javascript">
 
-<t>Type name:               text
-Subtype name:            javascript
-Required parameters:     none
-Optional parameters:     charset, see section 4.1 of <xref target="RFC4329"/>.
-Encoding considerations:
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  javascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t hangText='Encoding considerations:'>
   The same as the considerations in section 3.1 of <xref target="RFC3023"/>.</t>
-
-<t>Security considerations: See section 5 of <xref target="RFC4329"/>.
-Interoperability considerations:
-  See notes in various sections of <xref target="RFC4329"/>.
-  This media type does not specify the grammar of <xref target="ECMA-262"/> used.</t>
-
-<t>Published specification: <xref target="ECMA-262"/>
-Applications which use this media type:
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
   Script interpreters as discussed in <xref target="RFC4329"/>.</t>
-
-<t>Additional information:</t>
-
-<t>Magic number(s):             n/a
-  File extension(s):           .js, .mjs
-  Macintosh File Type Code(s): TEXT</t>
-
-<t>Person &amp; email address to contact for further information:
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
   See Author’s Address section.</t>
-
-<t>Intended usage:          COMMON
-Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/>
-Author:                  See Author’s Address section.
-Change controller:       The IESG.</t>
+  <t hangText='Intended usage:'>
+  COMMON</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
 
 </section>
 <section anchor="applicationjavascript" title="application/javascript">
 
-<t>Type name:               application
-Subtype name:            javascript
-Required parameters:     none
-Optional parameters:     charset, see section 4.1 of <xref target="RFC4329"/>.
-Encoding considerations:
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  application</t>
+  <t hangText='Subtype name:'>
+  javascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t hangText='Encoding considerations:'>
   The same as the considerations in section 3.2 of <xref target="RFC3023"/>.</t>
-
-<t>Security considerations: See section 5 of <xref target="RFC4329"/>.
-Interoperability considerations:
-  See notes in various sections of <xref target="RFC4329"/>.
-  This media type does not specify the grammar of <xref target="ECMA-262"/> used.</t>
-
-<t>Published specification: <xref target="ECMA-262"/>
-Applications which use this media type:
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
   Script interpreters as discussed in <xref target="RFC4329"/>.</t>
-
-<t>Additional information:</t>
-
-<t>Magic number(s):             n/a
-  File extension(s):           .js, .mjs
-  Macintosh File Type Code(s): TEXT</t>
-
-<t>Person &amp; email address to contact for further information:
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
   See Author’s Address section.</t>
-
-<t>Intended usage:          COMMON
-Restrictions on usage:   The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/>
-Author:                  See Author’s Address section.
-Change controller:       The IESG.</t>
+  <t hangText='Intended usage:'>
+  COMMON</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;.</t>
+</list></t>
 
 </section>
 </section>
@@ -207,53 +229,54 @@ Change controller:       The IESG.</t>
   </back>
 
 <!-- ##markdown-source:
-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
-4vnKOZcl+MJ0TabcY//kEGxmLCHy8qCs7wmNPmDSJ25gXbikB+uruIURfG4L
-xVuWs38sEQsYi9z9Jt6giUZQ/0wq1BVx6eBuseocldmhsTF5U75E/daLab+1
-Tx71+IN6GxgZCw31sGMhpNrsxQit9wiP2Y4pat/oe075VZJKoo3361b8mgPn
-PHlzIJyta7XTQPZdzhaveqp4eCr9BcYYbPh/Io7Tr8TxlTi+EseXEQfdvzPc
-TXn2nOa3uFvWqigVD/U0f0pzy+FcdFBeib85IM9IDITTWn3EwD1XtdG39u4Y
-2cI1C/M53Q0q2RyLv6JgvVgYVdf0NcDTtZiOxFyTMdBQyEbcWJlXcZqe4rUR
-77Rb+fSFs/kt567sdBFv+ggVbtBlFTGMu3EOd0fJT1YBSrnKFgAA
+H4sIALJEk1kAA+1XbXPbuBH+zl+BcWbaZGpKsZ1rG/Xm5hRHSdxa8dVyJtdJ
+bnIgCZGISYAFQCu6zP33PrugJMrnXNJ+7MQfZJBcLPbl2WcXaZomQYdaTcSo
+ee/FM10rMfsQlPHaGrG0TszyRi5yp9uQyCxz6maSFDY3ssGewsllSLOldFr6
+9L23Jq1so9KHD5NCBggcPzz6S5JjWVq3nghtljZJdOsmiXRKTsRzZZSTdbKy
+7rp0tmsnybVa46mYiDMTlDMqpE/plCTxQZrinaytgWJjk1ZPxJtg80OBH20K
+ZcKh8NYFp5Yeq3XTL4LTOT7ltmllv2ggjE/a1Nqon5JEdqGysEqkicCfNn4i
+nozEM3aMX0WHnzhZ1Go9/GBdKY3+RQYEbMJvVCN1PRFZlB01Kr/+vqR3I5zM
+Ep3TkyQx1jXYdqNo2+Wz00cnx4/75fHR0WZ58vD4BMJCzE7n0/T4z8fxkK3F
+ojdiwpnqo8bWIK70rc/vwYLiJ12xU8SrmFtxLk3ZyVKJRatyvdQ5qzhgDTGX
+067sfIgpZb3SlSpMRBVCOxmPV6vVSMGCVA8tGMGycdtlda/Qj31vhh+TvWTH
+qAoNOXh1evI4nZ/NZ+nZYvFq9kk/SW7Ps2lRiJ9l224OGb+XN9KzX39qbNHV
+6mfR6EYBKMKpxt4oIZtMl50O62++1EVPPqpsJF1eIWfsGJ7HJPzwr0ePjh6f
+PD46Hm9ESx2qLqOMj0N+8nhMoYGvY+19p/z45PiYXH5xNT//pJ+vX0yvXj8f
+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
+HJ6Pkv8AdLOfPagWAAA=
 
 -->
 
