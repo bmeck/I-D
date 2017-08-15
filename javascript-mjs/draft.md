@@ -40,6 +40,13 @@ normative:
     date: August 2017
     target: https://web.archive.org/web/20170814193912/https://github.com/tc39/ecma262/issues/322
 
+  HTML:
+    author:
+      org: WHATWG
+    title: HTML Living Standard
+    date: August 2017
+    target: https://html.spec.whatwg.org/multipage/scripting.html#prepare-a-script
+
 --- abstract
 
 This document proposes a new file extension be added to EcmaScript MIME types.
@@ -76,7 +83,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 # Registration
 
-The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of [ECMA-262].
+The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of [ECMA-262]. Finally, the [HTML] specification is using text/javascript as the default media type of EcmaScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.
 
 
 ## text/javascript

@@ -84,7 +84,7 @@
 </section>
 <section anchor="registration" title="Registration">
 
-<t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"></xref>.</t>
+<t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"></xref>. Finally, the <xref target="HTML"></xref> specification is using text/javascript as the default media type of EcmaScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.</t>
 
 <section anchor="textjavascript" title="text/javascript">
 
@@ -182,6 +182,15 @@ Change controller:       The IESG.</t>
     <date year="2017" month="August"/>
   </front>
 </reference>
+<reference anchor="HTML" target="https://html.spec.whatwg.org/multipage/scripting.html#prepare-a-script">
+  <front>
+    <title>HTML Living Standard</title>
+    <author >
+      <organization>WHATWG</organization>
+    </author>
+    <date year="2017" month="August"/>
+  </front>
+</reference>
 
 
     </references>
@@ -190,7 +199,7 @@ Change controller:       The IESG.</t>
 
 <section anchor="acknowledgements" title="Acknowledgements">
 
-<t>Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James Snell, Matthew A. Miller, and Allen Wirfs-Brock for guiding me through this process.</t>
+<t>Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James Snell, Matthew A. Miller, Adam Roach, and Allen Wirfs-Brock for guiding me through this process.</t>
 
 </section>
 
@@ -198,48 +207,52 @@ Change controller:       The IESG.</t>
   </back>
 
 <!-- ##markdown-source:
-H4sIANERk1kAA+1XXW/jxhV956+4cIA2QU3JljdJLRRFtbY2UbuyU8uLtlgs
-NkNyRM6anGFmhlbUIP89585Qn7G3+1ysH2RKvHO/z7l30jRNvPK1HNOg+eDo
-laolTX/2UjtlNC2NpWneiEVuVesTkWVWPo6TwuRaNDhTWLH0abYUVgmXfnBG
-p5VpZHp2lhTCQ2B0dv5tkuOxNHY9JqWXJklUa8eJsFKM6TuppRV1sjL2obSm
-a8fJg1zjWzGmmfbSaunTa7aSJM4LXbwXtdFQrE3SqjG99SY/JXwoXUjtT8kZ
-661cOjytm/7BW5XjVW6aVvQPDYTxSulaafkuSUTnKwOvKE0If0q7Mb0c0KsQ
-WPgpBvzSiqKW6/0XxpZCq/8Kj4SNwy+yEaoeUxZlB43MH/5W8m8DWA4SnVXj
-JNHGNjj2KPnY3aurFxejy/5xdH6+ebw4G11AmGh6NZ+ko29G0cjWY+qdGNO0
-s6aVQtMVIu2QPJoL3S0Rc2eldTRxDokKjoZjfeFPFpxYYYuthZPwOlZw0pWd
-87GQ4ZCwpfRjqrxvx8PharUaSHRIqkK1gnJRD+DPsO2yWuXhFzd0vQ035H5i
-I6mweTWofMOx3V9dXKbz2XyazhaLN9NnQ2S5A98nRUE/irbdWBp+EI/ChXb9
-U2OKrpY/UqMaiR4hKxvzKEk0mSo75ddff2qcjgOV2YA9RrlCdPg+ZOGzP5+/
-OL+8uDwfDTeipfJVl3Gxhz6/uBxyfhDwUDnXSTe8GI2SJE1TEhlaE9VJkvtK
-OQKqOu5LalFG46QjQVquaMmYlFtMZoigKGTBEe2wSZw88utWukHUro2X72/4
-w5v3d1IUaAG2JCn6QbVCvIxwH6wzyCgXwcDSdLog4ekvT8TUw304S6+Htchk
-7faSnoJF/jqIdhoDA1bmHNOXZokATqnToS1cJYuvepsw/gmWgGo5bIRDlz1h
-7i5aySuhS06clSE8+UlBMB8o757XzulsVAE0J0nyBROTRWvlAUhHtetabieH
-esG80iU1slAiFqZPtgw468uGWpdWwD5EazjfiVIOaObJda20uSxwjI/sq1Ga
-3vZ08W4QPHop8kCfukiSmQ4H3m7A/I6+8RVNC8Xuklkee7CxShuI9m3nTUu1
-fJQ1BQeFpZVg2zF2ZDYMh52eeUCbG1BIiDYrasQDe78yhHZ2Kqvl75XGpAi9
-phLI0rQwHaKme/Q7+7rTz3plwP/WUUeZKdbHflTwspAoJHLKKKnQAfvZ494w
-nXeqkH02lCWXgzn5Kw8ientER5zlWWhUgGo/GFp2db3emSO1RPaejYE1NCBo
-z0cBsxbxw0UVKxYTCJ6jXnqT99KIGrEKlu1aFDE3IFtoCbMwJAaTzliJWRdO
-cjNJ/ais0WHQUcPU1rkQOLuUIYFhGIcBBI1wATMXEwOO7aJZce7Y+lFQrjJd
-XXAEQKUIKOO6m8gkErodtoDnnKkESDivwHCazYnCINYnqQ6ehq2EK7zxitVx
-toJbhtP9u8aJmAD19dMI81BDJAyiyEzYMbjS6KCT+ZvF/clp/E83t+H5bvrP
-N7O76TU/L76fvH69fdhILL6/ffP6evcUf09w8up2Pp/eXMfD88l/8I+TfXL7
-w/3s9mby+iSWe58zuCNjQ4Qh2loZU4qYOYVZaJHkl1/6veDXX2OAd7JUPEA2
-NHSA6uOOj/ojO4XR0RoV+xCZx9qG/BTIsmtlrpYq35EBOCUc2bwRGxrZhyY4
-BzMpMMzpx0uJuKMr2xnGxQyjCCKHhxytQNhBwMq4xbGqgGjlY1PnxuIdQLHV
-1cNoAx5o3VFhSNwX5GFij+aRPOSp3/AO/1gyWXSZf1JgT8Wd/KlTFhEB0xBD
-GV0URXJlctv2nXj8FgMLFMB7qwReZAzwxeA8uL3j+KnOTcGdD+QzccWiO16N
-uO4OOrlfOPxDCW62jdqLnVreKTkZC5ljFfXrY7202HPn6yNnwl4OurQiU/UT
-h+EUH+f9I9h/xKQ1ndvoc0fqKA6MXcMCGDIybey5dcT7U/VkTisQxw+bneKw
-Tcd7oslktySisSqVV4ER/aHx4H1P1lswYkoxGpXLO9cT9v4AnvStj/rucWrY
-2eeiBJh012TSfum+OmwvPRQQeXXQ80dCgw+4pTBwgi7ccrxxVTwSevbKFDIc
-uZ/++x55gKuo2B/iFYQxBnAExPHIwKoZqHTZWWTUHjobizYJK/cfcVfoj/ZF
-4wHIM4cx2zlsC3tOMuPd3gABW4iixHonxh16xAaBCgJ+d1Owcxtq/xiCk+jh
-MU7pf7l/FTbDkAZr6lpuNbB3s+niu54anr5KfIQh9g78/xDF6DNRfCaKz0Tx
-HFHwfTDDlSusYZP8AZedWhalDPstr2JCP4RkLjoor+gfFj2nBXajSS1/xu45
-l7VWD+bxFLXCfQOrKq/JlWhO6e+AqKOFlnXNbz3iXNFkQHPFzsRlcoJHTf9S
-dunSl9bkD6FaZaeKeONEcnAZLKvYs7hi5ghxkPwGXdDAL+0TAAA=
+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
+bi/5LxbBDCt6FQAA
 
 -->
 

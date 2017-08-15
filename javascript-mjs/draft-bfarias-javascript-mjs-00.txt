@@ -75,7 +75,7 @@ Table of Contents
    3.  Notational Conventions  . . . . . . . . . . . . . . . . . . .   3
    4.  Registration  . . . . . . . . . . . . . . . . . . . . . . . .   3
      4.1.  text/javascript . . . . . . . . . . . . . . . . . . . . .   3
-     4.2.  application/javascript  . . . . . . . . . . . . . . . . .   3
+     4.2.  application/javascript  . . . . . . . . . . . . . . . . .   4
    5.  Normative References  . . . . . . . . . . . . . . . . . . . .   4
    Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .   5
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
@@ -126,7 +126,10 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
    specific standard undated specification of ECMAScript.  In addition,
    a new file extension of .mjs is to be added to the list of file
    extensions with the restriction that it must correspond to the Module
-   grammar of [ECMA-262].
+   grammar of [ECMA-262].  Finally, the [HTML] specification is using
+   text/javascript as the default media type of EcmaScript when
+   preparing script tags; therefore, text/javascript has been moved
+   intended usage from OBSOLETE to COMMON.
 
 4.1.  text/javascript
 
@@ -155,12 +158,9 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
    must be parsed using the Module grammar of [ECMA-262] Author: See
    Author's Address section.  Change controller: The IESG.
 
-4.2.  application/javascript
 
-   Type name: application Subtype name: javascript Required parameters:
-   none Optional parameters: charset, see section 4.1 of [RFC4329].
-   Encoding considerations: The same as the considerations in section
-   3.2 of [RFC3023].
+
+
 
 
 
@@ -169,6 +169,13 @@ Farias                  Expires February 16, 2018               [Page 3]
 
 Internet-Draft     .mjs File Extension for EcmaScript        August 2017
 
+
+4.2.  application/javascript
+
+   Type name: application Subtype name: javascript Required parameters:
+   none Optional parameters: charset, see section 4.1 of [RFC4329].
+   Encoding considerations: The same as the considerations in section
+   3.2 of [RFC3023].
 
    Security considerations: See section 5 of [RFC4329].
    Interoperability considerations: See notes in various sections of
@@ -198,6 +205,10 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
               international.org/publications/standards/
               Ecma-262-arch.htm>.
 
+   [HTML]     WHATWG, "HTML Living Standard", August 2017,
+              <https://html.spec.whatwg.org/multipage/
+              scripting.html#prepare-a-script>.
+
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
@@ -206,6 +217,14 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
    [RFC3023]  Murata, M., St. Laurent, S., and D. Kohn, "XML Media
               Types", RFC 3023, DOI 10.17487/RFC3023, January 2001,
               <http://www.rfc-editor.org/info/rfc3023>.
+
+
+
+
+Farias                  Expires February 16, 2018               [Page 4]
+
+Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+
 
    [RFC4329]  Hoehrmann, B., "Scripting Media Types", RFC 4329,
               DOI 10.17487/RFC4329, April 2006,
@@ -216,36 +235,17 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
               ambiguity5", August 2017, <https://web.archive.org/web/201
               70814193912/https://github.com/tc39/ecma262/issues/322>.
 
-
-
-
-
-
-Farias                  Expires February 16, 2018               [Page 4]
-
-Internet-Draft     .mjs File Extension for EcmaScript        August 2017
-
-
 Appendix A.  Acknowledgements
 
    Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James
-   Snell, Matthew A.  Miller, and Allen Wirfs-Brock for guiding me
-   through this process.
+   Snell, Matthew A.  Miller, Adam Roach, and Allen Wirfs-Brock for
+   guiding me through this process.
 
 Author's Address
 
    Bradley Farias
 
    Email: bradley.meck@gmail.com
-
-
-
-
-
-
-
-
-
 
 
 
