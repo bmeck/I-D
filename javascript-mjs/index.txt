@@ -1,0 +1,280 @@
+
+
+
+
+Network Working Group                                          B. Farias
+Internet-Draft                                           August 15, 2017
+Intended status: Informational
+Expires: February 16, 2018
+
+
+                   .mjs File Extension for EcmaScript
+                       draft-bfarias-json-home-00
+
+Abstract
+
+   This document proposes a new file extension be added to EcmaScript
+   MIME types.
+
+Note to Readers
+
+   The issues list for this draft can be found at
+   https://github.com/bfarias/I-D/labels/javascript-mjs.
+
+   The most recent (often, unpublished) draft is at
+   https://github.com/bfarias/I-D/tree/master/javascript-mjs.
+
+   Recent changes are listed at https://github.com/bfarias/I-
+   D/commits/master/javascript-mjs.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at http://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on February 16, 2018.
+
+Copyright Notice
+
+   Copyright (c) 2017 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+
+
+
+
+Farias                  Expires February 16, 2018               [Page 1]
+
+Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents
+   (http://trustee.ietf.org/license-info) in effect on the date of
+   publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.  Code Components extracted from this document must
+   include Simplified BSD License text as described in Section 4.e of
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Background  . . . . . . . . . . . . . . . . . . . . . . . . .   2
+   3.  Notational Conventions  . . . . . . . . . . . . . . . . . . .   3
+   4.  Registration  . . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.1.  text/javascript . . . . . . . . . . . . . . . . . . . . .   3
+     4.2.  application/javascript  . . . . . . . . . . . . . . . . .   3
+   5.  Normative References  . . . . . . . . . . . . . . . . . . . .   4
+   Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .   5
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
+
+1.  Introduction
+
+   This document updates existing media types for the ECMAScript
+   programming language.  It supercedes the media types in [RFC4329].
+
+2.  Background
+
+   In the [ECMA-262] 6th Edition of the ECMAScript language standard a
+   new top level grammar was introduced for ECMAScript Modules.  This
+   now makes two possible top level grammars for any given Source Text
+   of ECMAScript.  The TC39 standards body for ECMAScript has determined
+   that media types are outside of their scope of work
+   [TC39-MIME-ISSUE].
+
+   It is not possible to fully determine if a Source Text of ECMAScript
+   is meant to be parsed in the Module or Script grammar goals based
+   upon content alone.  Therefore, scripting environments must use out
+   of band information in order to determine what goal a Source Text
+   should be treated as.  To this end some scripting environments have
+   chosen to adopt a new file extension of .mjs for determining the goal
+   of a given Source Text.
+
+
+
+
+
+
+
+
+Farias                  Expires February 16, 2018               [Page 2]
+
+Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+
+
+3.  Notational Conventions
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+   document are to be interpreted as described in [RFC2119].
+
+4.  Registration
+
+   The ECMAScript media types are to be updated to point to a non-vendor
+   specific standard undated specification of ECMAScript.  In addition,
+   a new file extension of .mjs is to be added to the list of file
+   extensions with the restriction that it must correspond to the Module
+   grammar of [ECMA-262].
+
+4.1.  text/javascript
+
+   Type name: text Subtype name: javascript Required parameters: none
+   Optional parameters: charset, see section 4.1 of [RFC4329].  Encoding
+   considerations: The same as the considerations in section 3.1 of
+   [RFC3023].
+
+   Security considerations: See section 5 of [RFC4329].
+   Interoperability considerations: See notes in various sections of
+   [RFC4329].  This media type does not specify the grammar of
+   [ECMA-262] used.
+
+   Published specification: [ECMA-262] Applications which use this media
+   type: Script interpreters as discussed in [RFC4329].
+
+   Additional information:
+
+   Magic number(s): n/a File extension(s): .js, .mjs Macintosh File Type
+   Code(s): TEXT
+
+   Person & email address to contact for further information: See
+   Author's Address section.
+
+   Intended usage: COMMON Restrictions on usage: The file extension .mjs
+   must be parsed using the Module grammar of [ECMA-262] Author: See
+   Author's Address section.  Change controller: The IESG.
+
+4.2.  application/javascript
+
+   Type name: application Subtype name: javascript Required parameters:
+   none Optional parameters: charset, see section 4.1 of [RFC4329].
+   Encoding considerations: The same as the considerations in section
+   3.2 of [RFC3023].
+
+
+
+
+Farias                  Expires February 16, 2018               [Page 3]
+
+Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+
+
+   Security considerations: See section 5 of [RFC4329].
+   Interoperability considerations: See notes in various sections of
+   [RFC4329].  This media type does not specify the grammar of
+   [ECMA-262] used.
+
+   Published specification: [ECMA-262] Applications which use this media
+   type: Script interpreters as discussed in [RFC4329].
+
+   Additional information:
+
+   Magic number(s): n/a File extension(s): .js, .mjs Macintosh File Type
+   Code(s): TEXT
+
+   Person & email address to contact for further information: See
+   Author's Address section.
+
+   Intended usage: COMMON Restrictions on usage: The file extension .mjs
+   must be parsed using the Module grammar of [ECMA-262] Author: See
+   Author's Address section.  Change controller: The IESG.
+
+5.  Normative References
+
+   [ECMA-262]
+              European Computer Manufacturers Association, "Standard
+              ECMA-262", August 2017, <http://www.ecma-
+              international.org/publications/standards/
+              Ecma-262-arch.htm>.
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <http://www.rfc-editor.org/info/rfc2119>.
+
+   [RFC3023]  Murata, M., St. Laurent, S., and D. Kohn, "XML Media
+              Types", RFC 3023, DOI 10.17487/RFC3023, January 2001,
+              <http://www.rfc-editor.org/info/rfc3023>.
+
+   [RFC4329]  Hoehrmann, B., "Scripting Media Types", RFC 4329,
+              DOI 10.17487/RFC4329, April 2006,
+              <http://www.rfc-editor.org/info/rfc4329>.
+
+   [TC39-MIME-ISSUE]
+              TC39, "Add `application/javascript+module` mime to remove
+              ambiguity5", August 2017, <https://web.archive.org/web/201
+              70814193912/https://github.com/tc39/ecma262/issues/322>.
+
+
+
+
+
+
+Farias                  Expires February 16, 2018               [Page 4]
+
+Internet-Draft     .mjs File Extension for EcmaScript        August 2017
+
+
+Appendix A.  Acknowledgements
+
+   Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James
+   Snell, Matthew A.  Miller, and Allen Wirfs-Brock for guiding me
+   through this process.
+
+Author's Address
+
+   Bradley Farias
+
+   Email: bradley.meck@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Farias                  Expires February 16, 2018               [Page 5]
