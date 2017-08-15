@@ -81,8 +81,10 @@ Table of Contents
    4.  Registration  . . . . . . . . . . . . . . . . . . . . . . . .   3
      4.1.  text/javascript . . . . . . . . . . . . . . . . . . . . .   3
      4.2.  application/javascript  . . . . . . . . . . . . . . . . .   4
-   5.  Normative References  . . . . . . . . . . . . . . . . . . . .   5
-   Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .   5
+   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     5.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
+     5.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+   Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .   6
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
@@ -104,8 +106,6 @@ Table of Contents
    is meant to be parsed in the Module or Script grammar goals based
    upon content alone.  Therefore, scripting environments must use out
    of band information in order to determine what goal a Source Text
-   should be treated as.  To this end some scripting environments have
-
 
 
 
@@ -114,6 +114,7 @@ Farias                  Expires February 16, 2018               [Page 2]
 Internet-Draft     .mjs File Extension for EcmaScript        August 2017
 
 
+   should be treated as.  To this end some scripting environments have
    chosen to adopt a new file extension of .mjs for determining the goal
    of a given Source Text.
 
@@ -161,7 +162,6 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
    Additional information:
 
       Magic number(s):  n/a
-
 
 
 
@@ -238,16 +238,14 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
 
    Change controller:  IESG <iesg@ietf.org>.
 
-5.  Normative References
+5.  References
+
+5.1.  Normative References
 
    [ECMA-262]
               Ecma International, "Standard ECMA-262: ECMAScript
               Language Specification", August 2017, <http://www.ecma-
               international.org/publications/standards/Ecma-262.htm>.
-
-   [HTML]     WHATWG, "HTML Living Standard", August 2017,
-              <https://html.spec.whatwg.org/multipage/
-              scripting.html#prepare-a-script>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -262,16 +260,18 @@ Internet-Draft     .mjs File Extension for EcmaScript        August 2017
               DOI 10.17487/RFC4329, April 2006,
               <http://www.rfc-editor.org/info/rfc4329>.
 
+5.2.  Informative References
+
+   [HTML]     WHATWG, "HTML Living Standard", August 2017,
+              <https://html.spec.whatwg.org/multipage/
+              scripting.html#prepare-a-script>.
+
    [TC39-MIME-ISSUE]
               TC39, "Add `application/javascript+module` mime to remove
               ambiguity5", August 2017, <https://web.archive.org/web/201
               70814193912/https://github.com/tc39/ecma262/issues/322>.
 
-Appendix A.  Acknowledgements
 
-   Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James
-   Snell, Matthew A.  Miller, Adam Roach, and Allen Wirfs-Brock for
-   guiding me through this process.
 
 
 
@@ -282,17 +282,17 @@ Farias                  Expires February 16, 2018               [Page 5]
 Internet-Draft     .mjs File Extension for EcmaScript        August 2017
 
 
+Appendix A.  Acknowledgements
+
+   Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James
+   Snell, Matthew A.  Miller, Adam Roach, and Allen Wirfs-Brock for
+   guiding me through this process.
+
 Author's Address
 
    Bradley Farias
 
    Email: bradley.meck@gmail.com
-
-
-
-
-
-
 
 
 
