@@ -3,10 +3,10 @@
 
 
 Network Working Group                                          B. Farias
-Internet-Draft                                           August 15, 2017
-Updates: 4329 (if approved)
-Intended status: Informational
-Expires: February 16, 2018
+Internet-Draft
+Updates: 4329 (if approved)                                    M. Miller
+Intended status: Informational                                   Mozilla
+Expires: February 16, 2018                               August 15, 2017
 
 
                      EMCAScript Media Types Updates
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Farias                  Expires February 16, 2018               [Page 1]
+Farias & Miller         Expires February 16, 2018               [Page 1]
 
 Internet-Draft       EMCAScript Media Types Updates          August 2017
 
@@ -85,7 +85,7 @@ Table of Contents
      5.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
      5.2.  Informative References  . . . . . . . . . . . . . . . . .   5
    Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .   6
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Farias                  Expires February 16, 2018               [Page 2]
+Farias & Miller         Expires February 16, 2018               [Page 2]
 
 Internet-Draft       EMCAScript Media Types Updates          August 2017
 
@@ -165,7 +165,7 @@ Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
 
-Farias                  Expires February 16, 2018               [Page 3]
+Farias & Miller         Expires February 16, 2018               [Page 3]
 
 Internet-Draft       EMCAScript Media Types Updates          August 2017
 
@@ -221,7 +221,7 @@ Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
 
-Farias                  Expires February 16, 2018               [Page 4]
+Farias & Miller         Expires February 16, 2018               [Page 4]
 
 Internet-Draft       EMCAScript Media Types Updates          August 2017
 
@@ -277,7 +277,7 @@ Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
 
-Farias                  Expires February 16, 2018               [Page 5]
+Farias & Miller         Expires February 16, 2018               [Page 5]
 
 Internet-Draft       EMCAScript Media Types Updates          August 2017
 
@@ -288,13 +288,17 @@ Appendix A.  Acknowledgements
    Snell, Matthew A.  Miller, Adam Roach, and Allen Wirfs-Brock for
    guiding me through this process.
 
-Author's Address
+Authors' Addresses
 
    Bradley Farias
 
    Email: bradley.meck@gmail.com
 
 
+   Matthew A. Miller
+   Mozilla
+
+   Email: linuxwolf+ietf@outer-planes.net
 
 
 
@@ -329,8 +333,4 @@ Author's Address
 
 
 
-
-
-
-
-Farias                  Expires February 16, 2018               [Page 6]
+Farias & Miller         Expires February 16, 2018               [Page 6]
