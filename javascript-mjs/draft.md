@@ -1,7 +1,7 @@
 ---
 title: EMCAScript Media Types Updates
 abbrev:
-docname: draft-bfarias-json-home-00
+docname: draft-bfarias-javascript-mjs-00
 date: 2017
 category: info
 
