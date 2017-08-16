@@ -84,7 +84,7 @@
 </section>
 <section anchor="registration" title="Registration">
 
-<t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"/>. Finally, the <xref target="HTML"/> specification is using text/javascript as the default media type of  when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.</t>
+<t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"/>. Finally, the <xref target="HTML"/> specification is using text/javascript as the default media type of ECMAScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.</t>
 
 <section anchor="textjavascript" title="text/javascript">
 
@@ -234,7 +234,7 @@
   </back>
 
 <!-- ##markdown-source:
-H4sIAJ9/k1kAA+1XYXPbuBH9zl+BcWbaZGpKsZ1rG/Xm5hRHubi14qulTK6T
+H4sIACOVk1kAA+1XYXPbuBH9zl+BcWbaZGpKsZ1rG/Xm5hRHubi14qulTK6T
 3ORAEiIRkwAPAK3oMvnvfbugZMrnXDL92Ek+OBQJLN7uvn27SNM0CTrUaiJm
 89PpIne6DWKuCi3FctMqL162hQzKJzLLnLqeJIXNjWywvnByFdJsJZ2WPn3n
 rUkr26j04cOEdkzE8cOjvyU5HkvrNhOhzcomiW7dJJFOyYmYXi6TtXVXpbNd
@@ -268,20 +268,20 @@ nk/Pz3cP2xWL5xcvz5/ePMX3CXaeXsznsxdP4+b59D/4j4v94sfl2cWL6flB
 TPdQrrhCmBC70uCQwmcKYcYUSVhbaC5kOsLBy4H6RLfubq4D+1EYC/rVWh15
 iMhjgEd8CkTZ98PfrsrQK+IWPxwL92kNmbzprId/nErteyhYH4FQMrkLYsn+
 Ji/W6BW8wKk4xZMprmkdIqlz6/ANRbGz1ZfRtnhgdSiJmOk1KFFvDnnxhw80
-N0Ip990Dys4z0/YlmpJC26CpErPhIMp0DuoFRIyzIW3u9wRZ+n9EMYxFetso
-aVamsJVmu4JJYCg4cRRZOduIiyeLi/PZckZOEsMuXjAH7t22BR4QGL6sJMmE
-PyfJosvC3uvhhkv1a6cdjgNqfAcBPa8BK9BpL9q+hm59RZOHdtGFS6HQVczM
-o9FRjPeuCwLlzOSWxy+oFslu3y7ZCpHWw+w2rvtLqFK2pk8GpulGxKYXKsdN
-KmzuMr0Y4Prm96j4mgTVdzLT9R+YoAGOgVwjp7bzW5v+tslto9wRorAq9otI
-rU1UrbtZSdpcANWP27Fsn4+M5s3rN69x3E/49zNurNObyQJ1Uum8YoEP+yii
-H33z2YmL86wu2ued7xvQfnSmd3Z0NjaXJeTBdE2m3H3/gK9qIMtY0sOzvfq9
-+Tx6hxGf6p9+ziVu68H6Ki5nwp7aQt0sX85+WiIYwInk/Snep0kwUOksH9T/
-cOfgvrDqHJXW73BS8qZ8+/qzF9N+b5+8Pv83RcY7Yl1RQey0Blk2gxVE11u6
-xqLGSnTTz3vp+KwWIc799fDzeE95qGbPna1rFTedzRY/iDffauXL77UKK7rW
-vfkuKsPdo+dtgRis+j/RieOvOvFVJ77qxGd1YnunznDf5Hlyml/hvlirolQ8
-qNNMKc0VR3LR4ZxK/MuBdUZiyJvW6j2G6Lmqjb6y14fIFq5OmLlp3q9kcyj+
-iXr1YmFUXdPXAD/XYjoSc02wYKGQjbi0Mq/ihDzFayNeabfy6RNn8ytOW9np
-It7eESjcissqUhf33Ryej5L/AuHMmaXIFgAA
+N0Ip990Dys4z0/YlmpJC26CpErPhIMq3Cn1dgZJxSiQz/e4gS/+PKIuxXG+b
+J/XKFLbSlFcwHQyFKQ4lK2cbcfFkcXE+W87IXeLaxQtmw73btsAIgsXXliSZ
+8OckWXRZ2Hs93HCpfu20w3FAje+gouc14Ad67kXbV9Otr2j3UDG6eimUvIo5
+ejQ6ipHf9UOgnJnc8iAG/SIB7hsnWyH6epjdRnh/CdXM1vTJwDTdjdj0QuW4
+U4XNXaYXA1zf/B4VX5ig/05muv4DEzTKMZBr5NR2fmvT3za5bZk7ahRWxc4R
+SbaJ+nU3P0mlC6D6cTug7TOT0bx5/eY1jvsJ/37G3XV6M2OgYiqdVyz1YR9F
+9KNvQzuZcZ51Rvu8830r2o/O9M7ezsbmsoRQmK7JlLvvH/ClDWQZS3p4tlfJ
+N59H7zDskxLQz7nEvT1YX8XlTNhTW6ib5cvZT0sEAziRvD/FmzVJB2qehYQ6
+IW4f3CFWnaPS+h1OSt6U72F/9mLa7+2T1+f/psh4R6wrKoid6iDLZrCC6HpL
+4VjeWJNuOnsvIp9VJcS5vyh+Hu8pj9fsubN1reKms9niB/HmW618+b1WYUUX
+vDffRWW4ewi9LRCDVf8nOnH8VSe+6sRXnfisTmxv1xlunjxZTvMr3BxrVZSK
+R3aaLqW54kguOpxTiX85sM5IjHvTWr3HOD1XtdFX9voQ2cIlCtM3Tf6VbA7F
+P1GvXiyMqmv6GuDnWkxHYq4JFiwUshGXVuZVnJWneG3EK+1WPn3ibH7FaSs7
+XcR7PAKF+3FZReri5pvD81HyXzUEms3SFgAA
 
 -->
 

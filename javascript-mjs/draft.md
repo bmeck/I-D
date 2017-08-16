@@ -87,7 +87,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 # Registration
 
-The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of {{ECMA-262}}. Finally, the {{HTML}} specification is using text/javascript as the default media type of  when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.
+The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of {{ECMA-262}}. Finally, the {{HTML}} specification is using text/javascript as the default media type of ECMAScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.
 
 
 ## text/javascript
