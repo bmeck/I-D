@@ -21,6 +21,11 @@ author:
     organization:
     email: bradley.meck@gmail.com
     uri:
+ -
+    ins: M. Miller
+    name: Matthew A. Miller
+    organization: Mozilla
+    email: linuxwolf+ietf@outer-planes.net
 
 normative:
   RFC4329:
