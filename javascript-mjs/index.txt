@@ -6,10 +6,10 @@ Network Working Group                                          B. Farias
 Internet-Draft
 Updates: 4329 (if approved)                                    M. Miller
 Intended status: Informational                                   Mozilla
-Expires: February 17, 2018                               August 16, 2017
+Expires: February 18, 2018                               August 17, 2017
 
 
-                     EMCAScript Media Types Updates
+                     ECMAScript Media Types Updates
                     draft-bfarias-javascript-mjs-00
 
 Abstract
@@ -46,16 +46,16 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on February 17, 2018.
+   This Internet-Draft will expire on February 18, 2018.
 
 
 
 
 
 
-Farias & Miller         Expires February 17, 2018               [Page 1]
+Farias & Miller         Expires February 18, 2018               [Page 1]
 
-Internet-Draft       EMCAScript Media Types Updates          August 2017
+Internet-Draft       ECMAScript Media Types Updates          August 2017
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Farias & Miller         Expires February 17, 2018               [Page 2]
+Farias & Miller         Expires February 18, 2018               [Page 2]
 
-Internet-Draft       EMCAScript Media Types Updates          August 2017
+Internet-Draft       ECMAScript Media Types Updates          August 2017
 
 
    should be treated as.  To this end some scripting environments have
@@ -165,9 +165,9 @@ Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
 
-Farias & Miller         Expires February 17, 2018               [Page 3]
+Farias & Miller         Expires February 18, 2018               [Page 3]
 
-Internet-Draft       EMCAScript Media Types Updates          August 2017
+Internet-Draft       ECMAScript Media Types Updates          August 2017
 
 
       File extension(s):  .js, .mjs
@@ -221,9 +221,9 @@ Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
 
-Farias & Miller         Expires February 17, 2018               [Page 4]
+Farias & Miller         Expires February 18, 2018               [Page 4]
 
-Internet-Draft       EMCAScript Media Types Updates          August 2017
+Internet-Draft       ECMAScript Media Types Updates          August 2017
 
 
    Person & email address to contact for further information:  See
@@ -277,9 +277,9 @@ Internet-Draft       EMCAScript Media Types Updates          August 2017
 
 
 
-Farias & Miller         Expires February 17, 2018               [Page 5]
+Farias & Miller         Expires February 18, 2018               [Page 5]
 
-Internet-Draft       EMCAScript Media Types Updates          August 2017
+Internet-Draft       ECMAScript Media Types Updates          August 2017
 
 
 Appendix A.  Acknowledgements
@@ -333,4 +333,4 @@ Authors' Addresses
 
 
 
-Farias & Miller         Expires February 17, 2018               [Page 6]
+Farias & Miller         Expires February 18, 2018               [Page 6]
