@@ -1,7 +1,7 @@
 ---
 title: ECMAScript Media Types Updates
 abbrev:
-docname: draft-bfarias-javascript-mjs-00
+docname: draft-bfarias-javascript-mjs-02
 date: 2017
 category: info
 
