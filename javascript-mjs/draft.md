@@ -1,7 +1,7 @@
 ---
 title: ECMAScript Media Types Updates
 abbrev:
-docname: draft-bfarias-javascript-mjs-00
+docname: draft-bfarias-javascript-mjs-01
 date: 2017
 category: info
 
@@ -62,11 +62,11 @@ This document proposes updates to the ECMAScript media types, superseding the ex
 
 --- note_Note_to_Readers
 
-The issues list for this draft can be found at <https://github.com/bfarias/I-D/labels/javascript-mjs>.
+The issues list for this draft can be found at <https://github.com/bmeck/I-D/labels/javascript-mjs>.
 
-The most recent (often, unpublished) draft is at <https://github.com/bfarias/I-D/tree/master/javascript-mjs>.
+The most recent (often, unpublished) draft is at <https://github.com/bmeck/I-D/tree/master/javascript-mjs>.
 
-Recent changes are listed at <https://github.com/bfarias/I-D/commits/master/javascript-mjs>.
+Recent changes are listed at <https://github.com/bmeck/I-D/commits/master/javascript-mjs>.
 
 --- middle
 
