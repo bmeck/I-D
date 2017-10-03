@@ -1,13 +1,13 @@
 ---
 title: ECMAScript Media Types Updates
 abbrev:
-docname: draft-bfarias-javascript-mjs-01
+docname: draft-ietf-dispatch-javascript-mjs-00
 date: 2017
 category: info
 
 ipr:
 area: ART
-workgroup:
+workgroup: DISPATCH
 keyword: Internet-Draft
 updates: 4329
 
