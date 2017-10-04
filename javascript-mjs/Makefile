@@ -4,8 +4,8 @@ xml2rfc ?= xml2rfc
 kramdown-rfc2629 ?= kramdown-rfc2629
 idnits ?= idnits
 
-title = bfarias-$(shell basename ${CURDIR})
-latest = $(shell (ls draft-${title}-*.xml || echo "draft-${title}-01.xml") | sort | tail -1)
+title = ietf-dispatch-$(shell basename ${CURDIR})
+latest = $(shell (ls draft-${title}-*.xml || echo "draft-${title}-00.xml") | sort | tail -1)
 version = $(shell basename ${latest} .xml | awk -F- '{print $$NF}')
 
 target = draft-$(title)-$(version)
@@ -19,11 +19,11 @@ latest: $(target).txt index.txt $(target).xml
 clean:
 	rm -f $(target).html $(target).txt
 
-next: 
+next:
 	cp $(target).xml $(next).xml
 	sed -i '' -e"s/$(target)/$(next)/" draft.md
 
-diff: 
+diff:
 	rfcdiff $(prev).txt $(target).txt
 
 idnits: $(target).txt
