@@ -112,6 +112,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
 
 Encoding considerations:
 
@@ -123,7 +124,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used.
+: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
 
 Published specification:
 
@@ -185,6 +186,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
 
 Encoding considerations:
 
@@ -196,7 +198,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used.
+: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
 
 Published specification:
 
