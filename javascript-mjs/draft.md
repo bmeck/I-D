@@ -154,7 +154,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -228,7 +228,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -302,7 +302,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -376,7 +376,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -450,7 +450,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -598,7 +598,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -672,7 +672,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -746,7 +746,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -822,7 +822,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -896,7 +896,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -970,7 +970,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -1044,7 +1044,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -1118,7 +1118,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -1192,7 +1192,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
@@ -1266,7 +1266,7 @@ Person & email address to contact for further information:
 
 Intended usage:
 
-: COMMON
+: OBSOLETE
 
 Restrictions on usage:
 
