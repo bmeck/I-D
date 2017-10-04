@@ -247,11 +247,11 @@ Change controller:
 
 Type name:
 
-: text
+: application
 
 Subtype name:
 
-: javascript
+: x-ecmascript
 
 Required parameters:
 
@@ -321,11 +321,11 @@ Change controller:
 
 Type name:
 
-: text
+: application
 
 Subtype name:
 
-: javascript
+: x-javascript
 
 Required parameters:
 
@@ -399,7 +399,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: ecmascript
 
 Required parameters:
 
@@ -547,7 +547,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: javascript1.0
 
 Required parameters:
 
@@ -621,7 +621,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: javascript1.1
 
 Required parameters:
 
@@ -695,7 +695,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: javascript1.2
 
 Required parameters:
 
@@ -771,7 +771,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: javascript1.3
 
 Required parameters:
 
@@ -845,7 +845,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: javascript1.4
 
 Required parameters:
 
@@ -919,7 +919,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: javascript1.5
 
 Required parameters:
 
@@ -993,7 +993,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: jscript
 
 Required parameters:
 
@@ -1067,7 +1067,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: livescript
 
 Required parameters:
 
@@ -1141,7 +1141,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: x-ecmascript
 
 Required parameters:
 
@@ -1215,7 +1215,7 @@ Type name:
 
 Subtype name:
 
-: javascript
+: x-javascript
 
 Required parameters:
 
