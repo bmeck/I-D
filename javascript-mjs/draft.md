@@ -115,7 +115,7 @@ Optional parameters:
 
 Encoding considerations:
 
-: The same as the considerations in section 3.1 of {{RFC3023}}.
+: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
 
 Security considerations:
 
@@ -188,7 +188,7 @@ Optional parameters:
 
 Encoding considerations:
 
-: The same as the considerations in section 3.2 of {{RFC3023}}.
+: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
 
 Security considerations:
 
