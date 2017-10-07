@@ -391,7 +391,7 @@ Change controller:
 : IESG \<iesg@ietf.org\>
 
 
-# text/ecmascript
+## text/ecmascript
 
 Type name:
 
@@ -539,7 +539,7 @@ Change controller:
 : IESG \<iesg@ietf.org\>
 
 
-# text/javascript1.0
+## text/javascript1.0
 
 Type name:
 
