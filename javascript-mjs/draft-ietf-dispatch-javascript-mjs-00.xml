@@ -92,6 +92,231 @@
 
 <t>The ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of <xref target="ECMA-262"/>. Finally, the <xref target="HTML"/> specification is using text/javascript as the default media type of ECMAScript when preparing script tags; therefore, text/javascript has been moved intended usage from OBSOLETE to COMMON.</t>
 
+<section anchor="appliactionecmascript" title="appliaction/ecmascript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  application</t>
+  <t hangText='Subtype name:'>
+  ecmascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="applicationjavascript" title="application/javascript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  application</t>
+  <t hangText='Subtype name:'>
+  javascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;.</t>
+</list></t>
+
+</section>
+<section anchor="applicationx-ecmascript" title="application/x-ecmascript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  application</t>
+  <t hangText='Subtype name:'>
+  x-ecmascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="applicationx-javascript" title="application/x-javascript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  application</t>
+  <t hangText='Subtype name:'>
+  x-javascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textecmascript" title="text/ecmascript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  ecmascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
 <section anchor="textjavascript" title="text/javascript">
 
 <t><list style="hanging">
@@ -103,12 +328,13 @@
   none</t>
   <t hangText='Optional parameters:'>
   charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
   <t hangText='Encoding considerations:'>
-  The same as the considerations in section 3.1 of <xref target="RFC3023"/>.</t>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
   <t hangText='Security considerations:'>
   See section 5 of <xref target="RFC4329"/>.</t>
   <t hangText='Interoperability considerations:'>
-  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used.</t>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
   <t hangText='Published specification:'>
   [[RFCXXXX]]</t>
   <t hangText='Applications which use this media type:'>
@@ -136,23 +362,24 @@
 </list></t>
 
 </section>
-<section anchor="applicationjavascript" title="application/javascript">
+<section anchor="textjavascript10" title="text/javascript1.0">
 
 <t><list style="hanging">
   <t hangText='Type name:'>
-  application</t>
+  text</t>
   <t hangText='Subtype name:'>
-  javascript</t>
+  javascript1.0</t>
   <t hangText='Required parameters:'>
   none</t>
   <t hangText='Optional parameters:'>
   charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
   <t hangText='Encoding considerations:'>
-  The same as the considerations in section 3.2 of <xref target="RFC3023"/>.</t>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
   <t hangText='Security considerations:'>
   See section 5 of <xref target="RFC4329"/>.</t>
   <t hangText='Interoperability considerations:'>
-  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used.</t>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
   <t hangText='Published specification:'>
   [[RFCXXXX]]</t>
   <t hangText='Applications which use this media type:'>
@@ -170,13 +397,418 @@
   <t hangText='Person &amp; email address to contact for further information:'>
   See Author’s Address section.</t>
   <t hangText='Intended usage:'>
-  COMMON</t>
+  OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
   <t hangText='Author:'>
   See Author’s Address section.</t>
   <t hangText='Change controller:'>
-  IESG &lt;iesg@ietf.org&gt;.</t>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textjavascript11" title="text/javascript1.1">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  javascript1.1</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textjavascript12" title="text/javascript1.2">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  javascript1.2</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textjavascript13" title="text/javascript1.3">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  javascript1.3</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textjavascript14" title="text/javascript1.4">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  javascript1.4</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textjavascript15" title="text/javascript1.5">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  javascript1.5</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textjscript" title="text/jscript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  jscript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textlivescript" title="text/livescript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  livescript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textx-ecmascript" title="text/x-ecmascript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  x-ecmascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
+</list></t>
+
+</section>
+<section anchor="textx-javascript" title="text/x-javascript">
+
+<t><list style="hanging">
+  <t hangText='Type name:'>
+  text</t>
+  <t hangText='Subtype name:'>
+  x-javascript</t>
+  <t hangText='Required parameters:'>
+  none</t>
+  <t hangText='Optional parameters:'>
+  charset, see section 4.1 of <xref target="RFC4329"/>.</t>
+  <t>goal, declares the goal symbol within <xref target="ECMA-262"/> to be used while parsing.</t>
+  <t hangText='Encoding considerations:'>
+  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  <t hangText='Security considerations:'>
+  See section 5 of <xref target="RFC4329"/>.</t>
+  <t hangText='Interoperability considerations:'>
+  See notes in various sections of <xref target="RFC4329"/>. This media type does not specify the grammar of <xref target="ECMA-262"/> used when missing the goal parameter.</t>
+  <t hangText='Published specification:'>
+  [[RFCXXXX]]</t>
+  <t hangText='Applications which use this media type:'>
+  Script interpreters as discussed in <xref target="RFC4329"/>.</t>
+  <t hangText='Additional information:'>
+        <list style="hanging">
+        <t hangText='Magic number(s):'>
+        n/a</t>
+        <t hangText='File extension(s):'>
+        .js, .mjs</t>
+        <t hangText='Macintosh File Type Code(s):'>
+        TEXT</t>
+      </list>
+  </t>
+  <t hangText='Person &amp; email address to contact for further information:'>
+  See Author’s Address section.</t>
+  <t hangText='Intended usage:'>
+  OBSOLETE</t>
+  <t hangText='Restrictions on usage:'>
+  The file extension .mjs must be parsed using the Module grammar of <xref target="ECMA-262"/></t>
+  <t hangText='Author:'>
+  See Author’s Address section.</t>
+  <t hangText='Change controller:'>
+  IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
 
 </section>
@@ -240,55 +872,63 @@
   </back>
 
 <!-- ##markdown-source:
-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
+H4sIABbf2FkAA+2cXXPTSBaG7/UrukLVLtRYMklgd/FOUZgkDNmNCRubYrZg
+imlLbbuJ1K3pluIYiv++7+mWbTkkDMnFJjPVXIBs9cf5eM9zWiZxHMdRJatc
+9NjB3qA/TI0sKzYQmeRstCiFZW/KjFfCRnw8NuKsF2U6VbzA+MzwSRVLUU3i
+TNqSV+ks/sjPuHVrxMVHGz98GNHkHtt5uP33KMXlVJtFj0k10VEkS9OLuBG8
+x/ono2iuzenU6Lrssf3D4ev+aO9ldCoWeDvrsUNVCaNEFe/TrlHtjeqxR7s7
+T6LIVlxlH3iuFfZSOiplj72rdNph+EuqTKiqw6w2lRETi6tF0VxURqa4leqi
+5M1FgcG4JVUulfglinhdzTQMZXHE8Ecq7Po8YS+4kdy6t3w4nhue5WLRvqHN
+lCv5iVdSq557RxRc5j029mOTQqSnz6b0XoKd3YjayM29BgkbyDwXprXXgFfV
+TMxZf+PexnZsoD/hFm9vC4/q87nOJz9Q1p7pGjGNy5wrYRPENoqUNgWmnwmy
+9uTFHkW3udzZ3l5e7j7c2e1FuCbFxDt/2/G+rQLFGmMgqbTgTeqcVTx3dxvB
+bQ0pbdxk64XaIjzialrzqWDDUqRyIlO3xJZbwauqX09rW3lxuXW5mYqqx2ZV
+Vfa63fl8nghYEMu2BQks65b1OG8WtF3bmGG7ZC/ZkcyqAvqESlfxwAYvR4Oj
+K119+7I/evtT2z0azo7kmVRTtvT0O423sB4m5ImF68l8xqv51Nld1HklSwSl
+66sMa5Ot+b3SiBKlFPPY3yB7R3u7T+LB4eAgPhwO3xxcaTqN28hLP8vYr7ws
+lyHqrsv6h0JndS5+ZYUsBKqLGVHoM8F4MZbTWlaLx9+bIPJxLsYJN+kMEXbu
+4XWXBj/8x/aj7Se7T7Z3usuhU1nN6jGVSbdKd590KbHIVFdaWwvb3d3ZiaIo
+jmPGx6hqFHMUjWbSMuCqppJmpdGltgBaww4yHkXUVlzhsFcR9sCGuhTG4h2k
+j8aJc2kp3vB4KmkLJx4GibCty2O1xZB0tlWJ82rj3fGC8cyty5W78sLEDpVQ
+FtdungssDaotFcGcG4VXNkFeN/xautOUawdltZRGm+NbiQ+P0pX48Ir+qvSH
+E8EzOEmhEsxHEpBAxsirym1DuGUpDB0LvFvDMF6xHy/Jyphg1j2M97s5H4vc
+djd7wdPE71JoLG9ESqbf1xN43GG1cvVoZyJ70OyIrX93H9BcdAtuUdyXbHbi
+90hnwAjcQnE418R3OEBdQFb26rUpkIXMwHCI7h4RzqAsUsrjRdmt1NaWUEto
+Tag3dAipTg2HDRiaNxRM2GG10mSzXnuZTVVKxT5/bhTx5csNRJo4x57z1LVk
+lUXRoQItoBaqG8fFXH4SZFGJvup2cGjgZmm+hQlLsMMGpecsExM0VRg/R+3p
+Ms7FmcjZVEP86MljnV8aDhcLbhIv/EJwRe4ji/fhJo1FyQuVCqYn7XJa4Vur
+BzQMAiAR0N4AgZXjHJqnzgB2Vq1q5mrBpiCSatsw1LXBDiOEiewQDpps1TnY
+WGcLN7s1Z8ahA4ENkEjIzpncThlZgx5sZeZMh4nSMJvq0r2k4xAieAHiX74g
+M4euPlDJa0coKXWeL9YbMolotO2mRVvWNaGsaCpqG90DwmJNRAeO8kg428yB
+yxW85TS2LoGqVCOEWMUdvlxocLTSRgCgKwwJdSaNVu5kxQrqCLV1rpNJY9Jf
+K1dkwkpoa2+oCXqlbDplZ7rOM/IAOOCuvMHIkfb4EljbanSqK4yZcfSudIa+
+oGg7nmn4ypnC2Woic9FCMixNUP0ux0urlq3BmUXia3TTFourI/C2OX2wPa0w
+xKnNAxFHXMo1NLQ1eDMcbXX8v+zVsbs+OfjPm8OTg326Hr7sHx2tLpYjhi+P
+3xztr6/8+xFm7h0PBgev9v3kQf+/+McV+/Hr0eHxq/7Rlk93G1euQpwgVqXh
+QgqfKYRjJ5HIsYVOhE6OcPCkRR/v1uVttbW+B2NGr0otvQ4Rea1ixCdDlG1z
+7FtVGfqEn2LbB8JNWQOT657a+XYqpW1MwXhvCCXT9T8M2Zxk2Rydwg0wwj82
+0FKupmXlRZ1qg3soitVaTRktiwertpGIhwgJSeSLjhv8+TOdGEHKTfdgZW2d
+0jYRTUmhaWAqx6mwFeULhT6fQZL+fEjLNLMrPrX/9Fj05XpxeaLXWGAqne8y
+JwdFYfLHkYnRBTt+Pjw+OhgdkLukteNXTg33mGs13IXIHdSWZ1I6ifhHmCjq
+sVZDiqJhPa427rbnnYjfammwOXzAfQjTujFQCzrwcdnU1oW7aP1gGj35CQBA
++Iw9SrZ9HlbdMcFQquAOQpmifzXNtdWVXO5dS231s0bFBML5jLRCBKXzeBQd
+qFS78x3gSHRvurIzanUPeZ3RWSgTpXBPqF5hmZxMkBO0M9fFx4tKNDiEgk6t
+l0rj2dphX9iUQpdpozG9MWYoUjxTVovLjBm2AvP4q7BE7skN7cjwscy/sQSd
+KZ21Z5CYru1yTXtxyWUHXyk108I3Mq/5hY/85eWyjDVJUlq7Ad9VIGD16+VZ
+crOQnLXv371/B3N+xp9f8GzfXyvQUhbTmetM1aaV3s+ma66oaKzDorRpbZvO
+uRm9/qVHEbfYgE/BNVUXY2Hu2wfu6RJq7nK6eLEBnvXt5COyT+CilwOewhRt
+Z364K6w9nYn18NHBzyMEA3YiuX/xHwEQ6aBvxz1q3ChR19AmtSESfGUnJbfv
+Hhj/alm/mdskt9HHmgluxhIJVLMrTEIHqjWG2sMFJDseO4iujyL1KsXfxigi
+3TzT/r7Fe+5pwPluNH1w4iYdHgx/Yu9/lMJOn9EnI/Qs+v5pC2VfnZqvh7L2
+vICygLKAsoCy/yPKniZfo+w8vum5bHNmwFnAWcBZwNktn8zO45uezTZnBpwF
+nAWcBZzdAs7c529XH8rodviULMArwCvA647C6+oj2BXwCievAK8Arz8avPz/
+9P1Z0bWdPLw2vdycALAAsACwPwLA/uynr+1k+wYI2w4ICwgLCAsIuxsI27kB
+wnYCwgLCAsICwu4Gwnbx/vUhthsgFiAWIBYgdjcg9ugGCHsUEBYQFhAWEHY3
+EPb4Bgh7HBAWEBYQFhB2iwi73s9ShB+kCNgK2ArYum1s5fJMXItc7QkBXgFe
+AV4BXrcFr2/9WuQV+Aq/DxkAFgAWAHZXAHbtn8IPvwEZABYAFgB2qwCjb9Qc
+8/TUfZtcPz1Vep6LbCrc1/TRN8pxdepiOayxz4z920B3iqsO6+fiXCzYQORK
+nuqzDvJlTukb9+jb/ma86LB/Qa+WDZXI887XX52MFTJesBPN05mv7T7eVuyt
+NBMbP0d9n7rETWuZ+e/uRKCMrqczL96GAEn0P2FQHWNLWwAA
 
 -->
 
