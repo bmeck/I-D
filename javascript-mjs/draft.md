@@ -112,7 +112,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -186,7 +186,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -260,7 +260,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -334,7 +334,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -408,7 +408,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -482,7 +482,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -556,7 +556,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -630,7 +630,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -704,7 +704,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -780,7 +780,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -854,7 +854,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -928,7 +928,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -1002,7 +1002,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -1076,7 +1076,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -1150,7 +1150,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -1224,7 +1224,7 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing.
+: goal, declares the goal symbol within {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 

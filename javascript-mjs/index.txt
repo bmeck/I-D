@@ -6,7 +6,7 @@ DISPATCH                                                       B. Farias
 Internet-Draft
 Updates: 4329 (if approved)                                    M. Miller
 Intended status: Informational                                   Mozilla
-Expires: May 3, 2018                                    October 30, 2017
+Expires: May 6, 2018                                    November 2, 2017
 
 
                      ECMAScript Media Types Updates
@@ -46,16 +46,16 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 3, 2018.
+   This Internet-Draft will expire on May 6, 2018.
 
 
 
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 1]
+Farias & Miller            Expires May 6, 2018                  [Page 1]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 2]
+Farias & Miller            Expires May 6, 2018                  [Page 2]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
 2.  Background
@@ -159,15 +159,15 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 3]
+Farias & Miller            Expires May 6, 2018                  [Page 3]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -216,14 +216,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 4]
+Farias & Miller            Expires May 6, 2018                  [Page 4]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -272,14 +272,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 5]
+Farias & Miller            Expires May 6, 2018                  [Page 5]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -328,14 +328,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 6]
+Farias & Miller            Expires May 6, 2018                  [Page 6]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -384,14 +384,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 7]
+Farias & Miller            Expires May 6, 2018                  [Page 7]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -440,14 +440,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 8]
+Farias & Miller            Expires May 6, 2018                  [Page 8]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -496,14 +496,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                  [Page 9]
+Farias & Miller            Expires May 6, 2018                  [Page 9]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -552,14 +552,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 10]
+Farias & Miller            Expires May 6, 2018                 [Page 10]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -608,14 +608,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 11]
+Farias & Miller            Expires May 6, 2018                 [Page 11]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -664,14 +664,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 12]
+Farias & Miller            Expires May 6, 2018                 [Page 12]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -720,14 +720,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 13]
+Farias & Miller            Expires May 6, 2018                 [Page 13]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -776,14 +776,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 14]
+Farias & Miller            Expires May 6, 2018                 [Page 14]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -832,14 +832,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 15]
+Farias & Miller            Expires May 6, 2018                 [Page 15]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -888,14 +888,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 16]
+Farias & Miller            Expires May 6, 2018                 [Page 16]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -944,14 +944,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 17]
+Farias & Miller            Expires May 6, 2018                 [Page 17]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -1000,14 +1000,14 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol within [ECMA-262] to be used while
-      parsing.
+      parsing.  This parameter is case insensitive.
 
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 18]
+Farias & Miller            Expires May 6, 2018                 [Page 18]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    Encoding considerations:  Encoding is host dependent with differences
@@ -1061,9 +1061,9 @@ Internet-Draft       ECMAScript Media Types Updates         October 2017
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 19]
+Farias & Miller            Expires May 6, 2018                 [Page 19]
 
-Internet-Draft       ECMAScript Media Types Updates         October 2017
+Internet-Draft       ECMAScript Media Types Updates        November 2017
 
 
    [RFC3023]  Murata, M., St. Laurent, S., and D. Kohn, "XML Media
@@ -1117,4 +1117,4 @@ Authors' Addresses
 
 
 
-Farias & Miller            Expires May 3, 2018                 [Page 20]
+Farias & Miller            Expires May 6, 2018                 [Page 20]
