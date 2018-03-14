@@ -1,7 +1,7 @@
 ---
 title: ECMAScript Media Types Updates
 abbrev:
-docname: draft-ietf-dispatch-javascript-mjs-01
+docname: draft-ietf-dispatch-javascript-mjs-02
 date: 2017
 category: info
 
@@ -142,7 +142,7 @@ Additional information:
 
   File extension(s):
 
-  : .js, .mjs
+  : .es, .mjs
 
   Macintosh File Type Code(s):
 
@@ -290,7 +290,7 @@ Additional information:
 
   File extension(s):
 
-  : .js, .mjs
+  : .es, .mjs
 
   Macintosh File Type Code(s):
 
@@ -438,7 +438,7 @@ Additional information:
 
   File extension(s):
 
-  : .js, .mjs
+  : .es, .mjs
 
   Macintosh File Type Code(s):
 
@@ -1180,7 +1180,7 @@ Additional information:
 
   File extension(s):
 
-  : .js, .mjs
+  : .es, .mjs
 
   Macintosh File Type Code(s):
 
