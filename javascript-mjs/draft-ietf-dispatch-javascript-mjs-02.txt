@@ -6,7 +6,7 @@ DISPATCH                                                       B. Farias
 Internet-Draft
 Updates: 4329 (if approved)                                    M. Miller
 Intended status: Informational                                   Mozilla
-Expires: September 15, 2018                               March 14, 2018
+Expires: November 9, 2018                                   May 08, 2018
 
 
                      ECMAScript Media Types Updates
@@ -23,13 +23,13 @@ Abstract
 Note to Readers
 
    The issues list for this draft can be found at
-   https://github.com/bmeck/I-D/labels/javascript-mjs.
+   https://github.com/bmeck/I-D/labels/javascript-mjs [1].
 
    The most recent (often, unpublished) draft is at
-   https://github.com/bmeck/I-D/tree/master/javascript-mjs.
+   https://github.com/bmeck/I-D/tree/master/javascript-mjs [2].
 
    Recent changes are listed at https://github.com/bmeck/I-
-   D/commits/master/javascript-mjs.
+   D/commits/master/javascript-mjs [3].
 
 Status of This Memo
 
@@ -39,23 +39,23 @@ Status of This Memo
    Internet-Drafts are working documents of the Internet Engineering
    Task Force (IETF).  Note that other groups may also distribute
    working documents as Internet-Drafts.  The list of current Internet-
-   Drafts is at http://datatracker.ietf.org/drafts/current/.
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
 
    Internet-Drafts are draft documents valid for a maximum of six months
    and may be updated, replaced, or obsoleted by other documents at any
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 15, 2018.
+   This Internet-Draft will expire on November 9, 2018.
 
 
 
 
 
 
-Farias & Miller        Expires September 15, 2018               [Page 1]
+Farias & Miller         Expires November 9, 2018                [Page 1]
 
-Internet-Draft       ECMAScript Media Types Updates           March 2018
+Internet-Draft       ECMAScript Media Types Updates             May 2018
 
 
 Copyright Notice
@@ -65,7 +65,7 @@ Copyright Notice
 
    This document is subject to BCP 78 and the IETF Trust's Legal
    Provisions Relating to IETF Documents
-   (http://trustee.ietf.org/license-info) in effect on the date of
+   (https://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
@@ -75,7 +75,7 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
    2.  Background  . . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Notational Conventions  . . . . . . . . . . . . . . . . . . .   3
    4.  Registration  . . . . . . . . . . . . . . . . . . . . . . . .   3
@@ -98,21 +98,27 @@ Table of Contents
    5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  19
      5.1.  Normative References  . . . . . . . . . . . . . . . . . .  19
      5.2.  Informative References  . . . . . . . . . . . . . . . . .  20
+     5.3.  URIs  . . . . . . . . . . . . . . . . . . . . . . . . . .  20
    Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .  20
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  20
+
+
+
+
+
+
+
+
+Farias & Miller         Expires November 9, 2018                [Page 2]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
 
 1.  Introduction
 
    This document updates the existing media types for the ECMAScript
    programming language.  It supersedes the media types registrations in
    [RFC4329] for "application/javascript" and "text/javascript".
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 2]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
 2.  Background
 
@@ -156,19 +162,19 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+
+Farias & Miller         Expires November 9, 2018                [Page 3]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 3]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -213,18 +219,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018                [Page 4]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 4]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -269,18 +275,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018                [Page 5]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 5]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -325,18 +331,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018                [Page 6]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 6]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -381,18 +387,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018                [Page 7]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 7]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -437,18 +443,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018                [Page 8]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 8]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -493,18 +499,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018                [Page 9]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 9]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -549,18 +555,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 10]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 10]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -605,18 +611,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 11]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 11]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -661,18 +667,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 12]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 12]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -717,18 +723,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 13]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 13]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -773,18 +779,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 14]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 14]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -829,18 +835,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 15]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 15]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -885,18 +891,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 16]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 16]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -941,18 +947,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 17]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 17]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -997,18 +1003,18 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Required parameters:  none
 
+
+
+Farias & Miller         Expires November 9, 2018               [Page 18]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    Optional parameters:  charset, see section 4.1 of [RFC4329].
 
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 18]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -1049,6 +1055,17 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
 5.1.  Normative References
 
+
+
+
+
+
+
+Farias & Miller         Expires November 9, 2018               [Page 19]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
+
+
    [ECMA-262]
               Ecma International, "Standard ECMA-262: ECMAScript
               Language Specification", August 2017, <http://www.ecma-
@@ -1056,23 +1073,16 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997, <https://www.rfc-
-              editor.org/info/rfc2119>.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 19]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/info/rfc2119>.
 
    [RFC3023]  Murata, M., St. Laurent, S., and D. Kohn, "XML Media
               Types", RFC 3023, DOI 10.17487/RFC3023, January 2001,
               <https://www.rfc-editor.org/info/rfc3023>.
 
    [RFC4329]  Hoehrmann, B., "Scripting Media Types", RFC 4329,
-              DOI 10.17487/RFC4329, April 2006, <https://www.rfc-
-              editor.org/info/rfc4329>.
+              DOI 10.17487/RFC4329, April 2006,
+              <https://www.rfc-editor.org/info/rfc4329>.
 
 5.2.  Informative References
 
@@ -1085,6 +1095,14 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
               ambiguity5", August 2017, <https://web.archive.org/web/201
               70814193912/https://github.com/tc39/ecma262/issues/322>.
 
+5.3.  URIs
+
+   [1] https://github.com/bmeck/I-D/labels/javascript-mjs
+
+   [2] https://github.com/bmeck/I-D/tree/master/javascript-mjs
+
+   [3] https://github.com/bmeck/I-D/commits/master/javascript-mjs
+
 Appendix A.  Acknowledgements
 
    Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James
@@ -1096,6 +1114,12 @@ Authors' Addresses
    Bradley Farias
 
    Email: bradley.meck@gmail.com
+
+
+
+Farias & Miller         Expires November 9, 2018               [Page 20]
+
+Internet-Draft       ECMAScript Media Types Updates             May 2018
 
 
    Matthew A. Miller
@@ -1117,4 +1141,36 @@ Authors' Addresses
 
 
 
-Farias & Miller        Expires September 15, 2018              [Page 20]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Farias & Miller         Expires November 9, 2018               [Page 21]
