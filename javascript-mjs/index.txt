@@ -6,7 +6,7 @@ DISPATCH                                                       B. Farias
 Internet-Draft
 Updates: 4329 (if approved)                                    M. Miller
 Intended status: Informational                                   Mozilla
-Expires: September 15, 2018                               March 14, 2018
+Expires: January 27, 2019                                  July 26, 2017
 
 
                      ECMAScript Media Types Updates
@@ -23,13 +23,13 @@ Abstract
 Note to Readers
 
    The issues list for this draft can be found at
-   https://github.com/bmeck/I-D/labels/javascript-mjs.
+   https://github.com/bmeck/I-D/labels/javascript-mjs [1].
 
    The most recent (often, unpublished) draft is at
-   https://github.com/bmeck/I-D/tree/master/javascript-mjs.
+   https://github.com/bmeck/I-D/tree/master/javascript-mjs [2].
 
    Recent changes are listed at https://github.com/bmeck/I-
-   D/commits/master/javascript-mjs.
+   D/commits/master/javascript-mjs [3].
 
 Status of This Memo
 
@@ -39,33 +39,33 @@ Status of This Memo
    Internet-Drafts are working documents of the Internet Engineering
    Task Force (IETF).  Note that other groups may also distribute
    working documents as Internet-Drafts.  The list of current Internet-
-   Drafts is at http://datatracker.ietf.org/drafts/current/.
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
 
    Internet-Drafts are draft documents valid for a maximum of six months
    and may be updated, replaced, or obsoleted by other documents at any
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 15, 2018.
+   This Internet-Draft will expire on January 27, 2019.
 
 
 
 
 
 
-Farias & Miller        Expires September 15, 2018               [Page 1]
+Farias & Miller         Expires January 27, 2019                [Page 1]
 
-Internet-Draft       ECMAScript Media Types Updates           March 2018
+Internet-Draft       ECMAScript Media Types Updates            July 2017
 
 
 Copyright Notice
 
-   Copyright (c) 2018 IETF Trust and the persons identified as the
+   Copyright (c) 2017 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
    Provisions Relating to IETF Documents
-   (http://trustee.ietf.org/license-info) in effect on the date of
+   (https://trustee.ietf.org/license-info) in effect on the date of
    publication of this document.  Please review these documents
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
@@ -75,44 +75,50 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
    2.  Background  . . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Notational Conventions  . . . . . . . . . . . . . . . . . . .   3
-   4.  Registration  . . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.1.  application/ecmascript  . . . . . . . . . . . . . . . . .   3
-     4.2.  application/javascript  . . . . . . . . . . . . . . . . .   4
-     4.3.  application/x-ecmascript  . . . . . . . . . . . . . . . .   5
-     4.4.  application/x-javascript  . . . . . . . . . . . . . . . .   6
-     4.5.  text/ecmascript . . . . . . . . . . . . . . . . . . . . .   7
-     4.6.  text/javascript . . . . . . . . . . . . . . . . . . . . .   8
-     4.7.  text/javascript1.0  . . . . . . . . . . . . . . . . . . .   9
-     4.8.  text/javascript1.1  . . . . . . . . . . . . . . . . . . .  10
-     4.9.  text/javascript1.2  . . . . . . . . . . . . . . . . . . .  11
-     4.10. text/javascript1.3  . . . . . . . . . . . . . . . . . . .  12
-     4.11. text/javascript1.4  . . . . . . . . . . . . . . . . . . .  13
-     4.12. text/javascript1.5  . . . . . . . . . . . . . . . . . . .  14
-     4.13. text/jscript  . . . . . . . . . . . . . . . . . . . . . .  15
-     4.14. text/livescript . . . . . . . . . . . . . . . . . . . . .  16
-     4.15. text/x-ecmascript . . . . . . . . . . . . . . . . . . . .  17
-     4.16. text/x-javascript . . . . . . . . . . . . . . . . . . . .  18
-   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  19
-     5.1.  Normative References  . . . . . . . . . . . . . . . . . .  19
+   4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
+     4.1.  Common Javascript Media Types . . . . . . . . . . . . . .   4
+       4.1.1.  text/javascript . . . . . . . . . . . . . . . . . . .   4
+     4.2.  Historic Javascript Media Types . . . . . . . . . . . . .   5
+       4.2.1.  application/ecmascript  . . . . . . . . . . . . . . .   5
+       4.2.2.  application/javascript  . . . . . . . . . . . . . . .   6
+       4.2.3.  application/x-ecmascript  . . . . . . . . . . . . . .   7
+       4.2.4.  application/x-javascript  . . . . . . . . . . . . . .   8
+       4.2.5.  text/ecmascript . . . . . . . . . . . . . . . . . . .   9
+       4.2.6.  text/javascript1.0  . . . . . . . . . . . . . . . . .  10
+       4.2.7.  text/javascript1.1  . . . . . . . . . . . . . . . . .  11
+       4.2.8.  text/javascript1.2  . . . . . . . . . . . . . . . . .  12
+       4.2.9.  text/javascript1.3  . . . . . . . . . . . . . . . . .  13
+       4.2.10. text/javascript1.4  . . . . . . . . . . . . . . . . .  14
+       4.2.11. text/javascript1.5  . . . . . . . . . . . . . . . . .  15
+       4.2.12. text/jscript  . . . . . . . . . . . . . . . . . . . .  16
+       4.2.13. text/livescript . . . . . . . . . . . . . . . . . . .  17
+       4.2.14. text/x-ecmascript . . . . . . . . . . . . . . . . . .  18
+       4.2.15. text/x-javascript . . . . . . . . . . . . . . . . . .  19
+   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  20
+     5.1.  Normative References  . . . . . . . . . . . . . . . . . .  20
      5.2.  Informative References  . . . . . . . . . . . . . . . . .  20
-   Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .  20
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  20
+     5.3.  URIs  . . . . . . . . . . . . . . . . . . . . . . . . . .  20
+   Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .  21
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  21
+
+
+
+
+
+
+Farias & Miller         Expires January 27, 2019                [Page 2]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
 
 1.  Introduction
 
    This document updates the existing media types for the ECMAScript
    programming language.  It supersedes the media types registrations in
    [RFC4329] for "application/javascript" and "text/javascript".
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 2]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
 2.  Background
 
@@ -137,299 +143,36 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
    document are to be interpreted as described in [RFC2119].
 
-4.  Registration
+4.  IANA Considerations
 
-   The ECMAScript media types are to be updated to point to a non-vendor
-   specific standard undated specification of ECMAScript.  In addition,
-   a new file extension of .mjs is to be added to the list of file
-   extensions with the restriction that it must correspond to the Module
-   grammar of [ECMA-262].  Finally, the [HTML] specification is using
-   text/javascript as the default media type of ECMAScript when
-   preparing script tags; therefore, text/javascript has been moved
-   intended usage from OBSOLETE to COMMON.
+   The media type registrations herein are divided into two major
+   categories: the sole media type "text/javascript" which is now in
+   common usage, and all of the media types that are obsolete.
 
-4.1.  application/ecmascript
-
-   Type name:  application
-
-   Subtype name:  ecmascript
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
+   For both categories, The ECMAScript media types are to be updated to
+   point to a non-vendor specific standard undated specification of
+   ECMAScript.  In addition, a new file extension of .mjs is to be added
+   to the list of file extensions with the restriction that it must
+   correspond to the Module grammar of [ECMA-262].  Finally, the [HTML]
+   specification is using "text/javascript" as the default media type of
+   ECMAScript when preparing script tags; therefore, "text/javascript"
+   has been moved intended usage from OBSOLETE to COMMON.
 
 
 
 
-Farias & Miller        Expires September 15, 2018               [Page 3]
+
+
+
+
+Farias & Miller         Expires January 27, 2019                [Page 3]
 
-Internet-Draft       ECMAScript Media Types Updates           March 2018
+Internet-Draft       ECMAScript Media Types Updates            July 2017
 
 
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
+4.1.  Common Javascript Media Types
 
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .es, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.2.  application/javascript
-
-   Type name:  application
-
-   Subtype name:  javascript
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 4]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>.
-
-4.3.  application/x-ecmascript
-
-   Type name:  application
-
-   Subtype name:  x-ecmascript
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 5]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .es, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.4.  application/x-javascript
-
-   Type name:  application
-
-   Subtype name:  x-javascript
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 6]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.5.  text/ecmascript
-
-   Type name:  text
-
-   Subtype name:  ecmascript
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 7]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .es, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.6.  text/javascript
+4.1.1.  text/javascript
 
    Type name:  text
 
@@ -442,13 +185,6 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 8]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -483,13 +219,26 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Author:  See Author's Address section.
 
+
+
+Farias & Miller         Expires January 27, 2019                [Page 4]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
    Change controller:  IESG <iesg@ietf.org>
 
-4.7.  text/javascript1.0
+4.2.  Historic Javascript Media Types
 
-   Type name:  text
+   The following media types are added or updated for historical
+   purposes.  All herein have an intended usage of OBSOLETE, and are not
+   expected to be in use with modern implementations.
 
-   Subtype name:  javascript1.0
+4.2.1.  application/ecmascript
+
+   Type name:  application
+
+   Subtype name:  ecmascript
 
    Required parameters:  none
 
@@ -498,461 +247,6 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018               [Page 9]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.8.  text/javascript1.1
-
-   Type name:  text
-
-   Subtype name:  javascript1.1
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 10]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.9.  text/javascript1.2
-
-   Type name:  text
-
-   Subtype name:  javascript1.2
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 11]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.10.  text/javascript1.3
-
-   Type name:  text
-
-   Subtype name:  javascript1.3
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 12]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.11.  text/javascript1.4
-
-   Type name:  text
-
-   Subtype name:  javascript1.4
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 13]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.12.  text/javascript1.5
-
-   Type name:  text
-
-   Subtype name:  javascript1.5
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 14]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.13.  text/jscript
-
-   Type name:  text
-
-   Subtype name:  jscript
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 15]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.14.  text/livescript
-
-   Type name:  text
-
-   Subtype name:  livescript
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 16]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
-
-   Encoding considerations:  Encoding is host dependent with differences
-      in byte order marks, the charset parameter, and text
-      preprocessing.
-
-   Security considerations:  See section 5 of [RFC4329].
-
-   Interoperability considerations:  See notes in various sections of
-      [RFC4329].  This media type does not specify the grammar of
-      [ECMA-262] used when missing the goal parameter.
-
-   Published specification:  [[RFCXXXX]]
-
-   Applications which use this media type:  Script interpreters as
-      discussed in [RFC4329].
-
-   Additional information:
-
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-   Person & email address to contact for further information:  See
-      Author's Address section.
-
-   Intended usage:  OBSOLETE
-
-   Restrictions on usage:  The file extension .mjs must be parsed using
-      the Module grammar of [ECMA-262]
-
-   Author:  See Author's Address section.
-
-   Change controller:  IESG <iesg@ietf.org>
-
-4.15.  text/x-ecmascript
-
-   Type name:  text
-
-   Subtype name:  x-ecmascript
-
-   Required parameters:  none
-
-   Optional parameters:  charset, see section 4.1 of [RFC4329].
-
-      goal, declares the goal symbol in the Syntactic Grammars of
-      [ECMA-262] to be used while parsing.  This parameter is case
-      insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 17]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -980,6 +274,14 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
    Person & email address to contact for further information:  See
       Author's Address section.
 
+
+
+
+Farias & Miller         Expires January 27, 2019                [Page 5]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  The file extension .mjs must be parsed using
@@ -989,11 +291,11 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    Change controller:  IESG <iesg@ietf.org>
 
-4.16.  text/x-javascript
+4.2.2.  application/javascript
 
-   Type name:  text
+   Type name:  application
 
-   Subtype name:  x-javascript
+   Subtype name:  javascript
 
    Required parameters:  none
 
@@ -1002,13 +304,6 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
       goal, declares the goal symbol in the Syntactic Grammars of
       [ECMA-262] to be used while parsing.  This parameter is case
       insensitive.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 18]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
 
    Encoding considerations:  Encoding is host dependent with differences
       in byte order marks, the charset parameter, and text
@@ -1036,6 +331,741 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
    Person & email address to contact for further information:  See
       Author's Address section.
 
+
+
+Farias & Miller         Expires January 27, 2019                [Page 6]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>.
+
+4.2.3.  application/x-ecmascript
+
+   Type name:  application
+
+   Subtype name:  x-ecmascript
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .es, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019                [Page 7]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.4.  application/x-javascript
+
+   Type name:  application
+
+   Subtype name:  x-javascript
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019                [Page 8]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.5.  text/ecmascript
+
+   Type name:  text
+
+   Subtype name:  ecmascript
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .es, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019                [Page 9]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.6.  text/javascript1.0
+
+   Type name:  text
+
+   Subtype name:  javascript1.0
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 10]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.7.  text/javascript1.1
+
+   Type name:  text
+
+   Subtype name:  javascript1.1
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 11]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.8.  text/javascript1.2
+
+   Type name:  text
+
+   Subtype name:  javascript1.2
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 12]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.9.  text/javascript1.3
+
+   Type name:  text
+
+   Subtype name:  javascript1.3
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 13]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.10.  text/javascript1.4
+
+   Type name:  text
+
+   Subtype name:  javascript1.4
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 14]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.11.  text/javascript1.5
+
+   Type name:  text
+
+   Subtype name:  javascript1.5
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 15]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.12.  text/jscript
+
+   Type name:  text
+
+   Subtype name:  jscript
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 16]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.13.  text/livescript
+
+   Type name:  text
+
+   Subtype name:  livescript
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 17]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.14.  text/x-ecmascript
+
+   Type name:  text
+
+   Subtype name:  x-ecmascript
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .es, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 18]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   Intended usage:  OBSOLETE
+
+   Restrictions on usage:  The file extension .mjs must be parsed using
+      the Module grammar of [ECMA-262]
+
+   Author:  See Author's Address section.
+
+   Change controller:  IESG <iesg@ietf.org>
+
+4.2.15.  text/x-javascript
+
+   Type name:  text
+
+   Subtype name:  x-javascript
+
+   Required parameters:  none
+
+   Optional parameters:  charset, see section 4.1 of [RFC4329].
+
+      goal, declares the goal symbol in the Syntactic Grammars of
+      [ECMA-262] to be used while parsing.  This parameter is case
+      insensitive.
+
+   Encoding considerations:  Encoding is host dependent with differences
+      in byte order marks, the charset parameter, and text
+      preprocessing.
+
+   Security considerations:  See section 5 of [RFC4329].
+
+   Interoperability considerations:  See notes in various sections of
+      [RFC4329].  This media type does not specify the grammar of
+      [ECMA-262] used when missing the goal parameter.
+
+   Published specification:  [[RFCXXXX]]
+
+   Applications which use this media type:  Script interpreters as
+      discussed in [RFC4329].
+
+   Additional information:
+
+      Magic number(s):  n/a
+
+      File extension(s):  .js, .mjs
+
+      Macintosh File Type Code(s):  TEXT
+
+   Person & email address to contact for further information:  See
+      Author's Address section.
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 19]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  The file extension .mjs must be parsed using
@@ -1056,23 +1086,16 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997, <https://www.rfc-
-              editor.org/info/rfc2119>.
-
-
-
-Farias & Miller        Expires September 15, 2018              [Page 19]
-
-Internet-Draft       ECMAScript Media Types Updates           March 2018
-
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/info/rfc2119>.
 
    [RFC3023]  Murata, M., St. Laurent, S., and D. Kohn, "XML Media
               Types", RFC 3023, DOI 10.17487/RFC3023, January 2001,
               <https://www.rfc-editor.org/info/rfc3023>.
 
    [RFC4329]  Hoehrmann, B., "Scripting Media Types", RFC 4329,
-              DOI 10.17487/RFC4329, April 2006, <https://www.rfc-
-              editor.org/info/rfc4329>.
+              DOI 10.17487/RFC4329, April 2006,
+              <https://www.rfc-editor.org/info/rfc4329>.
 
 5.2.  Informative References
 
@@ -1084,6 +1107,22 @@ Internet-Draft       ECMAScript Media Types Updates           March 2018
               TC39, "Add `application/javascript+module` mime to remove
               ambiguity5", August 2017, <https://web.archive.org/web/201
               70814193912/https://github.com/tc39/ecma262/issues/322>.
+
+5.3.  URIs
+
+   [1] https://github.com/bmeck/I-D/labels/javascript-mjs
+
+   [2] https://github.com/bmeck/I-D/tree/master/javascript-mjs
+
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 20]
+
+Internet-Draft       ECMAScript Media Types Updates            July 2017
+
+
+   [3] https://github.com/bmeck/I-D/commits/master/javascript-mjs
 
 Appendix A.  Acknowledgements
 
@@ -1117,4 +1156,21 @@ Authors' Addresses
 
 
 
-Farias & Miller        Expires September 15, 2018              [Page 20]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Farias & Miller         Expires January 27, 2019               [Page 21]
