@@ -39,7 +39,6 @@ author:
 
 normative:
   RFC4329:
-  RFC2119:
   RFC3023:
 
   ECMA-262:
@@ -91,13 +90,6 @@ This document updates the existing media types for the ECMAScript programming la
 In order to formalize support for modular programs {{ECMA-262}} now defines two top-level goal symbols for the ECMAScript grammar. This means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
 
 It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments must use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt a new file extension of .mjs for determining the goal of a given Source Text.
-
-
-# Notational Conventions
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
-"RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in
-{{RFC2119}}.
 
 
 # IANA Considerations
