@@ -16,16 +16,26 @@ pi: [toc, tocindent, sortrefs, symrefs, strict, compact, comments, inline]
 
 author:
  -
-    ins: B. Farias
-    name: Bradley Farias
-    organization:
-    email: bradley.meck@gmail.com
-    uri:
+    ins: M. Borins
+    name: Myles Borins
+    organization: Google
+    email: mylesborins@google.com
+ -
+    ins: M. Bynens
+    name: Mathias Bynens
+    organization: Google
+    email: mths@google.com
  -
     ins: M. Miller
     name: Matthew A. Miller
     organization: Mozilla
     email: linuxwolf+ietf@outer-planes.net
+ -
+    ins: B. Farias
+    name: Bradley Farias
+    organization:
+    email: bradley.meck@gmail.com
+    uri:
 
 normative:
   RFC4329:
