@@ -1292,4 +1292,4 @@ Change controller:
 
 # Acknowledgements
 
-Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James Snell, Matthew A. Miller, Adam Roach, and Allen Wirfs-Brock for guiding me through this process.
+Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James Snell, Adam Roach, and Allen Wirfs-Brock for guiding me through this process.
