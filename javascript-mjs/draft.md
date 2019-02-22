@@ -241,7 +241,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -315,7 +315,8 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+
 
 Author:
 
@@ -389,7 +390,8 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+
 
 Author:
 
@@ -463,7 +465,8 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+
 
 Author:
 
@@ -537,7 +540,8 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+
 
 Author:
 
@@ -611,7 +615,8 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+
 
 Author:
 
@@ -685,7 +690,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -759,7 +764,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -835,7 +840,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -909,7 +914,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -983,7 +988,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
