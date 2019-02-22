@@ -14,7 +14,7 @@ next = draft-$(title)-$(shell printf "%.2d" `echo ${version}+1 | bc`)
 
 .PHONY: latest clean next diff idnits update
 
-latest: $(target).txt index.txt $(target).xml
+latest: $(target).html $(target).txt index.txt $(target).xml
 
 clean:
 	rm -f $(target).html $(target).txt
@@ -34,6 +34,9 @@ idnits: $(target).txt
 
 %.txt: %.xml
 	$(xml2rfc) $< $@
+
+%.html: %.xml
+	$(xml2rfc) --html $< $@
 
 index.txt: $(target).txt
 	cp $< $@
