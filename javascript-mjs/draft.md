@@ -2,7 +2,6 @@
 title: ECMAScript Media Types Updates
 abbrev:
 docname: draft-ietf-dispatch-javascript-mjs-02
-date: 2017
 category: info
 
 ipr:
@@ -35,11 +34,9 @@ author:
     name: Bradley Farias
     organization:
     email: bradley.meck@gmail.com
-    uri:
 
 normative:
   RFC4329:
-  RFC3023:
 
   ECMA-262:
     author:
