@@ -43,7 +43,7 @@ normative:
       org: Ecma International
     title: "Standard ECMA-262: ECMAScript Language Specification"
     date: August 2017
-    target: http://www.ecma-international.org/publications/standards/Ecma-262.htm
+    target: https://ecma-international.org/publications/standards/Ecma-262.htm
 
 informative:
 
@@ -57,7 +57,7 @@ informative:
   TC39-MIME-ISSUE:
     author:
       org: TC39
-    title: "Add `application/javascript+module` mime to remove ambiguity5"
+    title: "Add `application/javascript+module` mime to remove ambiguity"
     date: August 2017
     target: https://web.archive.org/web/20170814193912/https://github.com/tc39/ecma262/issues/322
 
@@ -114,7 +114,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -126,7 +125,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -192,7 +191,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -204,7 +202,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -238,7 +236,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -266,7 +264,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -278,7 +275,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -312,7 +309,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 
 Author:
@@ -341,7 +338,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -353,7 +349,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -387,7 +383,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 
 Author:
@@ -416,7 +412,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -428,7 +423,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -462,7 +457,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 
 Author:
@@ -491,7 +486,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -503,7 +497,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -537,7 +531,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 
 Author:
@@ -566,7 +560,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -578,7 +571,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -612,7 +605,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 
 Author:
@@ -641,7 +634,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -653,7 +645,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -687,7 +679,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -715,7 +707,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -727,7 +718,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -761,7 +752,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -791,7 +782,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -803,7 +793,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -837,7 +827,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -865,7 +855,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -877,7 +866,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -911,7 +900,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -939,7 +928,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -951,7 +939,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -985,7 +973,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: This media type is obsolete; current implementations should use text/javascript as the only javascript/ECMAscript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The file extension .mjs must be parsed using the Module grammar of {{ECMA-262}}
 
 Author:
 
@@ -1013,7 +1001,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -1025,7 +1012,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -1087,7 +1074,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -1099,7 +1085,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -1161,7 +1147,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -1173,7 +1158,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -1235,7 +1220,6 @@ Required parameters:
 Optional parameters:
 
 : charset, see section 4.1 of {{RFC4329}}.
-: goal, declares the goal symbol in the Syntactic Grammars of {{ECMA-262}} to be used while parsing. This parameter is case insensitive.
 
 Encoding considerations:
 
@@ -1247,7 +1231,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}. This media type does not specify the grammar of {{ECMA-262}} used when missing the goal parameter.
+: See notes in various sections of {{RFC4329}}.
 
 Published specification:
 
@@ -1296,4 +1280,4 @@ Change controller:
 
 # Acknowledgements
 
-Thanks to Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James Snell, Adam Roach, and Allen Wirfs-Brock for guiding me through this process.
+The authors would like to thank Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James Snell, Adam Roach, and Allen Wirfs-Brock for their guidance throughout this process.
