@@ -66,14 +66,6 @@ informative:
 
 This document proposes updates to the ECMAScript media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document updates RFC4329, "Scripting Media Types".
 
---- note_Note_to_Readers
-
-The issues list for this draft can be found at <https://github.com/bmeck/I-D/labels/javascript-mjs>.
-
-The most recent (often, unpublished) draft is at <https://github.com/bmeck/I-D/tree/master/javascript-mjs>.
-
-Recent changes are listed at <https://github.com/bmeck/I-D/commits/master/javascript-mjs>.
-
 --- middle
 
 
