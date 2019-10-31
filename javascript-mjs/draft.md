@@ -1,7 +1,7 @@
 ---
 title: ECMAScript Media Types Updates
 abbrev:
-docname: draft-ietf-dispatch-javascript-mjs-04
+docname: draft-ietf-dispatch-javascript-mjs-05
 category: info
 
 ipr:
