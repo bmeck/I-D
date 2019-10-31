@@ -1,7 +1,7 @@
 ---
 title: ECMAScript Media Types Updates
 abbrev:
-docname: draft-ietf-dispatch-javascript-mjs-05
+docname: draft-ietf-dispatch-javascript-mjs-04
 category: info
 
 ipr:
@@ -54,6 +54,35 @@ informative:
     date: August 2017
     target: https://html.spec.whatwg.org/multipage/scripting.html#prepare-a-script
 
+  SPECTRE:
+    author:
+      -
+        name: Paul Kocher
+      -
+        name: Anders Fogh
+      -
+        name: Daniel Gerkin
+      -
+        name: Daniel Gruss
+      -
+        name: Werner Haas
+      -
+        name: Mike Hamburg
+      -
+        name: Moritz Lipp
+      -
+        name: Stefan Mangard
+      -
+        name: Thomas Prescher
+      -
+        name: Michael Schwarz
+      -
+        name: Yuval Yarom
+
+    title: "Spectre Attacks: Exploiting Speculative Execution"
+    date: January 2018
+    target: https://arxiv.org/abs/1801.01203
+
   TC39-MIME-ISSUE:
     author:
       org: TC39
@@ -73,7 +102,6 @@ This document proposes updates to the ECMAScript media types, superseding the ex
 
 This document updates the existing media types for the ECMAScript programming language. It supersedes the media types registrations in {{RFC4329}} for "application/javascript" and "text/javascript".
 
-
 # Background
 
 In order to formalize support for modular programs, {{ECMA-262}} (starting with 6th Edition) defines two top-level goal symbols (or roots to the abstract syntax tree) for the ECMAScript grammar: Module and Script. The Script goal represents the more stand-alone structure where the code executes in the global scope, while the Module goal represents the module system built into ECMAScript starting with 6th Edition.
@@ -81,6 +109,14 @@ In order to formalize support for modular programs, {{ECMA-262}} (starting with 
 This separation means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
 
 It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments must use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt a new file extension of .mjs for determining the goal of a given Source Text.
+
+# Security Considerations
+
+Module scripts in ECMAScript can request the fetching and processing of additional scripts, called importing.  Implementations that support modules need to ensure these scripts are processed the same as scripts processed directly.  Further, there may be additional privacy and security concerns depending on the location(s) the original script and its imported modules are obtained from.  For instance, a scripted obtained from "host-a.example" could request to import a script from "host-b.example", which could expose information about the executing environment (e.g., IP address) to "host-b.example".
+
+With the addition of SharedArrayBuffer objects in ECMAScript version 8, it may be possible to implement a high-resolution timer which could lead to certain types of timing and side-channel attacks (e.g., {{SPECTRE}}).  Implementations may wish to take steps to mitigate this concern, such as disabling or removing support for SharedArrayBuffer objects, or take additional steps to ensure access to this shared memory is only accessible between execution contexts that have some form of mutual trust.
+
+All other security considerations from {{RFC4329}} still apply.
 
 # IANA Considerations
 
