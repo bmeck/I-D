@@ -109,7 +109,7 @@ informative:
 
 --- abstract
 
-This document updates the ECMAScript media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document obsoletes RFC4329, "Scripting Media Types".
+This document updates the ECMAScript media types, replacing the existing registrations for "application/javascript" and "text/javascript" with information and requirements aligned with implementation experiences.  This document obsoletes RFC4329, "Scripting Media Types".
 
 --- middle
 
@@ -117,7 +117,7 @@ This document updates the ECMAScript media types, superseding the existing regis
 
 This memo describes media types for the JavaScript and ECMAScript programming languages.  Refer to "Brief History" and "Overview" in {{ECMA-262}} for background information on these languages.  This document updates the descriptions and registrations for these media types to reflect existing usage on the Internet.
 
-This document replaces the media types registrations in {{RFC4329}}, osboleting it.
+This document replaces the media types registrations in {{RFC4329}}, osboleting that document.
 
 ## Terminology
 
