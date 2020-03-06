@@ -251,31 +251,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: charset, see section 4.1 of \[\[RFCXXXX]].
+: charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -293,7 +293,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -305,7 +305,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -328,31 +328,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: charset, see section 4.1 of \[\[RFCXXXX]].
+: charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -370,7 +370,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -383,7 +383,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -402,31 +402,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: charset, see section 4.1 of \[\[RFCXXXX]].
+: charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: charset, see section 4.1 of \[\[RFCXXXX]].
+: charset, see section 4.1 of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -444,7 +444,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -457,7 +457,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -476,31 +476,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -518,7 +518,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -531,7 +531,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -550,31 +550,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -592,7 +592,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -605,7 +605,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -624,31 +624,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -666,7 +666,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -679,7 +679,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -698,31 +698,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -740,7 +740,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -753,7 +753,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -772,31 +772,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -814,7 +814,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -826,7 +826,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -845,31 +845,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -887,7 +887,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -899,7 +899,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -920,31 +920,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -962,7 +962,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -974,7 +974,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -993,31 +993,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -1035,7 +1035,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -1047,7 +1047,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -1066,31 +1066,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -1108,7 +1108,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -1120,7 +1120,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -1139,31 +1139,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -1181,7 +1181,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -1193,7 +1193,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -1212,31 +1212,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -1254,7 +1254,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -1266,7 +1266,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -1285,31 +1285,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -1327,7 +1327,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -1339,7 +1339,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -1358,31 +1358,31 @@ Subtype name:
 
 Required parameters:
 
-: none
+: N/A
 
 Optional parameters:
 
-: : charset, see section 4.1 of \[\[RFCXXXX]].
+: : charset, see section 4.1 of \[this document].
 
 Encoding considerations:
 
-: Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.
+: Binary
 
 Security considerations:
 
-: See section 5 of \[\[RFCXXXX]]..
+: See section 5 of \[this document]..
 
 Interoperability considerations:
 
-: See various sections of \[\[RFCXXXX]].
+: See various sections of \[this document].
 
 Published specification:
 
-: \[\[RFCXXXX]]
+: \[this document]
 
 Applications which use this media type:
 
-: Script interpreters as discussed in \[\[RFCXXXX]].
+: Script interpreters as discussed in \[this document].
 
 Additional information:
 
@@ -1400,7 +1400,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Intended usage:
 
@@ -1412,7 +1412,7 @@ Restrictions on usage:
 
 Author:
 
-: See Author's Address section.
+: See Author's Address section of \[this document].
 
 Change controller:
 
@@ -1423,7 +1423,7 @@ Change controller:
 
 # Acknowledgements
 
-This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  The authors would like to thank Adam Roach, Anna van Kesteren, Allen Wirfs-Brock, Alexey Melnikov, James Snell, Mark Nottingham, and Suresh Krishnan for their guidance throughout this process.
+This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  The authors would like to thank Adam Roach, Anna van Kesteren, Allen Wirfs-Brock, Alexey Melnikov, James Snell, Mark Nottingham, Murray Kucherawy, and Suresh Krishnan for their guidance and feedback throughout this process.
 
 # Changes from RFC 4329
 
