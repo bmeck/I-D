@@ -65,7 +65,7 @@
     <abstract>
 
 
-<t>This document updates the ECMAScript media types, superseding the existing registrations for “application/javascript” and “text/javascript” by adding an additional extension and removing usage warnings.  This document obsoletes RFC4329, “Scripting Media Types”.</t>
+<t>This document updates the ECMAScript media types, replacing the existing registrations for “application/javascript” and “text/javascript” with information and requirements aligned with implementation experiences.  This document obsoletes RFC4329, “Scripting Media Types”.</t>
 
 
 
@@ -81,7 +81,7 @@
 
 <t>This memo describes media types for the JavaScript and ECMAScript programming languages.  Refer to “Brief History” and “Overview” in <xref target="ECMA-262"/> for background information on these languages.  This document updates the descriptions and registrations for these media types to reflect existing usage on the Internet.</t>
 
-<t>This document replaces the media types registrations in <xref target="RFC4329"/>, osboleting it.</t>
+<t>This document replaces the media types registrations in <xref target="RFC4329"/>, osboleting that document.</t>
 
 <section anchor="terminology" title="Terminology">
 
@@ -220,19 +220,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   javascript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  charset, see section 4.1 of [[RFCXXXX]].</t>
+  charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -244,13 +244,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   COMMON</t>
   <t hangText='Restrictions on usage:'>
   The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -269,19 +269,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   ecmascript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  charset, see section 4.1 of [[RFCXXXX]].</t>
+  charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -293,13 +293,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -313,19 +313,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   javascript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  charset, see section 4.1 of [[RFCXXXX]].</t>
+  charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  charset, see section 4.1 of [[RFCXXXX]].</t>
+  charset, see section 4.1 of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -337,13 +337,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;.</t>
 </list></t>
@@ -357,19 +357,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   x-ecmascript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -381,13 +381,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -401,19 +401,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   x-javascript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -425,13 +425,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -445,19 +445,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   ecmascript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -469,13 +469,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -489,19 +489,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   javascript1.0</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -513,13 +513,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -533,19 +533,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   javascript1.1</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -557,13 +557,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -577,19 +577,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   javascript1.2</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -601,13 +601,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -621,19 +621,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   javascript1.3</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -645,13 +645,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -665,19 +665,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   javascript1.4</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -689,13 +689,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -709,19 +709,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   javascript1.5</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -733,13 +733,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -753,19 +753,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   jscript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -777,13 +777,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -797,19 +797,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   livescript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -821,13 +821,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -841,19 +841,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   x-ecmascript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -865,13 +865,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -885,19 +885,19 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   <t hangText='Subtype name:'>
   x-javascript</t>
   <t hangText='Required parameters:'>
-  none</t>
+  N/A</t>
   <t hangText='Optional parameters:'>
-  : charset, see section 4.1 of [[RFCXXXX]].</t>
+  : charset, see section 4.1 of [this document].</t>
   <t hangText='Encoding considerations:'>
-  Encoding is host dependent with differences in byte order marks, the charset parameter, and text preprocessing.</t>
+  Binary</t>
   <t hangText='Security considerations:'>
-  See section 5 of [[RFCXXXX]]..</t>
+  See section 5 of [this document]..</t>
   <t hangText='Interoperability considerations:'>
-  See various sections of [[RFCXXXX]].</t>
+  See various sections of [this document].</t>
   <t hangText='Published specification:'>
-  [[RFCXXXX]]</t>
+  [this document]</t>
   <t hangText='Applications which use this media type:'>
-  Script interpreters as discussed in [[RFCXXXX]].</t>
+  Script interpreters as discussed in [this document].</t>
   <t hangText='Additional information:'>
         <list style="hanging">
         <t hangText='Magic number(s):'>
@@ -909,13 +909,13 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
       </list>
   </t>
   <t hangText='Person &amp; email address to contact for further information:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Intended usage:'>
   OBSOLETE</t>
   <t hangText='Restrictions on usage:'>
   The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of <xref target="ECMA-262"/>.</t>
   <t hangText='Author:'>
-  See Author’s Address section.</t>
+  See Author’s Address section of [this document].</t>
   <t hangText='Change controller:'>
   IESG &lt;iesg@ietf.org&gt;</t>
 </list></t>
@@ -1031,7 +1031,7 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
 
 <section anchor="acknowledgements" title="Acknowledgements">
 
-<t>This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  The authors would like to thank Adam Roach, Anna van Kesteren, Allen Wirfs-Brock, Alexey Melnikov, James Snell, Mark Nottingham, and Suresh Krishnan for their guidance throughout this process.</t>
+<t>This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  The authors would like to thank Adam Roach, Anna van Kesteren, Allen Wirfs-Brock, Alexey Melnikov, James Snell, Mark Nottingham, Murray Kucherawy, and Suresh Krishnan for their guidance and feedback throughout this process.</t>
 
 </section>
 <section anchor="changes-from-rfc-4329" title="Changes from RFC 4329">
@@ -1052,169 +1052,168 @@ Implementations SHOULD detect such errors as early as possible; in particular, t
   </back>
 
 <!-- ##markdown-source:
-H4sIADuHYl4AA+1dbXPbOJL+rl+B8lTdJjOSHNt5da62xnbsiXfjJBc7NTu1
-s3ULkZCEmCJ5BGlZk81/v34BQJCi5CS7c3U7w9RMIokgXhrdTz/dAMjRaDQo
-dZmoQ3F6cnF0GRU6L8WFirUUV6tcGfE+j2WpzEBOJoW6ORzEWZTKBZSPCzkt
-R1qV01GsTS7LaD76IG+koTpGiw9m9ODxIIKbZ1mxOhQ6nWaDgc6Lw4EslDwU
-R++uBsusuJ4VWZUfihfnl2+Prk5eDq7VCn6OD8V5WqoiVeXoBTY1yCYmSxT0
-5VA8PNh/NhiYUqbxf8skS6E7aTbI9aH4a5lFQwF/6TRWaTkUJivKQk0NfFot
-7Iey0BFcirJFLu2HBRSGSzpNdKr+NhjIqpxn0FUxGgj4o1No9WIsLnSSqIJ+
-YilcyLKcq6U4alzLiplM9S+y1FkKZbJf4JKkK2ohdXIooJXqdpkl0+9QgN9n
-FYx0lCcyVWYMI243e5wV8DFsdpXA3AQ/N1v8IctmiQobXOANEyr//YyujmHU
-a+2sUtVsR5ZzLU144c6WyvnGJo7H4kwWUGHQxHEh40StwguNJsK6J1x2vFDR
-9fcz/I2aGKRZsYDSNwpLvzs72d/be+Y+Hjx74j4+e/LUfjx49GjffXy878oe
-PHv6uP7obkNlsx8f7z9+ZD8+3Xvy8HAAn09eHr27PL265I56vRF2IKDGR6+P
-6Ls1tJ0jY/QsVbGI5rIABVSFMKo0O1xIFjNVHop5WebmcHd3uVyOtUzlGOra
-lXQn6equv3mEN8O9aMCj/cf7GztyGi2kNSoSrUwa3bpEc5JFXFcUYsIrmc4q
-OVPiMleRnuqIquA+I0Icij9VqRL7D/aedY5DQeMjHTZOI8qrSWLrMrvG9sDs
-YlexC+N5CdOL0OEn2M7P/oGfqqdPaFJeXl282jj2H18eXf34QzheLC5e6Rud
-zoQbejCao2pWmRLH86RzPNCxZGxAFuPlXJbLGY1mUSWlzkFKu4yCUDeOIPkm
-L1QOqDeSI76Ao7h8e3py9e60q8sj+6+zkbeySsSfs2hu8WW9xBHAXWHEWTab
-byjxAkxKJeIHVVzr9I4yRWXMhiI/IiQX4qWUm0pc6GsF1xeTqphtKgJAVP4C
-0s/zDSUuSzWVKeBPOnPzsl7oap4tAJzeFspsEc2FBlOBUV1G86UsftlQ6qfq
-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
-/wIxJCDXWZoAAA==
+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
+tGWdmHoPkq4HT8fIcNOKa/rD+s0RzYzNPllDpZ8VkGucBMSHqupzOcwFDT/i
+VotpgjPyt8Ad2IJ9y8SX6fR4hkxB+NICd3R2cvGD+PXfIfBMv8e3HuErI379
+a4+A6KV95HktFDVPfLUDFccFMAwXq6hsXD9G7Z7twWwKQqYN1lSLxnJvE0Bh
+Tg4v+37zlnfF2rkOeiCFG+RQRbtwTI9/weTCcmn9eHkbSYNWHYAa3rcF1D8p
+oKqvFFCdO22G1IbeaW/JstfnAuyMDv21KwZ2X4fWrclTHO2iqnmNubudbHf4
+xwf0/2tE/2bNizM+D/X+tDTyM+X+wyPf10olt8j350G+vw47kO9m8KWMr3nn
+F6Hf14t/W9a3ZX1b7Pt6sK+T9d0MvpT3Ne/cYt+fFvu2vG+LfV8N9rXeH3nH
+rZIty9si3ZblbZHuq0O6ekH2hg8+e1+Y7tni3Z8W77bMbot3Xy/e7X0B3u1t
+8W6Ld1u82+Ld//PDOB1wt/8FcLe/hbst3G3hbgt3Xx/cHcCFzwe8gy3gbQFv
+C3hbwPv6AO/hF8Ddwy3cbeFuC3dbuPv64O7RF8Ddoy3cbeFuC3dbuPtK4O7z
+HtfdHkDZQtwfGuK2IPM7gEyir9Vn4Ux4wxZqtlCzhZot1NwNajY9R7UGbLYP
+UG3h5k9wtHYLN78L3Hz2K4+2zyxt4WbLbrZwc3e4GQwGYiyjKwQeMYrw9YWJ
+iqf863j25eGLrLgS40onMUwjh4E1vTy1VJHCV0kGL6/kdyoq+sWwow8Zvo7o
+ZaZmBb4g2P5qKTcx9o3lib6yrxGX6RVMUM7Fu0xGs74YpSn+/G4qflL0w71p
+H1+bpFLxsy4mZnAE6r7Cr9QN/qqISlJ9lV33YYXx7bIXqUqSPlg+CP46K/GN
+wzM5hy8q/AkC8VMVgQnLxdL+UDC+f3kmfioAElJ8ZSW/r1cXYlrpmF6ZTq/4
+VypGVbmXbfIvTGj/ax301kbWvuFX3r07PRYPD/af9Xp/wcXDN036xXOvgwWj
+wMU3oVUa/6tUep6j42Vp8FslQ+jtvXsfIrRZ8wNRZKU8SP0jINKYLNJ0K70z
+as3QK7/XYNqDrv/Nrdj90jEKQL8GofgF8vQqTa9Ra0YApH1+l1VZ0m8ZThJ8
+cat/uSf9lD3/4BFIwNq1qll5Y1bzFZQrNWH+NQNbVWZYwzcP3tIv/aAWvuKS
+UM+0i8f8pmz/istaSS4S+Z9TwNCh+Ldg6p9amUFwoN/9y8yYuoiDLoJbYRAH
+Efyqfvcr2e4nRhDyNP/Mdo7BjcPVsPfftlYp1V2XAAA=
 
 -->
 
