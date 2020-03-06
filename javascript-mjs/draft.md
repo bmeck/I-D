@@ -1,19 +1,24 @@
 ---
 title: ECMAScript Media Types Updates
 abbrev:
-docname: draft-ietf-dispatch-javascript-mjs-05
+docname: draft-ietf-dispatch-javascript-mjs-06
 category: info
 
 ipr:
 area: ART
 workgroup: DISPATCH
 keyword: Internet-Draft
-updates: 4329
+obsoletes: 4329
 
 stand_alone: no
 pi: [toc, tocindent, sortrefs, symrefs, strict, compact, comments, inline]
 
 author:
+ -
+    ins: M. Miller
+    name: Matthew A. Miller
+    organization: Mozilla
+    email: linuxwolf+ietf@outer-planes.net
  -
     ins: M. Borins
     name: Myles Borins
@@ -25,28 +30,39 @@ author:
     organization: Google
     email: mths@google.com
  -
-    ins: M. Miller
-    name: Matthew A. Miller
-    organization: Mozilla
-    email: linuxwolf+ietf@outer-planes.net
- -
     ins: B. Farias
     name: Bradley Farias
     organization:
     email: bradley.meck@gmail.com
 
 normative:
+  RFC2119:
+  RFC2397:
+  RFC2978:
+  RFC3552:
+  RFC3629:
+  RFC3986:
+  RFC3987:
   RFC4329:
+  RFC6265:
+  RFC8174:
 
+  CHARSETS:
+    author:
+      org: IANA
+    title: "Assigned character sets"
+    target: https://www.iana.org/assignments/character-sets
   ECMA-262:
     author:
       org: Ecma International
     title: "Standard ECMA-262: ECMAScript Language Specification"
-    date: August 2017
+    date: June 2019
     target: https://ecma-international.org/publications/standards/Ecma-262.htm
 
 informative:
 
+  RFC3236:
+  RFC3875:
   HTML:
     author:
       org: WHATWG
@@ -93,16 +109,29 @@ informative:
 
 --- abstract
 
-This document proposes updates to the ECMAScript media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document updates RFC4329, "Scripting Media Types".
+This document updates the ECMAScript media types, superseding the existing registrations for "application/javascript" and "text/javascript" by adding an additional extension and removing usage warnings.  This document obsoletes RFC4329, "Scripting Media Types".
 
 --- middle
 
-
 # Introduction
 
-This document updates the existing media types for the ECMAScript programming language. It supersedes the media types registrations in {{RFC4329}} for "application/javascript" and "text/javascript".
+This memo describes media types for the JavaScript and ECMAScript programming languages.  Refer to "Brief History" and "Overview" in {{ECMA-262}} for background information on these languages.  This document updates the descriptions and registrations for these media types to reflect existing usage on the Internet.
 
-# Background
+This document replaces the media types registrations in {{RFC4329}}, osboleting it.
+
+## Terminology
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14  {{RFC2119}}  {{RFC8174}} when, and only when, they appear in all capitals, as shown here.
+
+# Compatibility
+
+This document defines equivalent processing requirements for the types text/javascript, text/ecmascript, and application/javascript.  The most widely supported media type in use is text/javascript; all others are considered historical and obsolete compared to text/javascript.  Differences in ECMAScript versions have been better dealt within in the processors.
+
+The types defined in this document are applicable to scripts written in {{ECMA-262}}.  This document does not address scripts written in other languages.  In particular, future editions of {{ECMA-262}} and extensions to {{ECMA-262}} are not directly addressed.
+
+This document may be updated to take other content into account.  Updates of this document may introduce new optional parameters; implementations MUST consider the impact of such an update.
+
+# Modules
 
 In order to formalize support for modular programs, {{ECMA-262}} (starting with 6th Edition) defines two top-level goal symbols (or roots to the abstract syntax tree) for the ECMAScript grammar: Module and Script. The Script goal represents the more stand-alone structure where the code executes in the global scope, while the Module goal represents the module system built into ECMAScript starting with 6th Edition.
 
@@ -110,13 +139,97 @@ This separation means that (in the absence of additional information) there are 
 
 It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments must use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt a new file extension of .mjs for determining the goal of a given Source Text.
 
+This document does not define how fragment identifiers in resource identifiers ({{RFC3986}}, {{RFC3987}}) for documents labeled with one of the media types defined in this document are resolved.  An update of this document may define processing of fragment identifiers.
+
+# Encoding
+
+Refer to {{RFC6265}} for a discussion of terminology used in this section.  Source text (as defined in {{ECMA-262}}, section "Source Text") can be binary source text.  Binary source text is a textual data object that represents source text encoded using a character encoding scheme.  A textual data object is a whole text protocol message or a whole text document, or a part of it, that is treated separately for purposes of external storage and retrieval.  An implementation's internal representation of source text and source text are not considered binary source text.
+
+Implementations need to determine a character encoding scheme in order to decode binary source text to source text.  The media types defined in this document allow an optional charset parameter to explicitly specify the character encoding scheme used to encode the source text.
+
+How implementations determine the character encoding scheme can be subject to processing rules that are out of the scope of this document.  For example, transport protocols can require that a specific character encoding scheme is to be assumed if the optional charset parameter is not specified, or they can require that the charset parameter is used in certain cases.  Such requirements are not considered part of this document.
+
+Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Other character encoding schemes MAY be supported.  Use of UTF-8 to encode binary source text is encouraged but not required.
+
+## Charset Parameter
+
+The charset parameter provides a means to specify the character encoding scheme of binary source text.  Its value MUST match the mime-charset production defined in {{RFC2978}}, section 2.3, and SHOULD be a registered charset {{CHARSETS}}.  An illegal value is a value that does not match that production.
+
+## Character Encoding Scheme Detection
+
+It is possible that implementations cannot interoperably determine a single character encoding scheme simply by complying with all requirements of the applicable specifications.  To foster interoperability in such cases, the following algorithm is defined.
+
+Implementations apply this algorithm until a single character encoding scheme is determined.
+
+1. If a charset parameter with a legal value is specified, the value determines the character encoding scheme.
+
+2. If the binary source text starts with a Unicode encoding form signature, the signature determines the encoding.  The following octet sequences, at the very beginning of the binary source text, are considered with their corresponding character encoding schemes:
+
+        +------------------+----------+
+        | Leading sequence | Encoding |
+        |------------------+----------|
+        | FF FE 00 00      | UTF-32LE |
+        | 00 00 FE FF      | UTF-32BE |
+        | FF FE            | UTF-16LE |
+        | FE FF            | UTF-16BE |
+        | EF BB BF         | UTF-8    |
+        +------------------+----------+
+
+    The longest matching octet sequence determines the encoding. Implementations of this step MUST use these octet sequences to determine the character encoding scheme, even if the determined scheme is not supported.  If this step determines the character encoding scheme, the octet sequence representing the Unicode encoding form signature MUST be ignored when decoding the binary source text to source text.
+
+3. The character encoding scheme is determined to be UTF-8.
+
+If the character encoding scheme is determined to be UTF-8 through any means other than step 2 as defined above and the binary source text starts with the octet sequence EF BB BF, the octet sequence is ignored when decoding the binary source text to source text.  (The sequence will also be ignored if step 2 determines the character encoding scheme per the requirements in step 2).
+
+## Character Encoding Scheme Error Handling
+
+The following error processing behavior is RECOMMENDED:
+
+  * If the value of a charset parameter is illegal, implementations MUST either recover from the error by ignoring the parameter or consider the character encoding scheme unsupported.
+
+  * If binary source text is determined to have been encoded using a certain character encoding scheme that the implementation is unable to process, implementations MUST consider the resource unsupported (i.e., they MUST NOT decode the binary source text using a different character encoding scheme).
+
+  * Binary source text can be determined to have been encoded using a certain character encoding scheme but contain octet sequences that are not legal according to that scheme.  This is typically caused by a lack of proper character encoding scheme information; such errors can pose a security risk, as discussed in section 5.
+
+    Implementations SHOULD detect such errors as early as possible; in particular, they SHOULD detect them before interpreting any of the source text.  Implementations MUST detect such errors and MUST NOT interpret any source text after detecting such an error.  Such errors MAY be reported, e.g., as syntax errors as defined in {{ECMA-262}}, section 16.
+
+This document does not define facilities that allow specification of the character encoding scheme used to encode binary source text in a conflicting manner.  There are only two sources for character encoding scheme information: the charset parameter and the Unicode encoding form signature.  If a charset parameter is specified, binary source text is processed as defined for that character encoding scheme.
+
 # Security Considerations
+
+Refer to {{RFC3552}} for a discussion of terminology used in this section.  Examples in this section and discussions of interactions of host environments with scripts, modules, and extensions to {{ECMA-262}} are to be understood as non-exhaustive and of a purely illustrative nature.
+
+The programming language defined in {{ECMA-262}} is not intended to be computationally self-sufficient, rather it is expected that the computational environment provides facilities to programs to enable specific functionality.  Such facilities constitute unknown factors and are thus considered out of the scope of this document.
+
+Derived programming languages are permitted to include additional functionality that is not described in {{ECMA-262}}; such functionality constitutes an unknown factor and is thus considered out of the scope of this document.  In particular, extensions to {{ECMA-262}} defined for the JavaScript programming language are not discussed in this document.
+
+Uncontrolled execution of scripts can be exceedingly dangerous. Implementations that execute scripts MUST give consideration to their application's threat models and those of the individual features they implement; in particular, they MUST ensure that untrusted content is not executed in an unprotected environment.
 
 Module scripts in ECMAScript can request the fetching and processing of additional scripts, called importing.  Implementations that support modules need to ensure these scripts are processed the same as scripts processed directly.  Further, there may be additional privacy and security concerns depending on the location(s) the original script and its imported modules are obtained from.  For instance, a scripted obtained from "host-a.example" could request to import a script from "host-b.example", which could expose information about the executing environment (e.g., IP address) to "host-b.example".
 
 With the addition of SharedArrayBuffer objects in ECMAScript version 8, it may be possible to implement a high-resolution timer which could lead to certain types of timing and side-channel attacks (e.g., {{SPECTRE}}).  Implementations may wish to take steps to mitigate this concern, such as disabling or removing support for SharedArrayBuffer objects, or take additional steps to ensure access to this shared memory is only accessible between execution contexts that have some form of mutual trust.
 
-All other security considerations from {{RFC4329}} still apply.
+Specifications for host environment facilities and for derived programming languages should include security considerations.  If an implementation supports such facilities, the respective security considerations apply.  In particular, if scripts can be referenced from or included in specific document formats, the considerations for the embedding or referencing document format apply.
+
+For example, scripts embedded in application/xhtml+xml {{RFC3236}} documents could be enabled through the host environment to manipulate the document instance, which could cause the retrieval of remote resources; security considerations regarding retrieval of remote resources of the embedding document would apply in this case.
+
+This circumstance can further be used to make information, that is normally only available to the script, available to a web server by encoding the information in the resource identifier of the resource, which can further enable eavesdropping attacks.  Implementation of such facilities is subject to the security considerations of the host environment, as discussed above.
+
+The programming language defined in {{ECMA-262}} does include facilities to loop, cause computationally complex operations, or consume large amounts of memory; this includes, but is not limited to, facilities that allow dynamically generated source text to be executed (e.g., the eval() function); uncontrolled execution of such features can cause denial of service, which implementations MUST protect against.
+
+A host environment can provide facilities to access external input. Scripts that pass such input to the eval() function or similar language features can be vulnerable to code injection attacks. Scripts are expected to protect against such attacks.
+
+A host environment can provide facilities to output computed results in a user-visible manner.  For example, host environments supporting a graphical user interface can provide facilities that enable scripts to present certain messages to the user.  Implementations MUST take steps to avoid confusion of the origin of such messages.  In general, the security considerations for the host environment apply in such a case as discussed above.
+
+Implementations are required to support the UTF-8 character encoding scheme; the security considerations of {{RFC3629}} apply.  Additional character encoding schemes may be supported; support for such schemes is subject to the security considerations of those schemes.
+
+Source text is expected to be in Unicode Normalization Form C. Scripts and implementations MUST consider security implications of unnormalized source text and data.  For a detailed discussion of such implications refer to the security considerations in {{RFC3629}}.
+
+Scripts can be executed in an environment that is vulnerable to code injection attacks.  For example, a CGI script {{RFC3875}} echoing user input could allow the inclusion of untrusted scripts that could be executed in an otherwise trusted environment.  This threat scenario is subject to security considerations that are out of the scope of this document.
+
+The "data" resource identifier scheme {{RFC2397}}, in combination with the types defined in this document, could be used to cause execution of untrusted scripts through the inclusion of untrusted resource identifiers in otherwise trusted content.  Security considerations of {{RFC2397}} apply.
+
+Implementations can fail to implement a specific security model or other means to prevent possibly dangerous operations.  Such failure could possibly be exploited to gain unauthorized access to a system or sensitive information; such failure constitutes an unknown factor and is thus considered out of the scope of this document.
 
 # IANA Considerations
 
@@ -142,7 +255,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -150,11 +263,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -162,7 +275,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -219,7 +332,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -227,11 +340,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -239,7 +352,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -293,7 +406,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -301,11 +414,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: charset, see section 4.1 of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -313,7 +426,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -367,7 +480,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -375,11 +488,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -387,7 +500,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -441,7 +554,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -449,11 +562,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -461,7 +574,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -515,7 +628,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -523,11 +636,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -535,7 +648,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -589,7 +702,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -597,11 +710,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -609,7 +722,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -663,7 +776,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -671,11 +784,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -683,7 +796,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -736,7 +849,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -744,11 +857,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -756,7 +869,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -811,7 +924,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -819,11 +932,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -831,7 +944,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -884,7 +997,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -892,11 +1005,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -904,7 +1017,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -957,7 +1070,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -965,11 +1078,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -977,7 +1090,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -1030,7 +1143,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -1038,11 +1151,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -1050,7 +1163,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -1103,7 +1216,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -1111,11 +1224,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -1123,7 +1236,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -1176,7 +1289,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -1184,11 +1297,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -1196,7 +1309,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -1249,7 +1362,7 @@ Required parameters:
 
 Optional parameters:
 
-: charset, see section 4.1 of {{RFC4329}}.
+: : charset, see section 4.1 of \[\[RFCXXXX]].
 
 Encoding considerations:
 
@@ -1257,11 +1370,11 @@ Encoding considerations:
 
 Security considerations:
 
-: See section 5 of {{RFC4329}}.
+: See section 5 of \[\[RFCXXXX]]..
 
 Interoperability considerations:
 
-: See notes in various sections of {{RFC4329}}.
+: See various sections of \[\[RFCXXXX]].
 
 Published specification:
 
@@ -1269,7 +1382,7 @@ Published specification:
 
 Applications which use this media type:
 
-: Script interpreters as discussed in {{RFC4329}}.
+: Script interpreters as discussed in \[\[RFCXXXX]].
 
 Additional information:
 
@@ -1310,4 +1423,14 @@ Change controller:
 
 # Acknowledgements
 
-The authors would like to thank Suresh Krishnan, Alexey Melnikov, Mark Nottingham, James Snell, Adam Roach, and Allen Wirfs-Brock for their guidance throughout this process.
+This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  The authors would like to thank Adam Roach, Anna van Kesteren, Allen Wirfs-Brock, Alexey Melnikov, James Snell, Mark Nottingham, and Suresh Krishnan for their guidance throughout this process.
+
+# Changes from RFC 4329
+
+* Added a section discussing ECMAscript modules and the impact on processing.
+* Updated the Security Considerations to discuss concerns associated with ECMAscript modules and SharedArrayBuffers.
+* Updated the character encoding scheme detection to remove normative guidance on its use, to better reflect operational reality.
+* Changed the intended usage of the media type text/javascript from obsolete to common.
+* Changed the intended usage for all other script media types to obsolete.
+* Updated various references where the original has been osboleted
+* Updated references to ECMA-262 to match the version at time of publication.

@@ -5,7 +5,7 @@ kramdown-rfc2629 ?= kramdown-rfc2629
 idnits ?= idnits
 
 title = ietf-dispatch-$(shell basename ${CURDIR})
-latest = "draft-${title}-05.xml"
+latest = "draft-${title}-06.xml"
 version = $(shell basename ${latest} .xml | awk -F- '{print $$NF}')
 
 target = draft-$(title)-$(version)
@@ -21,7 +21,7 @@ clean:
 
 next:
 	cp $(target).xml $(next).xml
-	sed -i '' -e"s/$(target)/$(next)/" draft.md
+	sed -i '' -e "s/$(target)/$(next)/" draft.md
 
 diff:
 	rfcdiff $(prev).txt $(target).txt
