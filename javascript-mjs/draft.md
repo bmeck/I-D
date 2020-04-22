@@ -115,7 +115,7 @@ This document updates the ECMAScript media types, replacing the existing registr
 
 # Introduction
 
-This memo describes media types for the JavaScript and ECMAScript programming languages.  Refer to "Brief History" and "Overview" in {{ECMA-262}} for background information on these languages.  This document updates the descriptions and registrations for these media types to reflect existing usage on the Internet.
+This memo describes media types for the JavaScript and ECMAScript programming languages.  Refer to the sections "Introduction" and "Overview" in {{ECMA-262}} for background information on these languages.  This document updates the descriptions and registrations for these media types to reflect existing usage on the Internet.
 
 This document replaces the media types registrations in {{RFC4329}}, osboleting that document.
 
@@ -125,7 +125,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 # Compatibility
 
-This document defines equivalent processing requirements for the types text/javascript, text/ecmascript, and application/javascript.  The most widely supported media type in use is text/javascript; all others are considered historical and obsolete compared to text/javascript.  Differences in ECMAScript versions have been better dealt within in the processors.
+This document defines equivalent processing requirements for the types text/javascript, text/ecmascript, and application/javascript.  The most widely supported media type in use is text/javascript; all others are considered historical and obsolete compared to text/javascript.  Differences in ECMAScript versions have been better dealt with in the processors.
 
 The types defined in this document are applicable to scripts written in {{ECMA-262}}.  This document does not address scripts written in other languages.  In particular, future editions of {{ECMA-262}} and extensions to {{ECMA-262}} are not directly addressed.
 
@@ -133,11 +133,11 @@ This document may be updated to take other content into account.  Updates of thi
 
 # Modules
 
-In order to formalize support for modular programs, {{ECMA-262}} (starting with 6th Edition) defines two top-level goal symbols (or roots to the abstract syntax tree) for the ECMAScript grammar: Module and Script. The Script goal represents the more stand-alone structure where the code executes in the global scope, while the Module goal represents the module system built into ECMAScript starting with 6th Edition.
+In order to formalize support for modular programs, {{ECMA-262}} (starting with 6th Edition) defines two top-level goal symbols (or roots to the abstract syntax tree) for the ECMAScript grammar: Module and Script.  The Script goal represents the original structure where the code executes in the global scope, while the Module goal represents the module system built into ECMAScript starting with 6th Edition.  See the section "ECMAScript Language: Scripts and Modules" of {{ECMA-262}} for details.
 
 This separation means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript Source Text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
 
-It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments must use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt a new file extension of .mjs for determining the goal of a given Source Text.
+It is not possible to fully determine if a Source Text of ECMAScript is meant to be parsed in the Module or Script grammar goals based upon content alone. Therefore, scripting environments MUST use out of band information in order to determine what goal a Source Text should be treated as. To this end some scripting environments have chosen to adopt the new file extension of .mjs for this purpose.
 
 This document does not define how fragment identifiers in resource identifiers ({{RFC3986}}, {{RFC3987}}) for documents labeled with one of the media types defined in this document are resolved.  An update of this document may define processing of fragment identifiers.
 
@@ -149,51 +149,43 @@ Implementations need to determine a character encoding scheme in order to decode
 
 How implementations determine the character encoding scheme can be subject to processing rules that are out of the scope of this document.  For example, transport protocols can require that a specific character encoding scheme is to be assumed if the optional charset parameter is not specified, or they can require that the charset parameter is used in certain cases.  Such requirements are not considered part of this document.
 
-Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Other character encoding schemes MAY be supported.  Use of UTF-8 to encode binary source text is encouraged but not required.
+Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Module goal sources MUST be encoded as UTF-8, all other encodings will fail.  Source goal sources SHOULD be encoded as UTF-8; other character encoding schemes MAY be supported, but are discouraged.
 
 ## Charset Parameter
 
 The charset parameter provides a means to specify the character encoding scheme of binary source text.  Its value MUST match the mime-charset production defined in {{RFC2978}}, section 2.3, and SHOULD be a registered charset {{CHARSETS}}.  An illegal value is a value that does not match that production.
 
+The charset parameter is only used when processing a Script goal source; Module goal sources MUST always be processed as UTF-8.
+
 ## Character Encoding Scheme Detection
 
-It is possible that implementations cannot interoperably determine a single character encoding scheme simply by complying with all requirements of the applicable specifications.  To foster interoperability in such cases, the following algorithm is defined.
+It is possible that implementations cannot interoperably determine a single character encoding scheme simply by complying with all requirements of the applicable specifications.  To foster interoperability in such cases, the following algorithm is defined.  Implementations apply this algorithm until a single character encoding scheme is determined.
 
-Implementations apply this algorithm until a single character encoding scheme is determined.
-
-1. If a charset parameter with a legal value is specified, the value determines the character encoding scheme.
-
-2. If the binary source text starts with a Unicode encoding form signature, the signature determines the encoding.  The following octet sequences, at the very beginning of the binary source text, are considered with their corresponding character encoding schemes:
+1. If the binary source text is not already determined to be a Module goal and starts with a Unicode encoding form signature, the signature determines the encoding.  The following octet sequences, at the very beginning of the binary source text, are considered with their corresponding character encoding schemes:
 
         +------------------+----------+
         | Leading sequence | Encoding |
         |------------------+----------|
-        | FF FE 00 00      | UTF-32LE |
-        | 00 00 FE FF      | UTF-32BE |
+        | EF BB BF         | UTF-8    |
         | FF FE            | UTF-16LE |
         | FE FF            | UTF-16BE |
-        | EF BB BF         | UTF-8    |
         +------------------+----------+
 
     The longest matching octet sequence determines the encoding. Implementations of this step MUST use these octet sequences to determine the character encoding scheme, even if the determined scheme is not supported.  If this step determines the character encoding scheme, the octet sequence representing the Unicode encoding form signature MUST be ignored when decoding the binary source text to source text.
 
+2. If a charset parameter with a legal and understood value is specified, the value determines the character encoding scheme.
+
 3. The character encoding scheme is determined to be UTF-8.
 
-If the character encoding scheme is determined to be UTF-8 through any means other than step 2 as defined above and the binary source text starts with the octet sequence EF BB BF, the octet sequence is ignored when decoding the binary source text to source text.  (The sequence will also be ignored if step 2 determines the character encoding scheme per the requirements in step 2).
+If the character encoding scheme is determined to be UTF-8 through any means other than step 1 as defined above and the binary source text starts with the octet sequence EF BB BF, the octet sequence is ignored when decoding the binary source text to source text.  (The sequence will also be ignored if step 2 determines the character encoding scheme per the requirements in step 2).
 
 ## Character Encoding Scheme Error Handling
 
-The following error processing behavior is RECOMMENDED:
+Binary source text that is not properly encoded for the determined character encoding can pose a security risk, as discussed in section 5.  That said, because of the varied and complex environments scripts are executed in, most of the error handling specifics are left to the processors.  The following are broad guidelines that processors follow.
 
-  * If the value of a charset parameter is illegal, implementations MUST either recover from the error by ignoring the parameter or consider the character encoding scheme unsupported.
+If binary source text is determined to have been encoded using a certain character encoding scheme that the implementation is unable to process, implementations can consider the resource unsupported (i.e., do not decode the binary source text using a different character encoding scheme).
 
-  * If binary source text is determined to have been encoded using a certain character encoding scheme that the implementation is unable to process, implementations MUST consider the resource unsupported (i.e., they MUST NOT decode the binary source text using a different character encoding scheme).
-
-  * Binary source text can be determined to have been encoded using a certain character encoding scheme but contain octet sequences that are not legal according to that scheme.  This is typically caused by a lack of proper character encoding scheme information; such errors can pose a security risk, as discussed in section 5.
-
-    Implementations SHOULD detect such errors as early as possible; in particular, they SHOULD detect them before interpreting any of the source text.  Implementations MUST detect such errors and MUST NOT interpret any source text after detecting such an error.  Such errors MAY be reported, e.g., as syntax errors as defined in {{ECMA-262}}, section 16.
-
-This document does not define facilities that allow specification of the character encoding scheme used to encode binary source text in a conflicting manner.  There are only two sources for character encoding scheme information: the charset parameter and the Unicode encoding form signature.  If a charset parameter is specified, binary source text is processed as defined for that character encoding scheme.
+Binary source text can be determined to have been encoded using a certain character encoding scheme but contain octet sequences that are not legal according to that scheme.  Implementations can substitute those illegal sequences with the replacement character U+FFFD (properly encoded for the scheme), or stop processing altogether.
 
 # Security Considerations
 
@@ -205,9 +197,7 @@ Derived programming languages are permitted to include additional functionality 
 
 Uncontrolled execution of scripts can be exceedingly dangerous. Implementations that execute scripts MUST give consideration to their application's threat models and those of the individual features they implement; in particular, they MUST ensure that untrusted content is not executed in an unprotected environment.
 
-Module scripts in ECMAScript can request the fetching and processing of additional scripts, called importing.  Implementations that support modules need to ensure these scripts are processed the same as scripts processed directly.  Further, there may be additional privacy and security concerns depending on the location(s) the original script and its imported modules are obtained from.  For instance, a scripted obtained from "host-a.example" could request to import a script from "host-b.example", which could expose information about the executing environment (e.g., IP address) to "host-b.example".
-
-With the addition of SharedArrayBuffer objects in ECMAScript version 8, it may be possible to implement a high-resolution timer which could lead to certain types of timing and side-channel attacks (e.g., {{SPECTRE}}).  Implementations may wish to take steps to mitigate this concern, such as disabling or removing support for SharedArrayBuffer objects, or take additional steps to ensure access to this shared memory is only accessible between execution contexts that have some form of mutual trust.
+Module scripts in ECMAScript can request the fetching and processing of additional scripts, called importing.  Implementations that support modules need to process imported sources in the same way scripts.  Further, there may be additional privacy and security concerns depending on the location(s) the original script and its imported modules are obtained from.  For instance, a script obtained from "host-a.example" could request to import a script from "host-b.example", which could expose information about the executing environment (e.g., IP address) to "host-b.example".  See the section "ECMAScript Language: Scripts and Modules" in {{ECMA-262}} for details.
 
 Specifications for host environment facilities and for derived programming languages should include security considerations.  If an implementation supports such facilities, the respective security considerations apply.  In particular, if scripts can be referenced from or included in specific document formats, the considerations for the embedding or referencing document format apply.
 
@@ -216,6 +206,8 @@ For example, scripts embedded in application/xhtml+xml {{RFC3236}} documents cou
 This circumstance can further be used to make information, that is normally only available to the script, available to a web server by encoding the information in the resource identifier of the resource, which can further enable eavesdropping attacks.  Implementation of such facilities is subject to the security considerations of the host environment, as discussed above.
 
 The programming language defined in {{ECMA-262}} does include facilities to loop, cause computationally complex operations, or consume large amounts of memory; this includes, but is not limited to, facilities that allow dynamically generated source text to be executed (e.g., the eval() function); uncontrolled execution of such features can cause denial of service, which implementations MUST protect against.
+
+With the addition of SharedArrayBuffer objects in ECMAScript version 8, it could be possible to implement a high-resolution timer which could lead to certain types of timin`g and side-channel attacks (e.g., {{SPECTRE}}).  Implementations can take steps to mitigate this concern, such as disabling or removing support for SharedArrayBuffer objects, or take additional steps to ensure access to this shared memory is only accessible between execution contexts that have some form of mutual trust.
 
 A host environment can provide facilities to access external input. Scripts that pass such input to the eval() function or similar language features can be vulnerable to code injection attacks. Scripts are expected to protect against such attacks.
 
