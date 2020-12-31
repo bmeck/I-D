@@ -4,7 +4,7 @@ abbrev:
 docname: draft-ietf-dispatch-javascript-mjs-07
 category: info
 
-ipr:
+ipr: trust200902
 area: ART
 workgroup: DISPATCH
 keyword: Internet-Draft
@@ -17,13 +17,13 @@ author:
  -
     ins: M. Miller
     name: Matthew A. Miller
-    organization: Mozilla
+    organization:
     email: linuxwolf+ietf@outer-planes.net
  -
     ins: M. Borins
     name: Myles Borins
-    organization: Google
-    email: mylesborins@google.com
+    organization: GitHub
+    email: mylesborins@github.com
  -
     ins: M. Bynens
     name: Mathias Bynens
@@ -171,13 +171,13 @@ It is possible that implementations cannot interoperably determine a single char
         | FE FF            | UTF-16BE |
         +------------------+----------+
 
-    The longest matching octet sequence determines the encoding. Implementations of this step MUST use these octet sequences to determine the character encoding scheme, even if the determined scheme is not supported.  If this step determines the character encoding scheme, the octet sequence representing the Unicode encoding form signature MUST be ignored when decoding the binary source text to source text.
+    Implementations of this step MUST use these octet sequences to determine the character encoding scheme, even if the determined scheme is not supported.  If this step determines the character encoding scheme, the octet sequence representing the Unicode encoding form signature MUST be ignored when decoding the binary source text.
 
 2. If a charset parameter with a legal and understood value is specified, the value determines the character encoding scheme.
 
-3. The character encoding scheme is determined to be UTF-8.
+3. If no other character encoding scheme is determined from the previous steps, it is assumed to be UTF-8.
 
-If the character encoding scheme is determined to be UTF-8 through any means other than step 1 as defined above and the binary source text starts with the octet sequence EF BB BF, the octet sequence is ignored when decoding the binary source text to source text.  (The sequence will also be ignored if step 2 determines the character encoding scheme per the requirements in step 2).
+If the character encoding scheme is determined to be UTF-8 through any means other than step 1 as defined above and the binary source text starts with the octet sequence EF BB BF, the octet sequence is ignored when decoding the binary source text.
 
 ## Character Encoding Scheme Error Handling
 
@@ -1415,7 +1415,7 @@ Change controller:
 
 # Acknowledgements
 
-This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  The authors would like to thank Adam Roach, Anna van Kesteren, Allen Wirfs-Brock, Alexey Melnikov, James Snell, Mark Nottingham, Murray Kucherawy, and Suresh Krishnan for their guidance and feedback throughout this process.
+This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  The authors would like to thank Adam Roach, Anne van Kesteren, Allen Wirfs-Brock, Alexey Melnikov, James Snell, Mark Nottingham, Murray Kucherawy, and Suresh Krishnan for their guidance and feedback throughout this process.
 
 # Changes from RFC 4329
 

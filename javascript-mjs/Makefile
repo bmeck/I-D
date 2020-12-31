@@ -30,13 +30,13 @@ idnits: $(target).txt
 	$(idnits) $<
 
 %.xml: draft.md
-	$(kramdown-rfc2629) $< > $@
+	$(kramdown-rfc2629) --v3 $< > $@
 
 %.txt: %.xml
-	$(xml2rfc) $< $@
+	$(xml2rfc) --text $<
 
 %.html: %.xml
-	$(xml2rfc) --html $< $@
+	$(xml2rfc) --html $<
 
 index.txt: $(target).txt
 	cp $< $@
