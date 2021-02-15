@@ -131,6 +131,8 @@ The types defined in this document are applicable to scripts written in {{ECMA-2
 
 This document may be updated to take other content into account.  Updates of this document may introduce new optional parameters; implementations MUST consider the impact of such an update.
 
+The definitions in this document reflect the current state of implementation across the JavaScript ecosystem, in web browsers and other environments such as Node.js alike, in order to guarantee backwards compatibility with existing applications as much as possible.
+
 # Modules
 
 In order to formalize support for modular programs, {{ECMA-262}} (starting with 6th Edition) defines two top-level goal symbols (or roots to the abstract syntax tree) for the ECMAScript grammar: Module and Script.  The Script goal represents the original structure where the code executes in the global scope, while the Module goal represents the module system built into ECMAScript starting with 6th Edition.  See the section "ECMAScript Language: Scripts and Modules" of {{ECMA-262}} for details.
