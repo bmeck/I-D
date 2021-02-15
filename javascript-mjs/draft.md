@@ -117,7 +117,7 @@ This document updates the ECMAScript media types, replacing the existing registr
 
 This memo describes media types for the JavaScript and ECMAScript programming languages.  Refer to the sections "Introduction" and "Overview" in {{ECMA-262}} for background information on these languages.  This document updates the descriptions and registrations for these media types to reflect existing usage on the Internet.
 
-This document replaces the media types registrations in {{RFC4329}}, osboleting that document.
+This document replaces the media types registrations in {{RFC4329}}, obsoleting that document.
 
 ## Terminology
 
