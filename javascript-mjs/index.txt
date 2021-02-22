@@ -3,16 +3,17 @@
 
 
 DISPATCH                                                       M. Miller
-Internet-Draft                                                   Mozilla
+Internet-Draft                                                          
 Obsoletes: 4329 (if approved)                                  M. Borins
-Intended status: Informational                                 M. Bynens
-Expires: October 24, 2020                                         Google
+Intended status: Informational                                    GitHub
+Expires: 26 August 2021                                        M. Bynens
+                                                                  Google
                                                                B. Farias
-                                                          April 22, 2020
+                                                        22 February 2021
 
 
                      ECMAScript Media Types Updates
-                 draft-ietf-dispatch-javascript-mjs-07
+                 draft-ietf-dispatch-javascript-mjs-08
 
 Abstract
 
@@ -37,30 +38,29 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on October 24, 2020.
+   This Internet-Draft will expire on 26 August 2021.
 
 Copyright Notice
 
-   Copyright (c) 2020 IETF Trust and the persons identified as the
+   Copyright (c) 2021 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
-   Provisions Relating to IETF Documents
-   (https://trustee.ietf.org/license-info) in effect on the date of
-   publication of this document.  Please review these documents
-   carefully, as they describe your rights and restrictions with respect
-   to this document.  Code Components extracted from this document must
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
 
 
 
-Miller, et al.          Expires October 24, 2020                [Page 1]
+Miller, et al.           Expires 26 August 2021                 [Page 1]
 
-Internet-Draft       ECMAScript Media Types Updates           April 2020
+Internet-Draft       ECMAScript Media Types Updates        February 2021
 
 
-   include Simplified BSD License text as described in Section 4.e of
-   the Trust Legal Provisions and are provided without warranty as
-   described in the Simplified BSD License.
+   extracted from this document must include Simplified BSD License text
+   as described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Simplified BSD License.
 
 Table of Contents
 
@@ -69,7 +69,7 @@ Table of Contents
    2.  Compatibility . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Modules . . . . . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Encoding  . . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.1.  Charset Parameter . . . . . . . . . . . . . . . . . . . .   4
+     4.1.  Charset Parameter . . . . . . . . . . . . . . . . . . . .   5
      4.2.  Character Encoding Scheme Detection . . . . . . . . . . .   5
      4.3.  Character Encoding Scheme Error Handling  . . . . . . . .   6
    5.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
@@ -91,10 +91,10 @@ Table of Contents
        6.2.12. text/jscript  . . . . . . . . . . . . . . . . . . . .  21
        6.2.13. text/livescript . . . . . . . . . . . . . . . . . . .  22
        6.2.14. text/x-ecmascript . . . . . . . . . . . . . . . . . .  23
-       6.2.15. text/x-javascript . . . . . . . . . . . . . . . . . .  24
-   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  25
-     7.1.  Normative References  . . . . . . . . . . . . . . . . . .  25
-     7.2.  Informative References  . . . . . . . . . . . . . . . . .  26
+       6.2.15. text/x-javascript . . . . . . . . . . . . . . . . . .  23
+   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  24
+     7.1.  Normative References  . . . . . . . . . . . . . . . . . .  24
+     7.2.  Informative References  . . . . . . . . . . . . . . . . .  25
    Appendix A.  Acknowledgements . . . . . . . . . . . . . . . . . .  26
    Appendix B.  Changes from RFC 4329  . . . . . . . . . . . . . . .  26
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  27
@@ -109,13 +109,13 @@ Table of Contents
 
 
 
-Miller, et al.          Expires October 24, 2020                [Page 2]
+Miller, et al.           Expires 26 August 2021                 [Page 2]
 
-Internet-Draft       ECMAScript Media Types Updates           April 2020
+Internet-Draft       ECMAScript Media Types Updates        February 2021
 
 
    This document replaces the media types registrations in [RFC4329],
-   osboleting that document.
+   obsoleting that document.
 
 1.1.  Terminology
 
@@ -143,6 +143,12 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Updates of this document may introduce new optional parameters;
    implementations MUST consider the impact of such an update.
 
+   The definitions in this document reflect the current state of
+   implementation across the JavaScript ecosystem, in web browsers and
+   other environments such as Node.js alike, in order to guarantee
+   backwards compatibility with existing applications as much as
+   possible.
+
 3.  Modules
 
    In order to formalize support for modular programs, [ECMA-262]
@@ -154,6 +160,16 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Edition.  See the section "ECMAScript Language: Scripts and Modules"
    of [ECMA-262] for details.
 
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                 [Page 3]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
    This separation means that (in the absence of additional information)
    there are two possible interpretations for any given ECMAScript
    Source Text.  The TC39 standards body for ECMAScript has determined
@@ -162,14 +178,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
 
    It is not possible to fully determine if a Source Text of ECMAScript
    is meant to be parsed in the Module or Script grammar goals based
-
-
-
-Miller, et al.          Expires October 24, 2020                [Page 3]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
    upon content alone.  Therefore, scripting environments MUST use out
    of band information in order to determine what goal a Source Text
    should be treated as.  To this end some scripting environments have
@@ -206,6 +214,18 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    charset parameter is used in certain cases.  Such requirements are
    not considered part of this document.
 
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                 [Page 4]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
    Implementations that support binary source text MUST support binary
    source text encoded using the UTF-8 [RFC3629] character encoding
    scheme.  Module goal sources MUST be encoded as UTF-8, all other
@@ -218,14 +238,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    The charset parameter provides a means to specify the character
    encoding scheme of binary source text.  Its value MUST match the
    mime-charset production defined in [RFC2978], section 2.3, and SHOULD
-
-
-
-Miller, et al.          Expires October 24, 2020                [Page 4]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
    be a registered charset [CHARSETS].  An illegal value is a value that
    does not match that production.
 
@@ -247,43 +259,39 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
        sequences, at the very beginning of the binary source text, are
        considered with their corresponding character encoding schemes:
 
+       +------------------+----------+
+       | Leading sequence | Encoding |
+       |------------------+----------|
+       | EF BB BF         | UTF-8    |
+       | FF FE            | UTF-16LE |
+       | FE FF            | UTF-16BE |
+       +------------------+----------+
 
-
-    +------------------+----------+
-    | Leading sequence | Encoding |
-    |------------------+----------|
-    | EF BB BF         | UTF-8    |
-    | FF FE            | UTF-16LE |
-    | FE FF            | UTF-16BE |
-    +------------------+----------+
-
-       The longest matching octet sequence determines the encoding.
        Implementations of this step MUST use these octet sequences to
        determine the character encoding scheme, even if the determined
        scheme is not supported.  If this step determines the character
        encoding scheme, the octet sequence representing the Unicode
        encoding form signature MUST be ignored when decoding the binary
-       source text to source text.
+       source text.
+
+
+
+
+Miller, et al.           Expires 26 August 2021                 [Page 5]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
 
    2.  If a charset parameter with a legal and understood value is
        specified, the value determines the character encoding scheme.
 
-   3.  The character encoding scheme is determined to be UTF-8.
+   3.  If no other character encoding scheme is determined from the
+       previous steps, it is assumed to be UTF-8.
 
    If the character encoding scheme is determined to be UTF-8 through
    any means other than step 1 as defined above and the binary source
    text starts with the octet sequence EF BB BF, the octet sequence is
-   ignored when decoding the binary source text to source text.  (The
-
-
-
-Miller, et al.          Expires October 24, 2020                [Page 5]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
-   sequence will also be ignored if step 2 determines the character
-   encoding scheme per the requirements in step 2).
+   ignored when decoding the binary source text.
 
 4.3.  Character Encoding Scheme Error Handling
 
@@ -321,6 +329,15 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    specific functionality.  Such facilities constitute unknown factors
    and are thus considered out of the scope of this document.
 
+
+
+
+
+Miller, et al.           Expires 26 August 2021                 [Page 6]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
    Derived programming languages are permitted to include additional
    functionality that is not described in [ECMA-262]; such functionality
    constitutes an unknown factor and is thus considered out of the scope
@@ -330,14 +347,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
 
    Uncontrolled execution of scripts can be exceedingly dangerous.
    Implementations that execute scripts MUST give consideration to their
-
-
-
-Miller, et al.          Expires October 24, 2020                [Page 6]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
    application's threat models and those of the individual features they
    implement; in particular, they MUST ensure that untrusted content is
    not executed in an unprotected environment.
@@ -377,6 +386,14 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    facilities to loop, cause computationally complex operations, or
    consume large amounts of memory; this includes, but is not limited
    to, facilities that allow dynamically generated source text to be
+
+
+
+Miller, et al.           Expires 26 August 2021                 [Page 7]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
    executed (e.g., the eval() function); uncontrolled execution of such
    features can cause denial of service, which implementations MUST
    protect against.
@@ -386,14 +403,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    could lead to certain types of timin`g and side-channel attacks
    (e.g., [SPECTRE]).  Implementations can take steps to mitigate this
    concern, such as disabling or removing support for SharedArrayBuffer
-
-
-
-Miller, et al.          Expires October 24, 2020                [Page 7]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
    objects, or take additional steps to ensure access to this shared
    memory is only accessible between execution contexts that have some
    form of mutual trust.
@@ -434,21 +443,18 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    identifiers in otherwise trusted content.  Security considerations of
    [RFC2397] apply.
 
+
+
+Miller, et al.           Expires 26 August 2021                 [Page 8]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
    Implementations can fail to implement a specific security model or
    other means to prevent possibly dangerous operations.  Such failure
    could possibly be exploited to gain unauthorized access to a system
    or sensitive information; such failure constitutes an unknown factor
    and is thus considered out of the scope of this document.
-
-
-
-
-
-
-Miller, et al.          Expires October 24, 2020                [Page 8]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
 
 6.  IANA Considerations
 
@@ -489,22 +495,18 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
-
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            File extension(s):  .js, .mjs
 
 
 
-
-
-Miller, et al.          Expires October 24, 2020                [Page 9]
+Miller, et al.           Expires 26 August 2021                 [Page 9]
 
-Internet-Draft       ECMAScript Media Types Updates           April 2020
+Internet-Draft       ECMAScript Media Types Updates        February 2021
 
+
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -548,21 +550,19 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
-
-      File extension(s):  .es, .mjs
+                            File extension(s):  .es, .mjs
 
 
 
 
-Miller, et al.          Expires October 24, 2020               [Page 10]
+Miller, et al.           Expires 26 August 2021                [Page 10]
 
-Internet-Draft       ECMAScript Media Types Updates           April 2020
+Internet-Draft       ECMAScript Media Types Updates        February 2021
 
 
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -602,24 +602,21 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
-
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 11]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 11]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
 
    Intended usage:  OBSOLETE
 
@@ -656,27 +653,27 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .es, .mjs
 
-      File extension(s):  .es, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
 
-
-
-Miller, et al.          Expires October 24, 2020               [Page 12]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  This media type is obsolete; current
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 12]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
       implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
@@ -709,28 +706,30 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
 
    Intended usage:  OBSOLETE
 
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 13]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
    Restrictions on usage:  This media type is obsolete; current
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 13]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
       implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
@@ -763,13 +762,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .es, .mjs
 
-      File extension(s):  .es, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -777,15 +774,19 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  This media type is obsolete; current
-      implementations should use text/javascript as the only JavaScript/
 
 
 
-Miller, et al.          Expires October 24, 2020               [Page 14]
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 14]
 
-Internet-Draft       ECMAScript Media Types Updates           April 2020
+Internet-Draft       ECMAScript Media Types Updates        February 2021
 
 
+      implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
       rely on file extensions to determine how to process inputs parse
@@ -817,13 +818,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -831,17 +830,21 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  This media type is obsolete; current
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 15]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
       implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 15]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
       rely on file extensions to determine how to process inputs parse
       .mjs files using the Module grammar of [ECMA-262].
 
@@ -871,13 +874,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -885,18 +886,23 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  This media type is obsolete; current
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 16]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
       implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
       rely on file extensions to determine how to process inputs parse
       .mjs files using the Module grammar of [ECMA-262].
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 16]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
 
    Author:  See Author's Address section of [this document].
 
@@ -924,13 +930,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -938,6 +942,18 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  This media type is obsolete; current
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 17]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
       implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
@@ -945,14 +961,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
       .mjs files using the Module grammar of [ECMA-262].
 
    Author:  See Author's Address section of [this document].
-
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 17]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
 
    Change controller:  IESG <iesg@ietf.org>
 
@@ -978,13 +986,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -992,6 +998,18 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  This media type is obsolete; current
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 18]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
       implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
@@ -1001,14 +1019,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Author:  See Author's Address section of [this document].
 
    Change controller:  IESG <iesg@ietf.org>
-
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 18]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
 
 6.2.10.  text/javascript1.4
 
@@ -1032,13 +1042,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -1046,6 +1054,18 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  This media type is obsolete; current
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 19]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
       implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
@@ -1055,16 +1075,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Author:  See Author's Address section of [this document].
 
    Change controller:  IESG <iesg@ietf.org>
-
-
-
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 19]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
 
 6.2.11.  text/javascript1.5
 
@@ -1088,13 +1098,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -1102,6 +1110,18 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Intended usage:  OBSOLETE
 
    Restrictions on usage:  This media type is obsolete; current
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 20]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
       implementations should use text/javascript as the only JavaScript/
       ECMAScript media type.  The .mjs file extension signals that the
       file represents a JavaScript module.  Execution environments that
@@ -1111,16 +1131,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Author:  See Author's Address section of [this document].
 
    Change controller:  IESG <iesg@ietf.org>
-
-
-
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 20]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
 
 6.2.12.  text/jscript
 
@@ -1144,13 +1154,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -1162,21 +1170,17 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
       on file extensions to determine how to process inputs parse .mjs
       files using the Module grammar of [ECMA-262].
 
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 21]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
    Author:  See Author's Address section of [this document].
 
    Change controller:  IESG <iesg@ietf.org>
-
-
-
-
-
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 21]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
 
 6.2.13.  text/livescript
 
@@ -1200,13 +1204,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -1227,11 +1229,9 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
 
 
 
-
-
-Miller, et al.          Expires October 24, 2020               [Page 22]
+Miller, et al.           Expires 26 August 2021                [Page 22]
 
-Internet-Draft       ECMAScript Media Types Updates           April 2020
+Internet-Draft       ECMAScript Media Types Updates        February 2021
 
 
 6.2.14.  text/x-ecmascript
@@ -1256,13 +1256,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .es, .mjs
 
-      File extension(s):  .es, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -1278,23 +1276,19 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
 
    Change controller:  IESG <iesg@ietf.org>
 
-
-
-
-
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 23]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
 6.2.15.  text/x-javascript
 
    Type name:  text
 
    Subtype name:  x-javascript
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 23]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
 
    Required parameters:  N/A
 
@@ -1312,13 +1306,11 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    Applications which use this media type:  Script interpreters as
       discussed in [this document].
 
-   Additional information:
+   Additional information:  Magic number(s):  n/a
 
-      Magic number(s):  n/a
+                            File extension(s):  .js, .mjs
 
-      File extension(s):  .js, .mjs
-
-      Macintosh File Type Code(s):  TEXT
+                            Macintosh File Type Code(s):  TEXT
 
    Person & email address to contact for further information:  See
       Author's Address section of [this document].
@@ -1334,30 +1326,25 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
 
    Change controller:  IESG <iesg@ietf.org>
 
-
-
-
-
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 24]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
 7.  References
 
 7.1.  Normative References
 
-   [CHARSETS]
-              IANA, "Assigned character sets", n.d.,
+   [CHARSETS] IANA, "Assigned character sets", n.d.,
               <https://www.iana.org/assignments/character-sets>.
 
-   [ECMA-262]
-              Ecma International, "Standard ECMA-262: ECMAScript
+   [ECMA-262] Ecma International, "Standard ECMA-262: ECMAScript
               Language Specification", June 2019, <https://ecma-
               international.org/publications/standards/Ecma-262.htm>.
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 24]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -1394,14 +1381,6 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
               DOI 10.17487/RFC4329, April 2006,
               <https://www.rfc-editor.org/info/rfc4329>.
 
-
-
-
-Miller, et al.          Expires October 24, 2020               [Page 25]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
    [RFC6265]  Barth, A., "HTTP State Management Mechanism", RFC 6265,
               DOI 10.17487/RFC6265, April 2011,
               <https://www.rfc-editor.org/info/rfc6265>.
@@ -1415,6 +1394,13 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
    [HTML]     WHATWG, "HTML Living Standard", August 2017,
               <https://html.spec.whatwg.org/multipage/
               scripting.html#prepare-a-script>.
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 25]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
 
    [RFC3236]  Baker, M. and P. Stark, "The 'application/xhtml+xml' Media
               Type", RFC 3236, DOI 10.17487/RFC3236, January 2002,
@@ -1438,53 +1424,54 @@ Internet-Draft       ECMAScript Media Types Updates           April 2020
 Appendix A.  Acknowledgements
 
    This work builds upon its antecedent document, authored by Bjoern
-   Hoehrmann.  The authors would like to thank Adam Roach, Anna van
+   Hoehrmann.  The authors would like to thank Adam Roach, Anne van
    Kesteren, Allen Wirfs-Brock, Alexey Melnikov, James Snell, Mark
    Nottingham, Murray Kucherawy, and Suresh Krishnan for their guidance
    and feedback throughout this process.
 
 Appendix B.  Changes from RFC 4329
 
-   o  Added a section discussing ECMAscript modules and the impact on
+   *  Added a section discussing ECMAscript modules and the impact on
       processing.
 
-   o  Updated the Security Considerations to discuss concerns associated
+   *  Updated the Security Considerations to discuss concerns associated
       with ECMAscript modules and SharedArrayBuffers.
 
-
-
-Miller, et al.          Expires October 24, 2020               [Page 26]
-
-Internet-Draft       ECMAScript Media Types Updates           April 2020
-
-
-   o  Updated the character encoding scheme detection to remove
+   *  Updated the character encoding scheme detection to remove
       normative guidance on its use, to better reflect operational
       reality.
 
-   o  Changed the intended usage of the media type text/javascript from
+   *  Changed the intended usage of the media type text/javascript from
       obsolete to common.
 
-   o  Changed the intended usage for all other script media types to
+   *  Changed the intended usage for all other script media types to
       obsolete.
 
-   o  Updated various references where the original has been osboleted
+   *  Updated various references where the original has been osboleted
 
-   o  Updated references to ECMA-262 to match the version at time of
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 26]
+
+Internet-Draft       ECMAScript Media Types Updates        February 2021
+
+
+   *  Updated references to ECMA-262 to match the version at time of
       publication.
 
 Authors' Addresses
 
    Matthew A. Miller
-   Mozilla
 
    Email: linuxwolf+ietf@outer-planes.net
 
 
    Myles Borins
-   Google
+   GitHub
 
-   Email: mylesborins@google.com
+   Email: mylesborins@github.com
 
 
    Mathias Bynens
@@ -1509,4 +1496,17 @@ Authors' Addresses
 
 
 
-Miller, et al.          Expires October 24, 2020               [Page 27]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Miller, et al.           Expires 26 August 2021                [Page 27]
