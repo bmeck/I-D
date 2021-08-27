@@ -234,7 +234,7 @@ For both categories, The ECMAScript media types are to be updated to point to a 
 
 These changes are to be reflected in the IANA Media Types registry in accordance with {{RFC6838}}.
 
-## Common Javascript Media Types
+## Common JavaScript Media Types
 
 ### text/javascript
 
