@@ -55,7 +55,7 @@ normative:
     author:
       org: Ecma International
     title: "Standard ECMA-262: ECMAScript Language Specification"
-    date: June 2019
+    date: June 2021
     target: https://ecma-international.org/publications/standards/Ecma-262.htm
 
 informative:
@@ -126,7 +126,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 # Compatibility
 
-This document defines equivalent processing requirements for the types text/javascript, text/ecmascript, and application/javascript.  The most widely supported media type in use is text/javascript; all others are considered historical and obsolete compared to text/javascript.  Differences in ECMAScript versions have been better dealt with in the processors.
+This document defines equivalent processing requirements for the types text/javascript, text/ecmascript, and application/javascript.  The most widely supported media type in use is text/javascript; all others are considered historical and obsolete compared to text/javascript.
 
 The types defined in this document are applicable to scripts written in {{ECMA-262}}.  This document does not address scripts written in other languages.  In particular, future editions of {{ECMA-262}} and extensions to {{ECMA-262}} are not directly addressed.
 
