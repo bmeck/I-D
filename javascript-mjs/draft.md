@@ -1186,7 +1186,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of {{ECMA-262}}.
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of {{ECMA-262}}.
 
 Author:
 
@@ -1259,7 +1259,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of {{ECMA-262}}.
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of {{ECMA-262}}.
 
 Author:
 
@@ -1332,7 +1332,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of {{ECMA-262}}.
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of {{ECMA-262}}.
 
 Author:
 
@@ -1405,7 +1405,7 @@ Intended usage:
 
 Restrictions on usage:
 
-: The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of {{ECMA-262}}.
+: This media type is obsolete; current implementations should use text/javascript as the only JavaScript/ECMAScript media type. The .mjs file extension signals that the file represents a JavaScript module. Execution environments that rely on file extensions to determine how to process inputs parse .mjs files using the Module grammar of {{ECMA-262}}.
 
 Author:
 
