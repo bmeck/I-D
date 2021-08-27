@@ -41,8 +41,6 @@ normative:
   RFC2978:
   RFC3552:
   RFC3629:
-  RFC3986:
-  RFC3987:
   RFC4329:
   RFC6265:
   RFC8174:
@@ -63,6 +61,8 @@ informative:
 
   RFC3236:
   RFC3875:
+  RFC3986:
+  RFC3987:
   HTML:
     author:
       org: WHATWG
