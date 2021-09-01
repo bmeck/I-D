@@ -55,7 +55,7 @@ normative:
     author:
       org: Ecma International
     title: "Standard ECMA-262: ECMAScript Language Specification"
-    date: June 2021
+    date: September 2021
     target: https://ecma-international.org/publications/standards/Ecma-262.htm
 
 informative:
@@ -1424,8 +1424,8 @@ This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  Th
 
 # Changes from RFC 4329
 
-* Added a section discussing ECMAscript modules and the impact on processing.
-* Updated the Security Considerations to discuss concerns associated with ECMAscript modules and SharedArrayBuffers.
+* Added a section discussing ECMAScript modules and the impact on processing.
+* Updated the Security Considerations to discuss concerns associated with ECMAScript modules and SharedArrayBuffers.
 * Updated the character encoding scheme detection to remove normative guidance on its use, to better reflect operational reality.
 * Changed the intended usage of the media type text/javascript from obsolete to common.
 * Changed the intended usage for all other script media types to obsolete.
