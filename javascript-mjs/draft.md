@@ -1429,5 +1429,5 @@ This work builds upon its antecedent document, authored by Bjoern Hoehrmann.  Th
 * Updated the character encoding scheme detection to remove normative guidance on its use, to better reflect operational reality.
 * Changed the intended usage of the media type text/javascript from obsolete to common.
 * Changed the intended usage for all other script media types to obsolete.
-* Updated various references where the original has been osboleted
+* Updated various references where the original has been obsoleted.
 * Updated references to ECMA-262 to match the version at time of publication.
