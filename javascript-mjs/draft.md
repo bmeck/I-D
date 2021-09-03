@@ -232,7 +232,7 @@ The media type registrations herein are divided into two major categories: the s
 
 For both categories, the ECMAScript media types are to be updated to point to a non-vendor specific standard undated specification of ECMAScript. In addition, a new file extension of .mjs is to be added to the list of file extensions with the restriction that it must correspond to the Module grammar of {{ECMA-262}}. Finally, the {{HTML}} specification uses "text/javascript" as the default media type of ECMAScript when preparing script tags; therefore, "text/javascript" intended usage is to be moved from OBSOLETE to COMMON.
 
-These changes are to be reflected in the IANA Media Types registry in accordance with {{RFC6838}}.
+These changes are to be reflected in the IANA Media Types registry in accordance with {{RFC6838}}. The outdated note stating that the "text/javascript" media type has been "OBSOLETED in favor of application/javascript" is to be removed, listing this document as the reference.
 
 ## Common JavaScript Media Types
 
