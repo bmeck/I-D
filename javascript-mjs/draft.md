@@ -42,7 +42,7 @@ normative:
   RFC3552:
   RFC3629:
   RFC4329:
-  RFC6265:
+  RFC6365:
   RFC6838:
   RFC8174:
 
@@ -146,7 +146,7 @@ This document does not define how fragment identifiers in resource identifiers (
 
 # Encoding
 
-Refer to {{RFC6265}} for a discussion of terminology used in this section.  Source text (as defined in {{ECMA-262}}, section "Source Text") can be binary source text.  Binary source text is a textual data object that represents source text encoded using a character encoding scheme.  A textual data object is a whole text protocol message or a whole text document, or a part of it, that is treated separately for purposes of external storage and retrieval.  An implementation's internal representation of source text and source text are not considered binary source text.
+Refer to {{RFC6365}} for a discussion of terminology used in this section.  Source text (as defined in {{ECMA-262}}, section "Source Text") can be binary source text.  Binary source text is a textual data object that represents source text encoded using a character encoding scheme.  A textual data object is a whole text protocol message or a whole text document, or a part of it, that is treated separately for purposes of external storage and retrieval.  An implementation's internal representation of source text and source text are not considered binary source text.
 
 Implementations need to determine a character encoding scheme in order to decode binary source text to source text.  The media types defined in this document allow an optional charset parameter to explicitly specify the character encoding scheme used to encode the source text.
 
