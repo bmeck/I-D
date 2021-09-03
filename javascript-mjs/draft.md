@@ -54,9 +54,9 @@ normative:
   ECMA-262:
     author:
       org: Ecma International
-    title: "Standard ECMA-262: ECMAScript Language Specification"
-    date: September 2021
-    target: https://ecma-international.org/publications/standards/Ecma-262.htm
+    title: "ECMAScript® 2021 language specification, ECMA-262 12th Edition, June 2021"
+    date: June 2021
+    target: https://262.ecma-international.org/12.0/
 
 informative:
 
