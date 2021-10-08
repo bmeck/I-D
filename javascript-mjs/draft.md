@@ -268,7 +268,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -345,7 +345,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -419,7 +419,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -493,7 +493,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -567,7 +567,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -641,7 +641,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -715,7 +715,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -789,7 +789,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -862,7 +862,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -937,7 +937,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -1010,7 +1010,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -1083,7 +1083,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -1156,7 +1156,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -1229,7 +1229,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -1302,7 +1302,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
@@ -1375,7 +1375,7 @@ Interoperability considerations:
 
 Published specification:
 
-: \[this document]
+: {{ECMA-262}}
 
 Applications which use this media type:
 
