@@ -290,7 +290,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section of \[this document].
+: See Author's Address section of \[this document] and {{RFC4329}}.
 
 Intended usage:
 
@@ -367,7 +367,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section of \[this document].
+: See Author's Address section of \[this document] and {{RFC4329}}.
 
 Intended usage:
 
@@ -441,7 +441,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section of \[this document].
+: See Author's Address section of \[this document] and {{RFC4329}}.
 
 Intended usage:
 
@@ -663,7 +663,7 @@ Additional information:
 
 Person & email address to contact for further information:
 
-: See Author's Address section of \[this document].
+: See Author's Address section of \[this document] and {{RFC4329}}.
 
 Intended usage:
 
