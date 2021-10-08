@@ -118,7 +118,7 @@ This document describes the registration of media types for the ECMAScript and J
 
 This memo describes media types for the JavaScript and ECMAScript programming languages.  Refer to the sections "Introduction" and "Overview" in {{ECMA-262}} for background information on these languages.  This document updates the descriptions and registrations for these media types to reflect existing usage on the Internet, and provides up-to-date security considerations.
 
-This document replaces the media types registrations in {{RFC4329}}, obsoleting that document.
+This document replaces the media types registrations in {{RFC4329}}, and updates the requirements for implementations using those media types defined in {{RFC4329}} based on current existing practices. As a consequence, this document obsoletes {{RFC4329}}.
 
 ## Terminology
 
