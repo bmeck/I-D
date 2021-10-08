@@ -152,7 +152,7 @@ Implementations need to determine a character encoding scheme in order to decode
 
 How implementations determine the character encoding scheme can be subject to processing rules that are out of the scope of this document.  For example, transport protocols can require that a specific character encoding scheme is to be assumed if the optional charset parameter is not specified, or they can require that the charset parameter is used in certain cases.  Such requirements are not considered part of this document.
 
-Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Module goal sources MUST be encoded as UTF-8, all other encodings will fail.  Source goal sources SHOULD be encoded as UTF-8; other character encoding schemes MAY be supported, but are discouraged.
+Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Module goal sources MUST be encoded as UTF-8, all other encodings will fail.  Source goal sources SHOULD be encoded as UTF-8; other character encoding schemes MAY be supported, but are discouraged.  Whether U+FEFF is processed as a Byte Order Mark (BOM) signature or not depends on the host environment, and is not considered part of this document.
 
 ## Charset Parameter
 
