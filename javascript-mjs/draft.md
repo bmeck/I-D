@@ -128,7 +128,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 This document defines equivalent processing requirements for the types text/javascript, text/ecmascript, and application/javascript.  The most widely supported media type in use is text/javascript; all others are considered historical and obsolete compared to text/javascript.
 
-The types defined in this document are applicable to scripts written in {{ECMA-262}}.  This document does not address scripts written in other languages.  In particular, future editions of {{ECMA-262}} and extensions to {{ECMA-262}} are not directly addressed.
+The types defined in this document are applicable to scripts written in {{ECMA-262}}.  Later editions of {{ECMA-262}} are not directly addressed, although it is expected that implementations will behave as if applicability were extended to them.  This document does not address other extensions to {{ECMA-262}} or scripts written in other languages.
 
 This document may be updated to take other content into account.  Updates of this document may introduce new optional parameters; implementations MUST consider the impact of such an update.
 
@@ -264,7 +264,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -341,7 +341,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -415,7 +415,8 @@ Security considerations:
 
 Interoperability considerations:
 
-: charset, see section 4.1 of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also section 4.1 of \[this document] regarding the charset parameter.
+
 
 Published specification:
 
@@ -489,7 +490,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -563,7 +564,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -637,7 +638,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -711,7 +712,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -785,7 +786,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -858,7 +859,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -933,7 +934,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -1006,7 +1007,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -1079,7 +1080,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -1152,7 +1153,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -1298,7 +1299,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
@@ -1371,7 +1372,7 @@ Security considerations:
 
 Interoperability considerations:
 
-: See various sections of \[this document].
+: It is expected that implementations will behave as if this registration applies to later editions of {{ECMA-262}}, and its published specification references may be updated accordingly from time to time. See also various sections of \[this document].
 
 Published specification:
 
