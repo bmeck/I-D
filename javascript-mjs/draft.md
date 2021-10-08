@@ -156,7 +156,7 @@ Implementations that support binary source text MUST support binary source text 
 
 ## Charset Parameter
 
-The charset parameter provides a means to specify the character encoding scheme of binary source text.  Its value MUST match the mime-charset production defined in {{RFC2978}}, section 2.3, and SHOULD be a registered charset {{CHARSETS}}.  An illegal value is a value that does not match that production.
+The charset parameter provides a means to specify the character encoding scheme of binary source text.  Its value SHOULD be a registered charset {{CHARSETS}}, and is considered valid if it matches the mime-charset production defined in {{RFC2978}}, section 2.3.
 
 The charset parameter is only used when processing a Script goal source; Module goal sources MUST always be processed as UTF-8.
 
@@ -176,7 +176,7 @@ It is possible that implementations cannot interoperably determine a single char
 
     Implementations of this step MUST use these octet sequences to determine the character encoding scheme, even if the determined scheme is not supported.  If this step determines the character encoding scheme, the octet sequence representing the Unicode encoding form signature MUST be ignored when decoding the binary source text.
 
-2. If a charset parameter with a legal and understood value is specified, the value determines the character encoding scheme.
+2. If a charset parameter is specified and its value is valid and supported by the implementation, the value determines the character encoding scheme.
 
 3. If no other character encoding scheme is determined from the previous steps, it is assumed to be UTF-8.
 
@@ -188,7 +188,7 @@ Binary source text that is not properly encoded for the determined character enc
 
 If binary source text is determined to have been encoded using a certain character encoding scheme that the implementation is unable to process, implementations can consider the resource unsupported (i.e., do not decode the binary source text using a different character encoding scheme).
 
-Binary source text can be determined to have been encoded using a certain character encoding scheme but contain octet sequences that are not legal according to that scheme.  Implementations can substitute those illegal sequences with the replacement character U+FFFD (properly encoded for the scheme), or stop processing altogether.
+Binary source text can be determined to have been encoded using a certain character encoding scheme but contain octet sequences that are not valid according to that scheme.  Implementations can substitute those invalid sequences with the replacement character U+FFFD (properly encoded for the scheme), or stop processing altogether.
 
 # Security Considerations
 
