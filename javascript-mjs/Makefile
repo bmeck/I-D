@@ -5,7 +5,8 @@ kramdown-rfc2629 ?= kramdown-rfc2629
 idnits ?= idnits
 
 title = ietf-dispatch-$(shell basename ${CURDIR})
-latest = "draft-${title}-09.xml"
+revision_id = "10"
+latest = "draft-${title}-${revision_id}.xml"
 version = $(shell basename ${latest} .xml | awk -F- '{print $$NF}')
 
 target = draft-$(title)-$(version)
