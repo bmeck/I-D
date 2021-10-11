@@ -1,7 +1,7 @@
 ---
 title: ECMAScript Media Types Updates
 abbrev:
-docname: draft-ietf-dispatch-javascript-mjs-09
+docname: draft-ietf-dispatch-javascript-mjs-10
 category: info
 
 ipr: trust200902
@@ -54,7 +54,7 @@ normative:
   ECMA-262:
     author:
       org: Ecma International
-    title: "ECMAScript® 2021 language specification, ECMA-262 12th Edition, June 2021"
+    title: "ECMAScript 2021 language specification, ECMA-262 12th Edition, June 2021"
     date: June 2021
     target: https://262.ecma-international.org/12.0/
 
