@@ -140,7 +140,7 @@ In order to formalize support for modular programs, {{ECMA-262}} (starting with 
 
 This separation means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript source text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
 
-It is not possible to fully determine if a source text of ECMAScript is meant to be parsed using the Module or Script grammar goals based upon content alone. Therefore, scripting environments use out of band information in order to determine what goal should be used. Some scripting environments have chosen to adopt the file extension of .mjs for this purpose.
+It is not possible to fully determine if a source text of ECMAScript is meant to be parsed using the Module or Script grammar goals based upon content alone. Therefore, scripting environments use out-of-band information in order to determine what goal should be used. Some scripting environments have chosen to adopt the file extension of .mjs for this purpose. The media types in this document allow such out-of-band information to be conveyed.
 
 This document does not define how fragment identifiers in resource identifiers ({{RFC3986}}, {{RFC3987}}) for documents labeled with one of the media types defined in this document are resolved.  An update of this document may define processing of fragment identifiers.
 
@@ -152,7 +152,7 @@ Implementations need to determine a character encoding scheme in order to decode
 
 How implementations determine the character encoding scheme can be subject to processing rules that are out of the scope of this document.  For example, transport protocols can require that a specific character encoding scheme is to be assumed if the optional charset parameter is not specified, or they can require that the charset parameter is used in certain cases.  Such requirements are not considered part of this document.
 
-Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Module goal sources MUST be encoded as UTF-8, all other encodings will fail.  Source goal sources SHOULD be encoded as UTF-8; other character encoding schemes MAY be supported, but are discouraged.  Whether U+FEFF is processed as a Byte Order Mark (BOM) signature or not depends on the host environment, and is not considered part of this document.
+Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Module goal sources MUST be encoded as UTF-8, all other encodings will fail.  Source goal sources SHOULD be encoded as UTF-8; other character encoding schemes MAY be supported, but are discouraged.  Whether U+FEFF is processed as a Byte Order Mark (BOM) signature or not depends on the host environment, and is not defined by this document.
 
 ## Charset Parameter
 
