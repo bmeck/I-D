@@ -140,7 +140,7 @@ In order to formalize support for modular programs, {{ECMA-262}} (starting with 
 
 This separation means that (in the absence of additional information) there are two possible interpretations for any given ECMAScript source text. The TC39 standards body for ECMAScript has determined that media types are outside of their scope of work {{TC39-MIME-ISSUE}}.
 
-It is not possible to fully determine if a source text of ECMAScript is meant to be parsed using the Module or Script grammar goals based upon content alone. Therefore, scripting environments use out-of-band information in order to determine what goal should be used. Some scripting environments have chosen to adopt the file extension of .mjs for this purpose. The media types in this document allow such out-of-band information to be conveyed.
+It is not possible to fully determine if a source text of ECMAScript is meant to be parsed using the Module or Script grammar goals based upon content or media type alone. Therefore, as permitted by the media types in this document, scripting environments use out-of-band information in order to determine what goal should be used. Some scripting environments have chosen to adopt the file extension of .mjs for this purpose.
 
 This document does not define how fragment identifiers in resource identifiers ({{RFC3986}}, {{RFC3987}}) for documents labeled with one of the media types defined in this document are resolved.  An update of this document may define processing of fragment identifiers.
 
