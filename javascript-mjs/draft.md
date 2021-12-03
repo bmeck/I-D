@@ -150,7 +150,7 @@ Refer to {{RFC6365}} for a discussion of terminology used in this section.  Sour
 
 Implementations need to determine a character encoding scheme in order to decode binary source text to source text.  The media types defined in this document allow an optional charset parameter to explicitly specify the character encoding scheme used to encode the source text.
 
-How implementations determine the character encoding scheme can be subject to processing rules that are out of the scope of this document.  For example, transport protocols can require that a specific character encoding scheme is to be assumed if the optional charset parameter is not specified, or they can require that the charset parameter is used in certain cases.  Such requirements are not considered part of this document.
+How implementations determine the character encoding scheme can be subject to processing rules that are out of the scope of this document.  For example, transport protocols can require that a specific character encoding scheme is to be assumed if the optional charset parameter is not specified, or they can require that the charset parameter is used in certain cases.  Such requirements are not defined by this document.
 
 Implementations that support binary source text MUST support binary source text encoded using the UTF-8 {{RFC3629}} character encoding scheme.  Module goal sources MUST be encoded as UTF-8, all other encodings will fail.  Source goal sources SHOULD be encoded as UTF-8; other character encoding schemes MAY be supported, but are discouraged.  Whether U+FEFF is processed as a Byte Order Mark (BOM) signature or not depends on the host environment, and is not defined by this document.
 
@@ -194,9 +194,9 @@ Binary source text can be determined to have been encoded using a certain charac
 
 Refer to {{RFC3552}} for a discussion of terminology used in this section.  Examples in this section and discussions of interactions of host environments with scripts, modules, and extensions to {{ECMA-262}} are to be understood as non-exhaustive and of a purely illustrative nature.
 
-The programming language defined in {{ECMA-262}} is not intended to be computationally self-sufficient, rather it is expected that the computational environment provides facilities to programs to enable specific functionality.  Such facilities constitute unknown factors and are thus considered out of the scope of this document.
+The programming language defined in {{ECMA-262}} is not intended to be computationally self-sufficient, rather it is expected that the computational environment provides facilities to programs to enable specific functionality.  Such facilities constitute unknown factors and are thus not defined by this document.
 
-Derived programming languages are permitted to include additional functionality that is not described in {{ECMA-262}}; such functionality constitutes an unknown factor and is thus considered out of the scope of this document.  In particular, extensions to {{ECMA-262}} defined for the JavaScript programming language are not discussed in this document.
+Derived programming languages are permitted to include additional functionality that is not described in {{ECMA-262}}; such functionality constitutes an unknown factor and is thus not defined by this document.  In particular, extensions to {{ECMA-262}} defined for the JavaScript programming language are not discussed in this document.
 
 Uncontrolled execution of scripts can be exceedingly dangerous. Implementations that execute scripts MUST give consideration to their application's threat models and those of the individual features they implement; in particular, they MUST ensure that untrusted content is not executed in an unprotected environment.
 
@@ -224,7 +224,7 @@ Scripts can be executed in an environment that is vulnerable to code injection a
 
 The "data" resource identifier scheme {{RFC2397}}, in combination with the types defined in this document, could be used to cause execution of untrusted scripts through the inclusion of untrusted resource identifiers in otherwise trusted content.  Security considerations of {{RFC2397}} apply.
 
-Implementations can fail to implement a specific security model or other means to prevent possibly dangerous operations.  Such failure could possibly be exploited to gain unauthorized access to a system or sensitive information; such failure constitutes an unknown factor and is thus considered out of the scope of this document.
+Implementations can fail to implement a specific security model or other means to prevent possibly dangerous operations.  Such failure could possibly be exploited to gain unauthorized access to a system or sensitive information; such failure constitutes an unknown factor and is thus not defined by this document.
 
 # IANA Considerations
 
