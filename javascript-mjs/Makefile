@@ -5,7 +5,8 @@ kramdown-rfc2629 ?= kramdown-rfc2629
 idnits ?= idnits
 
 title = ietf-dispatch-$(shell basename ${CURDIR})
-latest = $(shell (ls draft-${title}-*.xml || echo "draft-${title}-02.xml") | sort | tail -1)
+revision_id = "10"
+latest = "draft-${title}-${revision_id}.xml"
 version = $(shell basename ${latest} .xml | awk -F- '{print $$NF}')
 
 target = draft-$(title)-$(version)
@@ -14,14 +15,14 @@ next = draft-$(title)-$(shell printf "%.2d" `echo ${version}+1 | bc`)
 
 .PHONY: latest clean next diff idnits update
 
-latest: $(target).txt index.txt $(target).xml
+latest: $(target).html $(target).txt index.txt $(target).xml
 
 clean:
 	rm -f $(target).html $(target).txt
 
 next:
 	cp $(target).xml $(next).xml
-	sed -i '' -e"s/$(target)/$(next)/" draft.md
+	sed -i '' -e "s/$(target)/$(next)/" draft.md
 
 diff:
 	rfcdiff $(prev).txt $(target).txt
@@ -30,10 +31,13 @@ idnits: $(target).txt
 	$(idnits) $<
 
 %.xml: draft.md
-	$(kramdown-rfc2629) $< > $@
+	$(kramdown-rfc2629) --v3 $< > $@
 
 %.txt: %.xml
-	$(xml2rfc) $< $@
+	$(xml2rfc) --text $<
+
+%.html: %.xml
+	$(xml2rfc) --html $<
 
 index.txt: $(target).txt
 	cp $< $@
