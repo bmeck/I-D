@@ -234,6 +234,15 @@ For both categories, the media types are updated to reference {{ECMA-262}}. In a
 
 These changes are to be reflected in the IANA Media Types registry in accordance with {{RFC6838}}. All registrations will point to this document as reference. The outdated note stating that the "text/javascript" media type has been "OBSOLETED in favor of application/javascript" is to be removed. The outdated note stating that the "text/ecmascript" media type has been "OBSOLETED in favor of application/ecmascript" is to be removed. IANA is requested to add the note "OBSOLETED in favor of text/javascript" to all registrations except "text/javascript".
 
+Four of the legacy media types in this document have a subtype starting with the "x-" prefix:
+
+* application/x-ecmascript
+* application/x-javascript
+* text/x-ecmascript
+* text/x-javascript
+
+Note that these are grandfathered media types registered as per Appendix A of [RFC6838].
+
 ## Common JavaScript Media Types
 
 ### text/javascript
